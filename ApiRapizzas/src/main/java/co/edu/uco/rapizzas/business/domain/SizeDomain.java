@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class SizeDomain extends Domain{
+public final class SizeDomain extends Domain{
 	
 	private String sizeName;
 	

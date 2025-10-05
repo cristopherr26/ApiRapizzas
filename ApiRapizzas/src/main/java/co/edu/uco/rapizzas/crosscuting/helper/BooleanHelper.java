@@ -2,14 +2,14 @@ package co.edu.uco.rapizzas.crosscuting.helper;
 
 public class BooleanHelper {
 	
-	private static final boolean IS_CONFIRMED = false;
+	private static final boolean BOOLEAN_DEFAULT = false;
 	
 	private BooleanHelper () {
 		
 	}
 	
 	public static boolean getDefault() {
-		return IS_CONFIRMED;
+		return BOOLEAN_DEFAULT;
 	}
 	
 	public static boolean getDeafult(final boolean value) {

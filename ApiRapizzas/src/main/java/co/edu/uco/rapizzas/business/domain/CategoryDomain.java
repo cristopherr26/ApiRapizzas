@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class CategoryDomain extends Domain {
 	
-	private String nameCategory;
+	private String categoryName;
 	
 	public CategoryDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -34,11 +34,11 @@ public final class CategoryDomain extends Domain {
 	}
 
 	public String getNameCategory() {
-		return nameCategory;
+		return categoryName;
 	}
 
 	public void setNameCategory(final String nameCategory) {
-		this.nameCategory = TextHelper.getDefaultWithTrim(nameCategory);
+		this.categoryName = TextHelper.getDefaultWithTrim(nameCategory);
 	}
 
 }

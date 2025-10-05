@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public class SizeDomain extends Domain{
 	
-	private String nameSize;
+	private String sizeName;
 	
 	public SizeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -34,11 +34,11 @@ public class SizeDomain extends Domain{
 	}
 
 	public String getNameSize() {
-		return nameSize;
+		return sizeName;
 	}
 
 	public void setNameSize(final String nameSize) {
-		this.nameSize = TextHelper.getDefaultWithTrim(nameSize);
+		this.sizeName = TextHelper.getDefaultWithTrim(nameSize);
 	}
 	
 }

@@ -30,9 +30,8 @@ public final class ProductDomain extends Domain {
 		setSize(SizeDomain.getDefaultValue());
 	}
 	
-	
-
-	public ProductDomain(final UUID id, final String productName, final int price, final CategoryDomain category, final SizeDomain size) {
+	public ProductDomain(final UUID id, final String productName, final int price, 
+			final CategoryDomain category, final SizeDomain size) {
 		super(id);
 		setProductName(productName);
 		setPrice(price);
@@ -79,13 +78,5 @@ public final class ProductDomain extends Domain {
 	public void setSize(final SizeDomain size) {
 		this.size = SizeDomain.getDefaultValue(size);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

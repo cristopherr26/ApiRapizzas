@@ -27,7 +27,8 @@ public final class CustomerTableDomain extends Domain {
 		setCustomer(CustomerDomain.getDefaultValue());
 	}
 	
-	public CustomerTableDomain(final UUID id, final LocalDate orderDate, final TableDomain table, final CustomerDomain customer) {
+	public CustomerTableDomain(final UUID id, final LocalDate orderDate, 
+			final TableDomain table, final CustomerDomain customer) {
 		super(id);
 		setOrderDate(orderDate);
 		setTable(table);

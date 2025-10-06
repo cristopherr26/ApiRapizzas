@@ -27,7 +27,8 @@ public final class ProductOrderEntity{
 		setOrder(OrderEntity.getDefaultValue());
 	}
 
-	public ProductOrderEntity(final UUID id, final int amount, final ProductEntity product, final OrderEntity order) {
+	public ProductOrderEntity(final UUID id, final int amount, 
+			final ProductEntity product, final OrderEntity order) {
 		setProductOrderId(id);
 		setAmount(amount);
 		setProduct(product);
@@ -73,9 +74,5 @@ public final class ProductOrderEntity{
 	public void setOrder(final OrderEntity order) {
 		this.order = OrderEntity.getDefaultValue(order);
 	}
-
-	
-	
-	
 
 }

@@ -50,6 +50,4 @@ public final class SizeEntity{
 		this.sizeId = UUIDHelper.getUUIDHelper().getDefault(sizeId);
 	}
 	
-	
-	
 }

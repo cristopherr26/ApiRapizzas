@@ -34,7 +34,8 @@ public final class OrderDomain extends Domain {
 	}
 	
 	public OrderDomain(final UUID id, final int total, final String comment, 
-			final EmployeeDomain employee, final StatusDomain status, final CustomerTableDomain customerTable) {
+			final EmployeeDomain employee, final StatusDomain status, 
+			final CustomerTableDomain customerTable) {
 		super(id);
 		setTotal(total);
 		setComment(comment);

@@ -21,7 +21,7 @@ public final class CustomerEntity {
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
@@ -30,18 +30,19 @@ public final class CustomerEntity {
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
 	
-	public CustomerEntity(final UUID id, final String name, final String lastName, final boolean isActive,
-			final IdentificationTypeEntity identificationType, final String identificationNumber) {
+	public CustomerEntity(final UUID id, final String name, final String lastName, 
+			final boolean isActive, final IdentificationTypeEntity identificationType, 
+			final String identificationNumber) {
 		setCustomerId(id);
 		setName(name);
 		setLastName(lastName);
 		setActive(isActive);
-		setIdentificationType(identificationType);;
+		setIdentificationType(identificationType);
 		setIdentificationNumber(identificationNumber);
 	}
 	
@@ -53,42 +54,33 @@ public final class CustomerEntity {
 		return ObjectHelper.getDefault(customer, getDefaultValue());
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(final String name) {
 		this.name = TextHelper.getDefaultWithTrim(name);
 	}
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 	public void setLastName(final String lastName) {
 		this.lastName = TextHelper.getDefaultWithTrim(lastName);
 	}
 
-
 	public boolean isActive() {
 		return isActive;
 	}
-
 
 	public void setActive(final boolean isActive) {
 		this.isActive = BooleanHelper.getDeafult(isActive);
 	}
 
-
-
 	public String getIdentificationNumber() {
 		return identificationNumber;
 	}
-
 
 	public void setIdentificationNumber(final String identificationNumber) {
 		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
@@ -106,11 +98,9 @@ public final class CustomerEntity {
 		return identificationType;
 	}
 
-	public void setIdentificationType(final IdentificationTypeEntity identificationType) {
+	public void setIdentificationType(final IdentificationTypeEntity 
+			identificationType) {
 		this.identificationType = IdentificationTypeEntity.getDefaultValue(identificationType);
 	}
-	
-	
-	
 
 }

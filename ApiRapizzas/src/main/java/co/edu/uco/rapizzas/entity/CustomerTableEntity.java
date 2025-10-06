@@ -74,7 +74,5 @@ public final class CustomerTableEntity {
 	public void setCustomer(CustomerEntity customer) {
 		this.customer = CustomerEntity.getDefaultValue(customer);
 	}
-
-	
 	
 }

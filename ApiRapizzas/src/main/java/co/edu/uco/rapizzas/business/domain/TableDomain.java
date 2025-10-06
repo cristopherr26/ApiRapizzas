@@ -40,7 +40,5 @@ public final class TableDomain extends Domain{
 	public void setTableNumber(final int tableNumber) {
 		this.tableNumber = IntegerHelper.getDefault(tableNumber);
 	}
-	
-	
 
 }

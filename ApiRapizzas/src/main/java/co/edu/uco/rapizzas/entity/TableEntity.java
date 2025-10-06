@@ -50,9 +50,4 @@ public final class TableEntity{
 		this.tableId = UUIDHelper.getUUIDHelper().getDefault(tableId);
 	}
 	
-	
-	
-	
-	
-
 }

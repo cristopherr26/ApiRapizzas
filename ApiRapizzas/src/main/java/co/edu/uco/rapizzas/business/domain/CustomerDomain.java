@@ -34,8 +34,9 @@ public final class CustomerDomain extends Domain {
 	}
 	
 	
-	public CustomerDomain(final UUID id, final String name, final String lastName, final boolean isActive,
-			final IdentificationTypeDomain identificationType, final String identificationNumber) {
+	public CustomerDomain(final UUID id, final String name, final String lastName, 
+			final boolean isActive, final IdentificationTypeDomain identificationType, 
+			final String identificationNumber) {
 		super(id);
 		setName(name);
 		setLastName(lastName);
@@ -102,6 +103,4 @@ public final class CustomerDomain extends Domain {
 		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
 	}
 	
-	
-
 }

@@ -34,8 +34,6 @@ public final class CategoryEntity {
 		return ObjectHelper.getDefault(category, getDefaultValue());
 	}
 	
-	
-
 	public UUID getIdCategory() {
 		return categoryId;
 	}

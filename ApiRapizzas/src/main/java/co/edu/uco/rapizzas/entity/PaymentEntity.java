@@ -76,6 +76,4 @@ public final class PaymentEntity {
 		this.order = OrderEntity.getDefaultValue(order);
 	}
 	
-	
-	
 }

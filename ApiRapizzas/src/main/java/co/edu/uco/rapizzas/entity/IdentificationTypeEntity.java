@@ -31,7 +31,8 @@ public final class IdentificationTypeEntity{
 		return new IdentificationTypeEntity();
 	}
 	
-	static IdentificationTypeEntity getDefaultValue(final IdentificationTypeEntity identifiactionType) {
+	static IdentificationTypeEntity getDefaultValue(final IdentificationTypeEntity 
+			identifiactionType) {
 		return ObjectHelper.getDefault(identifiactionType, getDefaultValue());
 	}
 
@@ -50,7 +51,5 @@ public final class IdentificationTypeEntity{
 	public void setIdentificationTypeId(final UUID identificationTypeId) {
 		this.identificationTypeId = UUIDHelper.getUUIDHelper().getDefault(identificationTypeId);
 	}
-	
-	
 
 }

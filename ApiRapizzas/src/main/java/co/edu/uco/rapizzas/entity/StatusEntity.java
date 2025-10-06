@@ -50,6 +50,4 @@ public final class StatusEntity{
 		this.statusId = UUIDHelper.getUUIDHelper().getDefault(statusId);
 	}
 	
-	
-
 }

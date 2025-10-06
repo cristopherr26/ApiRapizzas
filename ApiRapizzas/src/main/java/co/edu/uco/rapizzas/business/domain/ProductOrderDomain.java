@@ -26,7 +26,8 @@ public final class ProductOrderDomain extends Domain {
 		setOrder(OrderDomain.getDefaultValue());
 	}
 
-	public ProductOrderDomain(final UUID id, final int amount, final ProductDomain product, final OrderDomain order) {
+	public ProductOrderDomain(final UUID id, final int amount, 
+			final ProductDomain product, final OrderDomain order) {
 		super(id);
 		setAmount(amount);
 		setProduct(product);
@@ -64,7 +65,5 @@ public final class ProductOrderDomain extends Domain {
 	public void setOrder(final OrderDomain order) {
 		this.order = OrderDomain.getDefaultValue(order);
 	}
-	
-	
 
 }

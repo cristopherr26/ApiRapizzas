@@ -31,9 +31,8 @@ public final class ProductEntity{
 		setSize(SizeEntity.getDefaultValue());
 	}
 	
-	
-
-	public ProductEntity(final UUID id, final String productName, final int price, final CategoryEntity category, final SizeEntity size) {
+	public ProductEntity(final UUID id, final String productName, final int price, 
+			final CategoryEntity category, final SizeEntity size) {
 		setProductId(id);
 		setProductName(productName);
 		setPrice(price);
@@ -88,8 +87,5 @@ public final class ProductEntity{
 	public void setSize(final SizeEntity size) {
 		this.size = SizeEntity.getDefaultValue(size);
 	}
-
-	
-	
 
 }

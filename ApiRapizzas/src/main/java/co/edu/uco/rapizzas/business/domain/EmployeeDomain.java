@@ -46,9 +46,11 @@ public final class EmployeeDomain extends Domain {
 	}
 	
 	
-	public EmployeeDomain(final UUID id, final String name, final String lastName, final boolean isActive,
-			final IdentificationTypeDomain identificationType, final String identificationNumber, final String cellPhoneNumber,
-			final boolean cellPhoneNumberConfirmed, final boolean isAdministrator, final String employeePassword) {
+	public EmployeeDomain(final UUID id, final String name, final String lastName, 
+			final boolean isActive, final IdentificationTypeDomain identificationType, 
+			final String identificationNumber, final String cellPhoneNumber,
+			final boolean cellPhoneNumberConfirmed, final boolean isAdministrator, 
+			final String employeePassword) {
 		super(id);
 		setName(name);
 		setLastName(lastName);
@@ -151,6 +153,4 @@ public final class EmployeeDomain extends Domain {
 		this.employeePassword = TextHelper.getDefault(employeePassword);
 	}
 	
-	
-
 }

@@ -30,7 +30,8 @@ public final class IdentificationTypeDomain extends Domain {
 		return new IdentificationTypeDomain();
 	}
 	
-	static IdentificationTypeDomain getDefaultValue(final IdentificationTypeDomain identifiactionType) {
+	static IdentificationTypeDomain getDefaultValue(final IdentificationTypeDomain 
+			identifiactionType) {
 		return ObjectHelper.getDefault(identifiactionType, getDefaultValue());
 	}
 
@@ -42,6 +43,4 @@ public final class IdentificationTypeDomain extends Domain {
 		this.identificationTypeName = TextHelper.getDefaultWithTrim(name);
 	}
 	
-	
-
 }

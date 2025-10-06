@@ -40,7 +40,5 @@ public final class StatusDomain extends Domain{
 	public void setStatusName(final String statusName) {
 		this.statusName = TextHelper.getDefaultWithTrim(statusName);
 	}
-	
-	
 
 }

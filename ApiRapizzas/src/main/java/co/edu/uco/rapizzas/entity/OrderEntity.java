@@ -35,7 +35,8 @@ public final class OrderEntity {
 	}
 	
 	public OrderEntity(final UUID id, final int total, final String comment, 
-			final EmployeeEntity employee, final StatusEntity status, final CustomerTableEntity customerTable) {
+			final EmployeeEntity employee, final StatusEntity status, 
+			final CustomerTableEntity customerTable) {
 		setOrderId(id);
 		setTotal(total);
 		setComment(comment);
@@ -99,7 +100,5 @@ public final class OrderEntity {
 	public void setCustomerTable(final CustomerTableEntity customerTable) {
 		this.customerTable = CustomerTableEntity.getDefaultValue(customerTable);
 	}
-	
-	
-	
+
 }

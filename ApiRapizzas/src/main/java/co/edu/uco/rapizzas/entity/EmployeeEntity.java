@@ -47,9 +47,11 @@ public final class EmployeeEntity{
 	}
 	
 	
-	public EmployeeEntity(final UUID id, final String name, final String lastName, final boolean isActive,
-			final IdentificationTypeEntity identificationType, final String identificationNumber, final String cellPhoneNumber,
-			final boolean cellPhoneNumberConfirmed, final boolean isAdministrator, final String employeePassword) {
+	public EmployeeEntity(final UUID id, final String name, final String lastName, 
+			final boolean isActive, final IdentificationTypeEntity identificationType, 
+			final String identificationNumber, final String cellPhoneNumber, 
+			final boolean cellPhoneNumberConfirmed, final boolean isAdministrator, 
+			final String employeePassword) {
 		setEmployeeId(id);
 		setName(name);
 		setLastName(lastName);
@@ -70,41 +72,33 @@ public final class EmployeeEntity{
 		return ObjectHelper.getDefault(employee, getDefaultValue());
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(final String name) {
 		this.name = TextHelper.getDefaultWithTrim(name);
 	}
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 	public void setLastName(final String lastName) {
 		this.lastName = TextHelper.getDefaultWithTrim(lastName);
 	}
 
-
 	public boolean isActive() {
 		return isActive;
 	}
-
 
 	public void setActive(final boolean isActive) {
 		this.isActive = BooleanHelper.getDeafult(isActive);
 	}
 
-
 	public String getIdentificationNumber() {
 		return identificationNumber;
 	}
-
 
 	public void setIdentificationNumber(final String identificationNumber) {
 		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
@@ -157,8 +151,5 @@ public final class EmployeeEntity{
 	public void setIdentificationType(final IdentificationTypeEntity identificationType) {
 		this.identificationType = IdentificationTypeEntity.getDefaultValue(identificationType);
 	}
-
-	
-	
 
 }

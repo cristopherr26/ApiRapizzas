@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class CustomerTableDomain extends Domain {
+public final class CustomerTableDomain extends Domain {
 	
 	private LocalDate orderDate;
 	private TableDomain table;
@@ -55,7 +55,7 @@ public class CustomerTableDomain extends Domain {
 	}
 
 	public void setTable(final TableDomain table) {
-		this.table = ObjectHelper.getDefault(table, TableDomain.getDefaultValue());
+		this.table = TableDomain.getDefaultValue(table);
 	}
 
 	public CustomerDomain getCustomer() {
@@ -63,7 +63,7 @@ public class CustomerTableDomain extends Domain {
 	}
 
 	public void setCustomer(final CustomerDomain customer) {
-		this.customer = ObjectHelper.getDefault(customer, CustomerDomain.getDefaultValue());
+		this.customer = CustomerDomain.getDefaultValue(customer);
 	}
 	
 }

@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class CustomerDomain extends Domain {
+public final class CustomerDomain extends Domain {
 	
 	private String name;
 	private String lastName;
@@ -89,7 +89,7 @@ public class CustomerDomain extends Domain {
 
 
 	public void setIdentificationType(final IdentificationTypeDomain identificationType) {
-		this.identificationType = ObjectHelper.getDefault(identificationType, IdentificationTypeDomain.getDefaultValue());
+		this.identificationType = IdentificationTypeDomain.getDefaultValue(identificationType);
 	}
 
 

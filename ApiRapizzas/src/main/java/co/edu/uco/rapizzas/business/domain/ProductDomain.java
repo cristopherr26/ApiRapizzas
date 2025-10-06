@@ -40,12 +40,12 @@ public final class ProductDomain extends Domain {
 	    setSize(size);
 	}
 	
-	static ProductDomain getDeafaultValue() {
+	static ProductDomain getDefaultValue() {
 		return new ProductDomain();
 	}
 	
-	static ProductDomain getDefaultvalue(final ProductDomain product) {
-		return ObjectHelper.getDefault(product, getDeafaultValue());
+	static ProductDomain getDefaultValue(final ProductDomain product) {
+		return ObjectHelper.getDefault(product, getDefaultValue());
 	}
 
 	public String getProductName() {
@@ -69,7 +69,7 @@ public final class ProductDomain extends Domain {
 	}
 
 	public void setCategory(final CategoryDomain category) {
-		this.category = ObjectHelper.getDefault(category, CategoryDomain.getDefaultValue());
+		this.category = CategoryDomain.getDefaultValue(category);
 	}
 
 	public SizeDomain getSize() {
@@ -77,7 +77,7 @@ public final class ProductDomain extends Domain {
 	}
 
 	public void setSize(final SizeDomain size) {
-		this.size = ObjectHelper.getDefault(size, SizeDomain.getDefaultValue());
+		this.size = SizeDomain.getDefaultValue(size);
 	}
 	
 	

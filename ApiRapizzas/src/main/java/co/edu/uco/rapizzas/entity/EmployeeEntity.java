@@ -1,4 +1,4 @@
-package co.edu.uco.rapizzas.business.domain;
+package co.edu.uco.rapizzas.entity;
 
 import java.util.UUID;
 
@@ -7,24 +7,25 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public final class EmployeeDomain extends Domain {
+public final class EmployeeEntity{
 	
+	private UUID employeeId;
 	private String name;
 	private String lastName;
 	private boolean isActive;
-	private IdentificationTypeDomain identificationType;
+	private IdentificationTypeEntity identificationType;
 	private String identificationNumber;
 	private String cellPhoneNumber;
 	private boolean cellPhoneNumberConfirmed;
 	private boolean isAdministrator;
 	private String employeePassword;
 	
-	public EmployeeDomain() {
-		super(UUIDHelper.getUUIDHelper().getDefault());
+	public EmployeeEntity() {
+		setEmployeeId(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(BooleanHelper.getDefault());
 		setCellPhoneNumber(TextHelper.getDefault());
@@ -32,12 +33,12 @@ public final class EmployeeDomain extends Domain {
 		setEmployeePassword(TextHelper.getDefault());
 	}
 	
-	public EmployeeDomain(final UUID id) {
-		super(id);
+	public EmployeeEntity(final UUID id) {
+		setEmployeeId(id);
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(BooleanHelper.getDefault());
 		setCellPhoneNumber(TextHelper.getDefault());
@@ -46,10 +47,10 @@ public final class EmployeeDomain extends Domain {
 	}
 	
 	
-	public EmployeeDomain(final UUID id, final String name, final String lastName, final boolean isActive,
-			final IdentificationTypeDomain identificationType, final String identificationNumber, final String cellPhoneNumber,
+	public EmployeeEntity(final UUID id, final String name, final String lastName, final boolean isActive,
+			final IdentificationTypeEntity identificationType, final String identificationNumber, final String cellPhoneNumber,
 			final boolean cellPhoneNumberConfirmed, final boolean isAdministrator, final String employeePassword) {
-		super(id);
+		setEmployeeId(id);
 		setName(name);
 		setLastName(lastName);
 		setActive(isActive);
@@ -61,11 +62,11 @@ public final class EmployeeDomain extends Domain {
 		setEmployeePassword(employeePassword);
 	}
 
-	static EmployeeDomain getDefaultValue() {
-		return new EmployeeDomain();
+	static EmployeeEntity getDefaultValue() {
+		return new EmployeeEntity();
 	}
 	
-	static EmployeeDomain getDefaultValue(final EmployeeDomain employee) {
+	static EmployeeEntity getDefaultValue(final EmployeeEntity employee) {
 		return ObjectHelper.getDefault(employee, getDefaultValue());
 	}
 
@@ -97,16 +98,6 @@ public final class EmployeeDomain extends Domain {
 
 	public void setActive(final boolean isActive) {
 		this.isActive = BooleanHelper.getDeafult(isActive);
-	}
-
-
-	public IdentificationTypeDomain getIdentificationType() {
-		return identificationType;
-	}
-
-
-	public void setIdentificationType(final IdentificationTypeDomain identificationType) {
-		this.identificationType = IdentificationTypeDomain.getDefaultValue(identificationType);
 	}
 
 
@@ -150,6 +141,23 @@ public final class EmployeeDomain extends Domain {
 	public void setEmployeePassword(final String employeePassword) {
 		this.employeePassword = TextHelper.getDefault(employeePassword);
 	}
+
+	public UUID getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(final UUID employeeId) {
+		this.employeeId = UUIDHelper.getUUIDHelper().getDefault(employeeId);
+	}
+
+	public IdentificationTypeEntity getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(final IdentificationTypeEntity identificationType) {
+		this.identificationType = IdentificationTypeEntity.getDefaultValue(identificationType);
+	}
+
 	
 	
 

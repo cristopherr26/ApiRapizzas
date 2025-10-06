@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class OrderDomain extends Domain {
+public final class OrderDomain extends Domain {
 	
 	private int total;
 	private String comment;
@@ -34,13 +34,13 @@ public class OrderDomain extends Domain {
 	}
 	
 	public OrderDomain(final UUID id, final int total, final String comment, 
-			final EmployeeDomain employee, final StatusDomain status) {
+			final EmployeeDomain employee, final StatusDomain status, final CustomerTableDomain customerTable) {
 		super(id);
 		setTotal(total);
 		setComment(comment);
 		setEmployee(employee);
 		setStatus(status);
-		setCustomerTable(CustomerTableDomain.getDefaultValue());
+		setCustomerTable(customerTable);
 	}
 	
 	static OrderDomain getDefaultValue() {
@@ -72,7 +72,7 @@ public class OrderDomain extends Domain {
 	}
 	
 	public void setEmployee(final EmployeeDomain employee) {
-		this.employee = ObjectHelper.getDefault(employee, EmployeeDomain.getDefaultValue());
+		this.employee = EmployeeDomain.getDefaultValue(employee);
 	}
 	
 	public StatusDomain getStatus() {
@@ -80,7 +80,7 @@ public class OrderDomain extends Domain {
 	}
 	
 	public void setStatus(final StatusDomain status) {
-		this.status = ObjectHelper.getDefault(status, StatusDomain.getDefaultValue());
+		this.status = StatusDomain.getDefaultValue(status);
 	}
 	
 	public CustomerTableDomain getCustomerTable() {
@@ -88,7 +88,7 @@ public class OrderDomain extends Domain {
 	}
 	
 	public void setCustomerTable(final CustomerTableDomain customerTable) {
-		this.customerTable = ObjectHelper.getDefault(customerTable, CustomerTableDomain.getDefaultValue());
+		this.customerTable = CustomerTableDomain.getDefaultValue(customerTable);
 	}
 	
 }

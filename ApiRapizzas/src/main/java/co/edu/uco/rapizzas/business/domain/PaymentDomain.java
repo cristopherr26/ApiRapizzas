@@ -7,7 +7,7 @@ import co.edu.uco.nose.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class PaymentDomain extends Domain {
+public final class PaymentDomain extends Domain {
 	
 	private LocalDate collectionDate;
 	private EmployeeDomain employee;
@@ -56,7 +56,7 @@ public class PaymentDomain extends Domain {
 	}
 	
 	public void setEmployee(final EmployeeDomain employee) {
-		this.employee = ObjectHelper.getDefault(employee, EmployeeDomain.getDefaultValue());
+		this.employee = EmployeeDomain.getDefaultValue(employee);
 	}
 	
 	public OrderDomain getOrder() {
@@ -64,7 +64,7 @@ public class PaymentDomain extends Domain {
 	}
 	
 	public void setOrder(final OrderDomain order) {
-		this.order = ObjectHelper.getDefault(order, OrderDomain.getDefaultValue());
+		this.order = OrderDomain.getDefaultValue(order);
 	}
 	
 }

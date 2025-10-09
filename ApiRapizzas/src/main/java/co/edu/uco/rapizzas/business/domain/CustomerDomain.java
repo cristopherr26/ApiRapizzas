@@ -80,10 +80,10 @@ public final class CustomerDomain extends Domain {
 
 
 	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDeafult(isActive);
+		this.isActive = BooleanHelper.getDefault(isActive);
 	}
 
-
+	
 	public IdentificationTypeDomain getIdentificationType() {
 		return identificationType;
 	}

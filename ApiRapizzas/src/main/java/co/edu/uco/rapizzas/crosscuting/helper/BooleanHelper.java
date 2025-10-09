@@ -12,7 +12,7 @@ public class BooleanHelper {
 		return BOOLEAN_DEFAULT;
 	}
 	
-	public static boolean getDeafult(final boolean value) {
+	public static boolean getDefault(final boolean value) {
 		return ObjectHelper.getDefault(value, getDefault());
 	}
 

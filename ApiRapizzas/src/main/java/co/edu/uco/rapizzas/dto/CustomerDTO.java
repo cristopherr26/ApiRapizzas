@@ -1,4 +1,4 @@
-package co.edu.uco.rapizzas.entity;
+package co.edu.uco.rapizzas.dto;
 
 import java.util.UUID;
 
@@ -7,38 +7,37 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public final class CustomerEntity {
+public class CustomerDTO {
 	
 	private UUID customerId;
 	private String name;
 	private String lastName;
 	private boolean isActive;
-	private IdentificationTypeEntity identificationType;
+	private IdentificationTypeDTO identificationType;
 	private String identificationNumber;
 	
-	public CustomerEntity() {
+	public CustomerDTO() {
 		setCustomerId(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
+		setIdentificationType(IdentificationTypeDTO.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
-	public CustomerEntity(final UUID id) {
-		setCustomerId(id);
+	public CustomerDTO(final UUID customerId) {
+		setCustomerId(customerId);
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
 		setActive(BooleanHelper.getDefault());
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
+		setIdentificationType(IdentificationTypeDTO.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
-	
-	public CustomerEntity(final UUID id, final String name, final String lastName, 
-			final boolean isActive, final IdentificationTypeEntity identificationType, 
+	public CustomerDTO(final UUID customerId, final String name, final String lastName, 
+			final boolean isActive, final IdentificationTypeDTO identificationType, 
 			final String identificationNumber) {
-		setCustomerId(id);
+		setCustomerId(customerId);
 		setName(name);
 		setLastName(lastName);
 		setActive(isActive);
@@ -46,61 +45,61 @@ public final class CustomerEntity {
 		setIdentificationNumber(identificationNumber);
 	}
 	
-	static CustomerEntity getDefaultValue() {
-		return new CustomerEntity();
+	static CustomerDTO getDefaultValue() {
+		return new CustomerDTO();
 	}
 	
-	static CustomerEntity getDefaultValue(final CustomerEntity customer) {
+	static CustomerDTO getDefaultValue(final CustomerDTO customer) {
 		return ObjectHelper.getDefault(customer, getDefaultValue());
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(final String name) {
-		this.name = TextHelper.getDefaultWithTrim(name);
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(final String lastName) {
-		this.lastName = TextHelper.getDefaultWithTrim(lastName);
-	}
-
-	public boolean isActive() {
-		return isActive;
-	}
-
-	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDefault(isActive);
-	}
-
-	public String getIdentificationNumber() {
-		return identificationNumber;
-	}
-
-	public void setIdentificationNumber(final String identificationNumber) {
-		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
-	}
-
+	
 	public UUID getCustomerId() {
 		return customerId;
 	}
-
+	
 	public void setCustomerId(final UUID customerId) {
-		this.customerId = UUIDHelper.getUUIDHelper().getDefault(customerId);
+		this.customerId = ObjectHelper.getDefault(customerId, UUIDHelper.getUUIDHelper().getDefault());
 	}
-
-	public IdentificationTypeEntity getIdentificationType() {
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(final String name) {
+		this.name = TextHelper.getDefaultWithTrim(name);
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public void setLastName(final String lastName) {
+		this.lastName = TextHelper.getDefaultWithTrim(lastName);
+	}
+	
+	public boolean isActive() {
+		return isActive;
+	}
+	
+	public void setActive(final boolean isActive) {
+		this.isActive = BooleanHelper.getDefault(isActive);
+	}
+	
+	public IdentificationTypeDTO getIdentificationType() {
 		return identificationType;
 	}
-
-	public void setIdentificationType(final IdentificationTypeEntity 
-			identificationType) {
-		this.identificationType = IdentificationTypeEntity.getDefaultValue(identificationType);
+	
+	public void setIdentificationType(final IdentificationTypeDTO identificationType) {
+		this.identificationType = ObjectHelper.getDefault(identificationType, 
+				IdentificationTypeDTO.getDefaultValue());
+	}
+	
+	public String getIdentificationNumber() {
+		return identificationNumber;
+	}
+	
+	public void setIdentificationNumber(final String identificationNumber) {
+		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
 	}
 
 }

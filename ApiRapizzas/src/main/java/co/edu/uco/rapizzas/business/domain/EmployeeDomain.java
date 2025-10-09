@@ -98,7 +98,7 @@ public final class EmployeeDomain extends Domain {
 
 
 	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDeafult(isActive);
+		this.isActive = BooleanHelper.getDefault(isActive);
 	}
 
 
@@ -134,7 +134,7 @@ public final class EmployeeDomain extends Domain {
 	}
 
 	public void setCellPhoneNumberConfirmed(final boolean cellPhoneNumberConfirmed) {
-		this.cellPhoneNumberConfirmed = BooleanHelper.getDeafult(cellPhoneNumberConfirmed);
+		this.cellPhoneNumberConfirmed = BooleanHelper.getDefault(cellPhoneNumberConfirmed);
 	}
 
 	public boolean isAdministrator() {
@@ -142,7 +142,7 @@ public final class EmployeeDomain extends Domain {
 	}
 
 	public void setAdministrator(final boolean isAdministrator) {
-		this.isAdministrator = BooleanHelper.getDeafult(isAdministrator);
+		this.isAdministrator = BooleanHelper.getDefault(isAdministrator);
 	}
 
 	public String getEmployeePassword() {

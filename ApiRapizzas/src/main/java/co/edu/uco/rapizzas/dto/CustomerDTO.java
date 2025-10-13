@@ -2,7 +2,6 @@ package co.edu.uco.rapizzas.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.rapizzas.crosscuting.helper.BooleanHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
@@ -13,6 +12,7 @@ public class CustomerDTO {
 	private String name;
 	private String lastName;
 	private boolean isActive;
+	private boolean isActiveDefaultValue;
 	private IdentificationTypeDTO identificationType;
 	private String identificationNumber;
 	
@@ -20,7 +20,8 @@ public class CustomerDTO {
 		setCustomerId(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeDTO.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -29,7 +30,8 @@ public class CustomerDTO {
 		setCustomerId(customerId);
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeDTO.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -82,7 +84,8 @@ public class CustomerDTO {
 	}
 	
 	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDefault(isActive);
+		this.isActive = isActive;
+		setActiveDefaultValue(false);
 	}
 	
 	public IdentificationTypeDTO getIdentificationType() {
@@ -101,5 +104,15 @@ public class CustomerDTO {
 	public void setIdentificationNumber(final String identificationNumber) {
 		this.identificationNumber = TextHelper.getDefaultWithTrim(identificationNumber);
 	}
+
+	public boolean isActiveDefaultValue() {
+		return isActiveDefaultValue;
+	}
+
+	private void setActiveDefaultValue(final boolean isActiveDefaultValue) {
+		this.isActiveDefaultValue = isActiveDefaultValue;
+	}
+	
+	
 
 }

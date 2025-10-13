@@ -2,7 +2,6 @@ package co.edu.uco.rapizzas.entity;
 
 import java.util.UUID;
 
-import co.edu.uco.rapizzas.crosscuting.helper.BooleanHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
@@ -13,6 +12,7 @@ public final class CustomerEntity {
 	private String name;
 	private String lastName;
 	private boolean isActive;
+	private boolean isActiveDefaultValue;
 	private IdentificationTypeEntity identificationType;
 	private String identificationNumber;
 	
@@ -20,7 +20,8 @@ public final class CustomerEntity {
 		setCustomerId(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -29,7 +30,8 @@ public final class CustomerEntity {
 		setCustomerId(id);
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -75,7 +77,17 @@ public final class CustomerEntity {
 	}
 
 	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDefault(isActive);
+		this.isActive = isActive;
+		setActiveDefaultValue(false);
+	}
+	
+
+	public boolean isActiveDefaultValue() {
+		return isActiveDefaultValue;
+	}
+
+	private void setActiveDefaultValue(final boolean isActiveDefaultValue) {
+		this.isActiveDefaultValue = isActiveDefaultValue;
 	}
 
 	public String getIdentificationNumber() {

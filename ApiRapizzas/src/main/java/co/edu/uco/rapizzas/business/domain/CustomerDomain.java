@@ -2,7 +2,6 @@ package co.edu.uco.rapizzas.business.domain;
 
 import java.util.UUID;
 
-import co.edu.uco.rapizzas.crosscuting.helper.BooleanHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
@@ -12,6 +11,7 @@ public final class CustomerDomain extends Domain {
 	private String name;
 	private String lastName;
 	private boolean isActive;
+	private boolean isActiveDefaultValue;
 	private IdentificationTypeDomain identificationType;
 	private String identificationNumber;
 	
@@ -19,7 +19,8 @@ public final class CustomerDomain extends Domain {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -28,7 +29,8 @@ public final class CustomerDomain extends Domain {
 		super(id);
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
-		setActive(BooleanHelper.getDefault());
+		setActive(false);
+		setActiveDefaultValue(true);
 		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
 		setIdentificationNumber(TextHelper.getDefault());
 	}
@@ -80,10 +82,19 @@ public final class CustomerDomain extends Domain {
 
 
 	public void setActive(final boolean isActive) {
-		this.isActive = BooleanHelper.getDefault(isActive);
+		this.isActive = isActive;
+		setActiveDefaultValue(false);
 	}
 
 	
+	public boolean isActiveDefaultValue() {
+		return isActiveDefaultValue;
+	}
+
+	private void setActiveDefaultValue(final boolean isActiveDefaultValue) {
+		this.isActiveDefaultValue = isActiveDefaultValue;
+	}
+
 	public IdentificationTypeDomain getIdentificationType() {
 		return identificationType;
 	}

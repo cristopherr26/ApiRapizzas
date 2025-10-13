@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class DateHelper {
 	
-	private static final LocalDate DATE_DEFAULT = LocalDate.of(0000, 00, 00);
+	private static final LocalDate DATE_DEFAULT = LocalDate.of(2500, 12, 31);
 	
 	private DateHelper() {
 		

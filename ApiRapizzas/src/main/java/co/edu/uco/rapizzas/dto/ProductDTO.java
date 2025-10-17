@@ -77,7 +77,7 @@ public class ProductDTO {
 	}
 	
 	public void setCategory(final CategoryDTO category) {
-		this.category = ObjectHelper.getDefault(category, CategoryDTO.getDefaultValue());
+		this.category = CategoryDTO.getDefaultValue(category);
 	}
 	
 	public SizeDTO getSize() {
@@ -85,7 +85,7 @@ public class ProductDTO {
 	}
 	
 	public void setSize(final SizeDTO size) {
-		this.size = ObjectHelper.getDefault(size, SizeDTO.getDefaultValue());
+		this.size = SizeDTO.getDefaultValue(size);
 	}
 	
 }

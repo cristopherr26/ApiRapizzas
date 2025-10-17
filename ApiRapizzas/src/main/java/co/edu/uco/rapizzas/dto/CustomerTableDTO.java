@@ -66,7 +66,7 @@ public class CustomerTableDTO {
 	}
 	
 	public void setTable(final TableDTO table) {
-		this.table = ObjectHelper.getDefault(table, TableDTO.getDefaultValue());
+		this.table = TableDTO.getDefaultValue(table);
 	}
 	
 	public CustomerDTO getCustomer() {
@@ -74,7 +74,7 @@ public class CustomerTableDTO {
 	}
 	
 	public void setCustomer(final CustomerDTO customer) {
-		this.customer = ObjectHelper.getDefault(customer, CustomerDTO.getDefaultValue());
+		this.customer = CustomerDTO.getDefaultValue(customer);
 	}
 
 }

@@ -82,7 +82,7 @@ public class OrderDTO {
 	}
 	
 	public void setEmployee(final EmployeeDTO employee) {
-		this.employee = ObjectHelper.getDefault(employee, EmployeeDTO.getDefaultValue());
+		this.employee = EmployeeDTO.getDefaultValue(employee);
 	}
 	
 	public StatusDTO getStatus() {
@@ -90,7 +90,7 @@ public class OrderDTO {
 	}
 	
 	public void setStatus(final StatusDTO status) {
-		this.status = ObjectHelper.getDefault(status, StatusDTO.getDefaultValue());
+		this.status = StatusDTO.getDefaultValue(status);
 	}
 	
 	public CustomerTableDTO getCustomerTable() {
@@ -98,7 +98,7 @@ public class OrderDTO {
 	}
 	
 	public void setCustomerTable(final CustomerTableDTO customerTable) {
-		this.customerTable = ObjectHelper.getDefault(customerTable, CustomerTableDTO.getDefaultValue());
+		this.customerTable = CustomerTableDTO.getDefaultValue(customerTable);
 	}
 	
 }

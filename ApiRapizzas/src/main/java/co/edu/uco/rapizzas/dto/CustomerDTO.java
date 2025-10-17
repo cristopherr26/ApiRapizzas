@@ -93,8 +93,7 @@ public class CustomerDTO {
 	}
 	
 	public void setIdentificationType(final IdentificationTypeDTO identificationType) {
-		this.identificationType = ObjectHelper.getDefault(identificationType, 
-				IdentificationTypeDTO.getDefaultValue());
+		this.identificationType = IdentificationTypeDTO.getDefaultValue(identificationType);
 	}
 	
 	public String getIdentificationNumber() {

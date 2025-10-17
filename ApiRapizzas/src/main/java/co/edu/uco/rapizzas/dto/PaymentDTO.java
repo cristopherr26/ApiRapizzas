@@ -65,7 +65,7 @@ public class PaymentDTO {
 	}
 	
 	public void setEmployee(final EmployeeDTO employee) {
-		this.employee = ObjectHelper.getDefault(employee, EmployeeDTO.getDefaultValue());
+		this.employee = EmployeeDTO.getDefaultValue(employee);
 	}
 	
 	public OrderDTO getOrder() {
@@ -73,7 +73,7 @@ public class PaymentDTO {
 	}
 	
 	public void setOrder(final OrderDTO order) {
-		this.order = ObjectHelper.getDefault(order, OrderDTO.getDefaultValue());
+		this.order = OrderDTO.getDefaultValue(order);
 	}
 	
 }

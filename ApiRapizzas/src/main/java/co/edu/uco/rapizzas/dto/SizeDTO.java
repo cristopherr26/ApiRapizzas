@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class SizeDTO {
+public final class SizeDTO {
 	
 	private UUID sizeId;
 	private String sizeName;

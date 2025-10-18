@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class CategoryDTO {
+public final class CategoryDTO {
 	
 	private UUID categoryId;
 	private String categoryName;

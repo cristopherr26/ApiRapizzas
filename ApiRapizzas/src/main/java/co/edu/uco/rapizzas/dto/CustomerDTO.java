@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class CustomerDTO {
+public final class CustomerDTO {
 	
 	private UUID customerId;
 	private String name;

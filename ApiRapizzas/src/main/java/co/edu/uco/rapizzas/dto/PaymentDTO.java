@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class PaymentDTO {
+public final class PaymentDTO {
 	
 	private UUID paymentId;
 	private LocalDate collectionDate;

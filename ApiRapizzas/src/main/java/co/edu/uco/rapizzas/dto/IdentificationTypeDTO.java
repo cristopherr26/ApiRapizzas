@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class IdentificationTypeDTO {
+public final class IdentificationTypeDTO {
 	
 	private UUID identificationTypeId;
 	private String identificationTypeName;

@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class ProductDTO {
+public final class ProductDTO {
 	
 	private UUID productId;
 	private String productName;

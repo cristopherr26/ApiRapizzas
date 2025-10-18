@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 
-public class CustomerTableDTO {
+public final class CustomerTableDTO {
 	
 	private UUID customerTableId;
 	private LocalDate orderDate;

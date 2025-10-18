@@ -6,7 +6,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class TableDTO {
+public final class TableDTO {
 	
 	private UUID tableId;
 	private int tableNumber;

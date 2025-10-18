@@ -7,7 +7,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
-public class OrderDTO {
+public final class OrderDTO {
 	
 	private UUID orderId;
 	private int total;

@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.OrderEntity;
 
 public final class OrderPostgreSqlDAO extends SqlConnection implements OrderDAO {
 
-	protected OrderPostgreSqlDAO(final Connection connection) {
+	public OrderPostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

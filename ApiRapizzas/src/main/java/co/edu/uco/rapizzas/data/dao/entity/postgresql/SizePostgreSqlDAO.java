@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.SizeEntity;
 
 public final class SizePostgreSqlDAO extends SqlConnection implements SizeDAO {
 
-	protected SizePostgreSqlDAO(final Connection connection) {
+	public SizePostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

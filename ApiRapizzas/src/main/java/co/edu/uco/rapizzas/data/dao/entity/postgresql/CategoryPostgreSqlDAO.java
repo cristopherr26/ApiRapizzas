@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.CategoryEntity;
 
 public final class CategoryPostgreSqlDAO extends SqlConnection implements CategoryDAO {
 
-	protected CategoryPostgreSqlDAO(final Connection connection) {
+	public CategoryPostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

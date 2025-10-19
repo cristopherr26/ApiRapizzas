@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.PaymentEntity;
 
 public final class PaymentPostgreSqlDAO extends SqlConnection implements PaymentDAO {
 
-	protected PaymentPostgreSqlDAO(final Connection connection) {
+	public PaymentPostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.IdentificationTypeEntity;
 
 public final class IdentificationTypePostgreSqlDAO extends SqlConnection implements IdentificationTypeDAO {
 
-	protected IdentificationTypePostgreSqlDAO(final Connection connection) {
+	public IdentificationTypePostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.CustomerTableEntity;
 
 public final class CustomerTablePostgreSqlDAO extends SqlConnection implements CustomerTableDAO{
 
-	protected CustomerTablePostgreSqlDAO(final Connection connection) {
+	public CustomerTablePostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

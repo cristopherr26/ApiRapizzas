@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.entity.StatusEntity;
 
 public final class StatusPostgreSqlDAO extends SqlConnection implements StatusDAO {
 
-	protected StatusPostgreSqlDAO(final Connection connection) {
+	public StatusPostgreSqlDAO(final Connection connection) {
 		super(connection);
 	}
 

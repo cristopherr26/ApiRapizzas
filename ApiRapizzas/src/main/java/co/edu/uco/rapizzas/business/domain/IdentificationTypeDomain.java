@@ -35,7 +35,7 @@ public final class IdentificationTypeDomain extends Domain {
 		return ObjectHelper.getDefault(identifiactionType, getDefaultValue());
 	}
 
-	public String getName() {
+	public String getIdentificationTypeName() {
 		return identificationTypeName;
 	}
 

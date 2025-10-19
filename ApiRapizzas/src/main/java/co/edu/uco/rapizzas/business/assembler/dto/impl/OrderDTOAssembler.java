@@ -7,15 +7,26 @@ import co.edu.uco.rapizzas.business.domain.OrderDomain;
 import co.edu.uco.rapizzas.dto.OrderDTO;
 
 public final class OrderDTOAssembler implements DTOAssembler<OrderDTO, OrderDomain>{
-
+	
+	private static final DTOAssembler<OrderDTO, OrderDomain> instance =
+			new OrderDTOAssembler();
+	
+	private OrderDTOAssembler() {
+		
+	}
+	
+	public static DTOAssembler<OrderDTO, OrderDomain> getOrderDTOAssembler() {
+		return instance;
+	}
+	
 	@Override
-	public OrderDTO toDTO(OrderDomain domain) {
+	public OrderDTO toDTO(final OrderDomain domain) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public OrderDomain toDomain(OrderDTO dto) {
+	public OrderDomain toDomain(final OrderDTO dto) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -4,20 +4,33 @@ import java.util.List;
 
 import co.edu.uco.rapizzas.business.assembler.dto.DTOAssembler;
 import co.edu.uco.rapizzas.business.domain.IdentificationTypeDomain;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.dto.IdentificationTypeDTO;
 
 public final class IdentificationTypeDTOAssembler implements DTOAssembler<IdentificationTypeDTO, IdentificationTypeDomain>{
-
+	
+	private static final DTOAssembler<IdentificationTypeDTO, IdentificationTypeDomain> instance =
+			new IdentificationTypeDTOAssembler();
+	
+	private IdentificationTypeDTOAssembler() {
+		
+	}
+	
+	public static DTOAssembler<IdentificationTypeDTO, IdentificationTypeDomain> getIdentificationTypeDTOAssembler() {
+		return instance;
+	}
+	
 	@Override
-	public IdentificationTypeDTO toDTO(IdentificationTypeDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
+	public IdentificationTypeDTO toDTO(final IdentificationTypeDomain domain) {
+		var domainTmp = ObjectHelper.getDefault(domain, new IdentificationTypeDomain(UUIDHelper.getUUIDHelper().getDefault()));
+		return new IdentificationTypeDTO(domainTmp.getId(), domainTmp.getIdentificationTypeName());
 	}
 
 	@Override
-	public IdentificationTypeDomain toDomain(IdentificationTypeDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
+	public IdentificationTypeDomain toDomain(final IdentificationTypeDTO dto) {
+		var dtoTmp = ObjectHelper.getDefault(dto, new IdentificationTypeDTO());
+		return new IdentificationTypeDomain(dtoTmp.getIdentificationTypeId(), dtoTmp.getIdentificationTypeName());
 	}
 
 	@Override

@@ -40,6 +40,11 @@ public final class CustomerDTOAssembler implements DTOAssembler<CustomerDTO, Cus
 
 	@Override
 	public List<CustomerDTO> toDTO(final List<CustomerDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+		
 		var customerDtoList = new ArrayList<CustomerDTO>();
 		
 		for (var customerDomain : domainList) {

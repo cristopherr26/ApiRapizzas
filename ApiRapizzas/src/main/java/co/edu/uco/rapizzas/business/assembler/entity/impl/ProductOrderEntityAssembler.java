@@ -26,7 +26,8 @@ public final class ProductOrderEntityAssembler implements EntityAssembler<Produc
 		var domainTmp = ObjectHelper.getDefault(domain, new ProductOrderDomain(UUIDHelper.getUUIDHelper().getDefault()));
 		var orderTmp = getOrderEntityAssembler().toEntity(domainTmp.getOrder());
 		var productTmp = getProductEntityAssembler().toEntity(domainTmp.getProduct());
-		return new ProductOrderEntity(domainTmp.getId(), domainTmp.getAmount(), productTmp, orderTmp);
+		return new ProductOrderEntity(domainTmp.getId(), domainTmp.getAmount(), 
+				productTmp, orderTmp);
 	}
 
 	@Override
@@ -34,9 +35,8 @@ public final class ProductOrderEntityAssembler implements EntityAssembler<Produc
 		var entityTmp = ObjectHelper.getDefault(entity, new ProductOrderEntity());
 		var orderDomainTmp = getOrderEntityAssembler().toDomain(entityTmp.getOrder());
 		var productDomainTmp = getProductEntityAssembler().toDomain(entityTmp.getProduct());
-		return new ProductOrderDomain(entityTmp.getProductOrderId(), entityTmp.getAmount(), productDomainTmp, orderDomainTmp);
+		return new ProductOrderDomain(entityTmp.getProductOrderId(), entityTmp.getAmount(), 
+				productDomainTmp, orderDomainTmp);
 	}
-	
-
 
 }

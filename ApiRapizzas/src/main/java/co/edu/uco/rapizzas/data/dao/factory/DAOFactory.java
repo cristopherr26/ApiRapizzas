@@ -122,5 +122,6 @@ public abstract class DAOFactory {
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 	}
+	
 }
 	

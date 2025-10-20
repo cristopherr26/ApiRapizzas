@@ -60,7 +60,7 @@ public final class CustomerDTO {
 	}
 	
 	public void setCustomerId(final UUID customerId) {
-		this.customerId = ObjectHelper.getDefault(customerId, UUIDHelper.getUUIDHelper().getDefault());
+		this.customerId = UUIDHelper.getUUIDHelper().getDefault(customerId);
 	}
 	
 	public String getName() {

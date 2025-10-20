@@ -11,10 +11,6 @@ public final class TableDTO {
 	private UUID tableId;
 	private int tableNumber;
 	
-	public UUID getTableId() {
-		return tableId;
-	}
-	
 	public TableDTO() {
 		setTableId(UUIDHelper.getUUIDHelper().getDefault());
 		setTableNumber(IntegerHelper.getDefault());
@@ -38,8 +34,12 @@ public final class TableDTO {
 		return ObjectHelper.getDefault(table, getDefaultValue());
 	}
 	
+	public UUID getTableId() {
+		return tableId;
+	}
+	
 	public void setTableId(final UUID tableId) {
-		this.tableId = ObjectHelper.getDefault(tableId, UUIDHelper.getUUIDHelper().getDefault());
+		this.tableId = UUIDHelper.getUUIDHelper().getDefault(tableId);
 	}
 	
 	public int getTableNumber() {

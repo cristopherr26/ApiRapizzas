@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.data.dao.RetrieveDAO;
 import co.edu.uco.rapizzas.data.dao.UpdateDAO;
 import co.edu.uco.rapizzas.entity.ProductOrderEntity;
 
-public interface ProductOrderDAO extends CreateDAO<ProductOrderEntity>, RetrieveDAO<ProductOrderEntity>,
-	UpdateDAO<ProductOrderEntity>, DeleteDAO<UUID> {
+public interface ProductOrderDAO extends CreateDAO<ProductOrderEntity>, 
+	RetrieveDAO<ProductOrderEntity>,UpdateDAO<ProductOrderEntity>, DeleteDAO<UUID> {
 
 }

@@ -36,6 +36,11 @@ public final class CategoryDTOAssembler implements DTOAssembler<CategoryDTO, Cat
 
 	@Override
 	public List<CategoryDTO> toDTO(final List<CategoryDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+		
 		var categoryDtoList = new ArrayList<CategoryDTO>();
 		
 		for (var categoryDomain : domainList) {

@@ -10,7 +10,7 @@ public final class TableDomain extends Domain{
 	
 	private int tableNumber;
 	
-	public TableDomain() {
+	TableDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setTableNumber(IntegerHelper.getDefault());
 	}

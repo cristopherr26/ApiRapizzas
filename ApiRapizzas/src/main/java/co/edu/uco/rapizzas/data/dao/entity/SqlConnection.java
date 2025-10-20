@@ -22,5 +22,4 @@ public abstract class SqlConnection {
 		this.connection = connection;
 	}
 	
-	
 }

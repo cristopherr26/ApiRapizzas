@@ -5,7 +5,7 @@ import co.edu.uco.rapizzas.data.dao.RetrieveDAO;
 import co.edu.uco.rapizzas.data.dao.UpdateDAO;
 import co.edu.uco.rapizzas.entity.CustomerEntity;
 
-public interface CustomerDAO extends CreateDAO<CustomerEntity>, RetrieveDAO<CustomerEntity>,
-    UpdateDAO<CustomerEntity>{
+public interface CustomerDAO extends CreateDAO<CustomerEntity>,
+	RetrieveDAO<CustomerEntity>, UpdateDAO<CustomerEntity>{
 
 }

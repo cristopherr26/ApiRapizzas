@@ -39,7 +39,7 @@ public final class SizeDTO {
 	}
 	
 	public void setSizeId(final UUID sizeId) {
-		this.sizeId = ObjectHelper.getDefault(sizeId, UUIDHelper.getUUIDHelper().getDefault());
+		this.sizeId = UUIDHelper.getUUIDHelper().getDefault(sizeId);
 	}
 	
 	public String getSizeName() {
@@ -50,6 +50,4 @@ public final class SizeDTO {
 		this.sizeName = TextHelper.getDefaultWithTrim(sizeName);
 	}
 	
-	
-
 }

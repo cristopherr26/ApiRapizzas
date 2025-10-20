@@ -30,5 +30,4 @@ public final class CategoryEntityAssembler implements EntityAssembler<CategoryEn
 		return new CategoryDomain(entityTmp.getIdCategory(), entityTmp.getNameCategory());
 	}
 	
-
 }

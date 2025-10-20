@@ -10,7 +10,7 @@ public final class StatusDomain extends Domain{
 	
 	private String statusName;
 	
-	public StatusDomain() {
+	StatusDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setStatusName(TextHelper.getDefault());
 	}

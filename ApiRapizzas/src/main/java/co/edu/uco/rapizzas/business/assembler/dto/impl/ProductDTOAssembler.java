@@ -43,6 +43,11 @@ public final class ProductDTOAssembler implements DTOAssembler<ProductDTO, Produ
 
 	@Override
 	public List<ProductDTO> toDTO(final List<ProductDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+		
 		var productDtoList = new ArrayList<ProductDTO>();
 		
 		for (var productDomain : domainList) {

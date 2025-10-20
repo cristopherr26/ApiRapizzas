@@ -39,7 +39,7 @@ public final class IdentificationTypeDTO {
 	}
 	
 	public void setIdentificationTypeId(final UUID identificationTypeId) {
-		this.identificationTypeId = ObjectHelper.getDefault(identificationTypeId, UUIDHelper.getUUIDHelper().getDefault());
+		this.identificationTypeId = UUIDHelper.getUUIDHelper().getDefault(identificationTypeId);
 	}
 	
 	public String getIdentificationTypeName() {

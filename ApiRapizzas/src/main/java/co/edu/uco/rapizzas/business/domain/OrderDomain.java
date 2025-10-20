@@ -2,7 +2,7 @@ package co.edu.uco.rapizzas.business.domain;
 
 import java.util.UUID;
 
-import co.edu.uco.nose.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
@@ -15,7 +15,7 @@ public final class OrderDomain extends Domain {
 	private StatusDomain status;
 	private CustomerTableDomain customerTable;
 	
-	public OrderDomain() {
+	OrderDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setTotal(IntegerHelper.getDefault());
 		setComment(TextHelper.getDefault());

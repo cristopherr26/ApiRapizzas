@@ -10,19 +10,19 @@ public final class CategoryDomain extends Domain {
 	
 	private String categoryName;
 	
-	public CategoryDomain() {
+	CategoryDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
-		setNameCategory(TextHelper.getDefault());	
+		setCategoryName(TextHelper.getDefault());	
 	}
 	
 	public CategoryDomain(final UUID id) {
 		super(id);
-		setNameCategory(TextHelper.getDefault());
+		setCategoryName(TextHelper.getDefault());
 	}
 	
 	public CategoryDomain(final UUID id, final String nameCategory) {
 		super(id);
-		setNameCategory(nameCategory);
+		setCategoryName(nameCategory);
 	}
 	
 	static CategoryDomain getDefaultValue() {
@@ -37,7 +37,7 @@ public final class CategoryDomain extends Domain {
 		return categoryName;
 	}
 
-	public void setNameCategory(final String nameCategory) {
+	public void setCategoryName(final String nameCategory) {
 		this.categoryName = TextHelper.getDefaultWithTrim(nameCategory);
 	}
 

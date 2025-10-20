@@ -28,7 +28,8 @@ private static final EntityAssembler<OrderEntity, OrderDomain> instance = new Or
 		var customerTableTmp = getCustomerTableEntityAssembler().toEntity(domainTmp.getCustomerTable());
 		var employeeTmp = getEmployeeEntityAssembler().toEntity(domainTmp.getEmployee());
 		var statusTmp = getStatusEntityAssembler().toEntity(domainTmp.getStatus());
-		return new OrderEntity(domainTmp.getId(), domainTmp.getTotal(), domainTmp.getComment(), employeeTmp, statusTmp, customerTableTmp);
+		return new OrderEntity(domainTmp.getId(), domainTmp.getTotal(), domainTmp.getComment(), 
+				employeeTmp, statusTmp, customerTableTmp);
 	}
 
 	@Override
@@ -37,8 +38,8 @@ private static final EntityAssembler<OrderEntity, OrderDomain> instance = new Or
 		var customerTableDomainTmp = getCustomerTableEntityAssembler().toDomain(entityTmp.getCustomerTable());
 		var statusDomainTmp = getStatusEntityAssembler().toDomain(entityTmp.getStatus());
 		var employeeDomainTmp = getEmployeeEntityAssembler().toDomain(entityTmp.getEmployee());
-		return new OrderDomain(entityTmp.getOrderId(), entityTmp.getTotal(), entityTmp.getComment(), employeeDomainTmp, statusDomainTmp, customerTableDomainTmp);
+		return new OrderDomain(entityTmp.getOrderId(), entityTmp.getTotal(), entityTmp.getComment(), 
+				employeeDomainTmp, statusDomainTmp, customerTableDomainTmp);
 	}
-	
 	
 }

@@ -10,7 +10,7 @@ public final class IdentificationTypeDomain extends Domain {
 	
 	private String identificationTypeName;
 	
-	public IdentificationTypeDomain() {
+	IdentificationTypeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setIdentificationTypeName(TextHelper.getDefault());
 	}

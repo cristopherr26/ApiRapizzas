@@ -21,7 +21,7 @@ public final class EmployeeDomain extends Domain {
 	private boolean isAdministratorDefaultValue;
 	private String employeePassword;
 	
-	public EmployeeDomain() {
+	EmployeeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());
@@ -187,6 +187,5 @@ public final class EmployeeDomain extends Domain {
 	private void setAdministratorDefaultValue(final boolean isAdministratorDefaultValue) {
 		this.isAdministratorDefaultValue = isAdministratorDefaultValue;
 	}
-	
 	
 }

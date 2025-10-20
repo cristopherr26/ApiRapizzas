@@ -12,17 +12,17 @@ public final class CategoryEntity {
 	private String categoryName;
 	
 	public CategoryEntity() {
-		setcategoryId(UUIDHelper.getUUIDHelper().getDefault());
+		setCategoryId(UUIDHelper.getUUIDHelper().getDefault());
 		setNameCategory(TextHelper.getDefault());	
 	}
 	
 	public CategoryEntity(final UUID id) {
-		setcategoryId(id);
+		setCategoryId(id);
 		setNameCategory(TextHelper.getDefault());
 	}
 	
 	public CategoryEntity(final UUID id, final String nameCategory) {
-		setcategoryId(id);
+		setCategoryId(id);
 		setNameCategory(nameCategory);
 	}
 	
@@ -38,7 +38,7 @@ public final class CategoryEntity {
 		return categoryId;
 	}
 
-	public void setcategoryId(final UUID categoryId) {
+	public void setCategoryId(final UUID categoryId) {
 		this.categoryId = UUIDHelper.getUUIDHelper().getDefault(categoryId);
 	}
 

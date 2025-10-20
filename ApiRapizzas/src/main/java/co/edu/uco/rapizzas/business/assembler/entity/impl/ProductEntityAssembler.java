@@ -26,7 +26,8 @@ public final class ProductEntityAssembler implements EntityAssembler<ProductEnti
 		var domainTmp = ObjectHelper.getDefault(domain, new ProductDomain(UUIDHelper.getUUIDHelper().getDefault()));
 		var sizeTmp = getSizeEntityAssembler().toEntity(domainTmp.getSize());
 		var categoryTmp = getCategoryEntityAssembler().toEntity(domainTmp.getCategory());
-		return new ProductEntity(domainTmp.getId(), domainTmp.getProductName(), domainTmp.getPrice(), categoryTmp, sizeTmp);
+		return new ProductEntity(domainTmp.getId(), domainTmp.getProductName(), 
+				domainTmp.getPrice(), categoryTmp, sizeTmp);
 	}
 
 	@Override
@@ -34,8 +35,8 @@ public final class ProductEntityAssembler implements EntityAssembler<ProductEnti
 		var entityTmp = ObjectHelper.getDefault(entity, new ProductEntity());
 		var sizeDomainTmp = getSizeEntityAssembler().toDomain(entityTmp.getSize());
 		var categoryDomainTmp = getCategoryEntityAssembler().toDomain(entityTmp.getCategory());
-		return new ProductDomain(entityTmp.getProductId(), entityTmp.getProductName(), entityTmp.getPrice(), categoryDomainTmp, sizeDomainTmp);
+		return new ProductDomain(entityTmp.getProductId(), entityTmp.getProductName(), 
+				entityTmp.getPrice(), categoryDomainTmp, sizeDomainTmp);
 	}
-	
 
 }

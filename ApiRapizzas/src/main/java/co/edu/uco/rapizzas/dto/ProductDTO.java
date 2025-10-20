@@ -53,7 +53,7 @@ public final class ProductDTO {
 	}
 	
 	public void setProductId(final UUID productId) {
-		this.productId = ObjectHelper.getDefault(productId, UUIDHelper.getUUIDHelper().getDefault());
+		this.productId = UUIDHelper.getUUIDHelper().getDefault(productId);
 	}
 	
 	public String getProductName() {

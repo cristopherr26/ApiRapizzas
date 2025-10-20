@@ -58,6 +58,4 @@ public final class RapizzasException extends RuntimeException {
 		return serialVersionUID;
 	}
 	
-	
-
 }

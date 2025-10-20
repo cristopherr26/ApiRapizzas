@@ -40,6 +40,11 @@ public final class EmployeeDTOAssembler implements DTOAssembler<EmployeeDTO, Emp
 
 	@Override
 	public List<EmployeeDTO> toDTO(final List<EmployeeDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+
 		var employeeDtoList = new ArrayList<EmployeeDTO>();
 		
 		for (var employeeDomain : domainList) {

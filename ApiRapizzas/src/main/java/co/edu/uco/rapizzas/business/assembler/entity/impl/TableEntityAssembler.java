@@ -29,7 +29,5 @@ public final class TableEntityAssembler implements EntityAssembler<TableEntity, 
 		var entityTmp = ObjectHelper.getDefault(entity, new TableEntity());
 		return new TableDomain(entityTmp.getTableId(), entityTmp.getTableNumber());
 	}
-	
-
 
 }

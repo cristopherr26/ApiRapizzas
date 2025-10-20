@@ -30,6 +30,4 @@ public final class StatusEntityAssembler implements EntityAssembler<StatusEntity
 		return new StatusDomain(entityTmp.getStatusId(), entityTmp.getStatusName());
 	}
 	
-	
-
 }

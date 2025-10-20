@@ -33,7 +33,5 @@ public final class CustomerEntityAssembler implements EntityAssembler<CustomerEn
 		var identificationTypeDomainTmp = getIdentificationTypeEntityAssembler().toDomain(entityTmp.getIdentificationType());
 		return new CustomerDomain(entityTmp.getCustomerId(), entityTmp.getName(), entityTmp.getLastName(), entityTmp.isActive(), identificationTypeDomainTmp, entityTmp.getIdentificationNumber());
 	}
-	
-	
 
 }

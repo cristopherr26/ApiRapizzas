@@ -13,7 +13,7 @@ public final class CustomerTableDomain extends Domain {
 	private TableDomain table;
 	private CustomerDomain customer;
 	
-	public CustomerTableDomain() {
+	CustomerTableDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setOrderDate(DateHelper.getDefault());
 		setTable(TableDomain.getDefaultValue());

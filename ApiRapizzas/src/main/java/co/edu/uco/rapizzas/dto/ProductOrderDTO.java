@@ -2,8 +2,8 @@ package co.edu.uco.rapizzas.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.nose.crosscuting.helper.ObjectHelper;
-import co.edu.uco.nose.crosscuting.helper.UUIDHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 
 public final class ProductOrderDTO {
@@ -48,7 +48,7 @@ public final class ProductOrderDTO {
 	}
 	
 	public void setProductOrderId(final UUID productOrderId) {
-		this.productOrderId = ObjectHelper.getDefault(productOrderId, UUIDHelper.getUUIDHelper().getDefault());
+		this.productOrderId = UUIDHelper.getUUIDHelper().getDefault(productOrderId);
 	}
 	
 	public int getAmount() {

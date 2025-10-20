@@ -36,6 +36,11 @@ public final class StatusDTOAssembler implements DTOAssembler<StatusDTO, StatusD
 
 	@Override
 	public List<StatusDTO> toDTO(final List<StatusDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+		
 		var statusDtoList = new ArrayList<StatusDTO>();
 		
 		for (var statusDomain : domainList) {

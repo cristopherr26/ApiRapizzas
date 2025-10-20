@@ -24,16 +24,21 @@ private static final EntityAssembler<EmployeeEntity, EmployeeDomain> instance = 
 	public EmployeeEntity toEntity(final EmployeeDomain domain) {
 		var domainTmp = ObjectHelper.getDefault(domain, new EmployeeDomain(UUIDHelper.getUUIDHelper().getDefault()));
 		var identificationTypeTmp = getIdentificationTypeEntityAssembler().toEntity(domainTmp.getIdentificationType());
-		return new EmployeeEntity(domainTmp.getId(), domainTmp.getName(), domainTmp.getLastName(), domainTmp.isActive(), identificationTypeTmp, domainTmp.getIdentificationNumber(), domainTmp.getCellPhoneNumber(), domainTmp.isCellPhoneNumberConfirmed(), domainTmp.isAdministrator(), domainTmp.getEmployeePassword());
+		return new EmployeeEntity(domainTmp.getId(), domainTmp.getName(), domainTmp.getLastName(), 
+				domainTmp.isActive(), identificationTypeTmp, domainTmp.getIdentificationNumber(), 
+				domainTmp.getCellPhoneNumber(), domainTmp.isCellPhoneNumberConfirmed(), 
+				domainTmp.isAdministrator(), domainTmp.getEmployeePassword());
 	}
 
 	@Override
 	public EmployeeDomain toDomain(final EmployeeEntity entity) {
 		var entityTmp = ObjectHelper.getDefault(entity, new EmployeeEntity());
 		var identificationTypeDomainTmp = getIdentificationTypeEntityAssembler().toDomain(entityTmp.getIdentificationType());
-		return new EmployeeDomain(entityTmp.getEmployeeId(), entityTmp.getName(), entityTmp.getLastName(), entityTmp.isActive(), identificationTypeDomainTmp, entityTmp.getIdentificationNumber(), entityTmp.getCellPhoneNumber(), entityTmp.isCellPhoneNumberConfirmed(), entityTmp.isAdministrator(), entityTmp.getEmployeePassword());
+		return new EmployeeDomain(entityTmp.getEmployeeId(), entityTmp.getName(), 
+				entityTmp.getLastName(), entityTmp.isActive(), identificationTypeDomainTmp, 
+				entityTmp.getIdentificationNumber(), entityTmp.getCellPhoneNumber(), 
+				entityTmp.isCellPhoneNumberConfirmed(), entityTmp.isAdministrator(), 
+				entityTmp.getEmployeePassword());
 	}
 	
-	
-
 }

@@ -29,6 +29,5 @@ private static final EntityAssembler<IdentificationTypeEntity, IdentificationTyp
 		var entityTmp = ObjectHelper.getDefault(entity, new IdentificationTypeEntity());
 		return new IdentificationTypeDomain(entityTmp.getIdentificationTypeId(), entityTmp.getName());
 	}
-	
-	
+
 }

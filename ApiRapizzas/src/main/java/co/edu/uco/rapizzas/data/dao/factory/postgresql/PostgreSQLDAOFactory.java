@@ -32,6 +32,10 @@ import co.edu.uco.rapizzas.data.dao.entity.postgresql.TablePostgreSqlDAO;
 import co.edu.uco.rapizzas.data.dao.factory.DAOFactory;
 
 public final class PostgreSQLDAOFactory extends DAOFactory {
+	
+	public PostgreSQLDAOFactory() {
+		openConnection();
+	}
 
 	@Override
 	protected void openConnection() {
@@ -107,6 +111,5 @@ public final class PostgreSQLDAOFactory extends DAOFactory {
 	public ProductOrderDAO getProductOrderDAO() {
 		return new ProductOrderPostgreSqlDAO(connection);
 	}
-
 
 }

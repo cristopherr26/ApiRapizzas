@@ -11,6 +11,7 @@ import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
 public final class SqlConnectionHelper {
 	
 	 private SqlConnectionHelper() {
+		 
 	    }
 
 	    public static void ensureConnectionIsNotNull(final Connection connection) {

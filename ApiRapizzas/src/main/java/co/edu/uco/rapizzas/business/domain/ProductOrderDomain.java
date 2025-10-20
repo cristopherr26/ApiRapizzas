@@ -12,7 +12,7 @@ public final class ProductOrderDomain extends Domain {
 	private ProductDomain product;
 	private OrderDomain order;
 	
-	public ProductOrderDomain() {
+	ProductOrderDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setAmount(IntegerHelper.getDefault());
 		setProduct(ProductDomain.getDefaultValue());

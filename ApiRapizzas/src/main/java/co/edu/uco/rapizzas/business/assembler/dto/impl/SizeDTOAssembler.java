@@ -36,6 +36,11 @@ public final class SizeDTOAssembler implements DTOAssembler<SizeDTO, SizeDomain>
 
 	@Override
 	public List<SizeDTO> toDTO(final List<SizeDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+			return new ArrayList<>();
+		}
+		
 		var sizeDtoList = new ArrayList<SizeDTO>();
 		
 		for (var sizeDomain : domainList) {

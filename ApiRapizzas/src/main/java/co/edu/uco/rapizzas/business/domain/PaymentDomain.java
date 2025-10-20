@@ -3,7 +3,7 @@ package co.edu.uco.rapizzas.business.domain;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import co.edu.uco.nose.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
@@ -13,7 +13,7 @@ public final class PaymentDomain extends Domain {
 	private EmployeeDomain employee;
 	private OrderDomain order;
 	
-	public PaymentDomain() {
+	PaymentDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setCollectionDate(DateHelper.getDefault());
 		setEmployee(EmployeeDomain.getDefaultValue());

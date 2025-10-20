@@ -30,6 +30,4 @@ public final class SizeEntityAssembler implements EntityAssembler<SizeEntity, Si
 		return new SizeDomain(entityTmp.getSizeId(), entityTmp.getNameSize());
 	}
 	
-
-
 }

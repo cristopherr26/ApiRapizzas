@@ -58,7 +58,7 @@ public final class OrderDTO {
 	}
 	
 	public void setOrderId(final UUID orderId) {
-		this.orderId = ObjectHelper.getDefault(orderId, UUIDHelper.getUUIDHelper().getDefault());
+		this.orderId = UUIDHelper.getUUIDHelper().getDefault(orderId);
 	}
 	
 	public int getTotal() {

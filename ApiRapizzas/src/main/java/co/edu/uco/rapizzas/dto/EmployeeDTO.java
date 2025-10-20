@@ -185,6 +185,5 @@ public final class EmployeeDTO {
 	private void setAdministratorDefaultValue(final boolean isAdministratorDefaultValue) {
 		this.isAdministratorDefaultValue = isAdministratorDefaultValue;
 	}
-	
 
 }

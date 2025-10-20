@@ -8,6 +8,7 @@ public final class UUIDHelper {
 	private static final String UUID_DEFAULT_AS_STRING = "00000000-0000-0000-0000-000000000000";
 
 	private UUIDHelper() {
+		
 	}
 
 	public static UUIDHelper getUUIDHelper() {

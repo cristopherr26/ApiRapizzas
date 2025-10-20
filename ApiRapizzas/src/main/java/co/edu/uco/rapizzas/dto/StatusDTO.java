@@ -39,7 +39,7 @@ public final class StatusDTO {
 	}
 	
 	public void setStatusId(final UUID statusId) {
-		this.statusId = ObjectHelper.getDefault(statusId, UUIDHelper.getUUIDHelper().getDefault());
+		this.statusId = UUIDHelper.getUUIDHelper().getDefault(statusId);
 	}
 	
 	public String getStatusName() {
@@ -50,6 +50,4 @@ public final class StatusDTO {
 		this.statusName = TextHelper.getDefaultWithTrim(statusName);
 	}
 	
-	
-
 }

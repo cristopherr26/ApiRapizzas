@@ -15,7 +15,7 @@ public final class CustomerDomain extends Domain {
 	private IdentificationTypeDomain identificationType;
 	private String identificationNumber;
 	
-	public CustomerDomain() {
+	CustomerDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setName(TextHelper.getDefault());
 		setLastName(TextHelper.getDefault());

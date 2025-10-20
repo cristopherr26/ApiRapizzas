@@ -37,6 +37,4 @@ private static final EntityAssembler<CustomerTableEntity, CustomerTableDomain> i
 		return new CustomerTableDomain(entityTmp.getCustomerTableId(), entityTmp.getOrderDate(), tableDomainTmp, customerDomainTmp);
 	}
 	
-
-
 }

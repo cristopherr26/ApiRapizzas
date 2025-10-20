@@ -28,7 +28,7 @@ public final class PaymentDTOAssembler implements DTOAssembler<PaymentDTO, Payme
 	@Override
 	public PaymentDTO toDTO(final PaymentDomain domain) {
 		var domainTmp = ObjectHelper.getDefault(domain, new PaymentDomain(UUIDHelper.getUUIDHelper().getDefault()));
-		var orderTmp = getOrderDTOAssembler().toDTO(domain.getOrder());
+		var orderTmp = getOrderDTOAssembler().toDTO(domainTmp.getOrder());
 		var employeeTmp = getEmployeeDTOAssembler().toDTO(domainTmp.getEmployee());
 		return new PaymentDTO(domainTmp.getId(), domainTmp.getCollectionDate(), employeeTmp, orderTmp);
 	}
@@ -44,6 +44,11 @@ public final class PaymentDTOAssembler implements DTOAssembler<PaymentDTO, Payme
 
 	@Override
 	public List<PaymentDTO> toDTO(final List<PaymentDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+		    return new ArrayList<>();
+		}
+
 		var paymentDtoList = new ArrayList<PaymentDTO>();
 		
 		for (var paymentDomain : domainList) {

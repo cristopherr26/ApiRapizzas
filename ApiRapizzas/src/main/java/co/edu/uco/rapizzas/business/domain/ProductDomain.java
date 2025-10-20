@@ -14,7 +14,7 @@ public final class ProductDomain extends Domain {
 	private CategoryDomain category;
 	private SizeDomain size;
 	
-	public ProductDomain() {
+	ProductDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
 		setProductName(TextHelper.getDefault());
 		setPrice(IntegerHelper.getDefault());

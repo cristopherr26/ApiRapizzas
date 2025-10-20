@@ -10,19 +10,19 @@ public final class SizeDomain extends Domain{
 	
 	private String sizeName;
 	
-	public SizeDomain() {
+	SizeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
-		setNameSize(TextHelper.getDefault());	
+		setSizeName(TextHelper.getDefault());	
 	}
 	
 	public SizeDomain(final UUID id) {
 		super(id);
-		setNameSize(TextHelper.getDefault());	
+		setSizeName(TextHelper.getDefault());	
 	}
 	
 	public SizeDomain(final UUID id, final String nameSize) {
 		super(id);
-		setNameSize(nameSize);
+		setSizeName(nameSize);
 	}
 	
 	static SizeDomain getDefaultValue() {
@@ -37,7 +37,7 @@ public final class SizeDomain extends Domain{
 		return sizeName;
 	}
 
-	public void setNameSize(final String nameSize) {
+	public void setSizeName(final String nameSize) {
 		this.sizeName = TextHelper.getDefaultWithTrim(nameSize);
 	}
 	

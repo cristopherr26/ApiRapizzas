@@ -49,7 +49,7 @@ public final class PaymentDTO {
 	}
 	
 	public void setPaymentId(final UUID paymentId) {
-		this.paymentId = ObjectHelper.getDefault(paymentId, UUIDHelper.getUUIDHelper().getDefault());
+		this.paymentId = UUIDHelper.getUUIDHelper().getDefault(paymentId);
 	}
 	
 	public LocalDate getCollectionDate() {

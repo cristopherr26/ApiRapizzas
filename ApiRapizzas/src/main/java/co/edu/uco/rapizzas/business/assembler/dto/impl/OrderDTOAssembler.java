@@ -47,6 +47,11 @@ public final class OrderDTOAssembler implements DTOAssembler<OrderDTO, OrderDoma
 
 	@Override
 	public List<OrderDTO> toDTO(final List<OrderDomain> domainList) {
+		
+		if (ObjectHelper.isNull(domainList)) {
+		    return new ArrayList<>();
+		}
+
 		var orderDtoList = new ArrayList<OrderDTO>();
 		
 		for (var orderDomain : domainList) {

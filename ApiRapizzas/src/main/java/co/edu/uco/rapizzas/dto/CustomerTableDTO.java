@@ -50,7 +50,7 @@ public final class CustomerTableDTO {
 	}
 	
 	public void setCustomerTableId(final UUID customerTableId) {
-		this.customerTableId = ObjectHelper.getDefault(customerTableId, UUIDHelper.getUUIDHelper().getDefault());
+		this.customerTableId = UUIDHelper.getUUIDHelper().getDefault(customerTableId);
 	}
 	
 	public LocalDate getOrderDate() {

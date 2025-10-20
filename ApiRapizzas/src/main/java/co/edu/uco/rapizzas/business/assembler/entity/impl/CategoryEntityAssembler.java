@@ -2,6 +2,8 @@ package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.CategoryDomain;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.entity.CategoryEntity;
 
 public final class CategoryEntityAssembler implements EntityAssembler<CategoryEntity, CategoryDomain>{
@@ -15,17 +17,18 @@ public final class CategoryEntityAssembler implements EntityAssembler<CategoryEn
 	public static EntityAssembler<CategoryEntity, CategoryDomain> getCategoryEntityAssembler() {
 		return instance;
 	}
-	
+
 	@Override
-	public CategoryEntity toDomain(final CategoryDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
+	public CategoryEntity toEntity(final CategoryDomain domain) {
+		var domainTmp = ObjectHelper.getDefault(domain, new CategoryDomain(UUIDHelper.getUUIDHelper().getDefault()));
+		return new CategoryEntity(domainTmp.getId(), domainTmp.getNameCategory());
 	}
 
 	@Override
-	public CategoryDomain toEntity(final CategoryEntity entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public CategoryDomain toDomain(final CategoryEntity entity) {
+		var entityTmp = ObjectHelper.getDefault(entity, new CategoryEntity());
+		return new CategoryDomain(entityTmp.getIdCategory(), entityTmp.getNameCategory());
 	}
+	
 
 }

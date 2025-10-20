@@ -2,6 +2,8 @@ package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.SizeDomain;
+import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.entity.SizeEntity;
 
 public final class SizeEntityAssembler implements EntityAssembler<SizeEntity, SizeDomain>{
@@ -15,17 +17,19 @@ public final class SizeEntityAssembler implements EntityAssembler<SizeEntity, Si
 	public static EntityAssembler<SizeEntity, SizeDomain> getSizeEntityAssembler() {
 		return instance;
 	}
-	
+
 	@Override
-	public SizeEntity toDomain(final SizeDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
+	public SizeEntity toEntity(final SizeDomain domain) {
+		var domainTmp = ObjectHelper.getDefault(domain, new SizeDomain(UUIDHelper.getUUIDHelper().getDefault()));
+		return new SizeEntity(domainTmp.getId(), domainTmp.getNameSize());
 	}
 
 	@Override
-	public SizeDomain toEntity(final SizeEntity entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public SizeDomain toDomain(final SizeEntity entity) {
+		var entityTmp = ObjectHelper.getDefault(entity, new SizeEntity());
+		return new SizeDomain(entityTmp.getSizeId(), entityTmp.getNameSize());
 	}
+	
+
 
 }

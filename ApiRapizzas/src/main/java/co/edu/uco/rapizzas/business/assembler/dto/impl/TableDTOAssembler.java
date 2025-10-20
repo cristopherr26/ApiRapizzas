@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.assembler.dto.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.nose.business.assembler.dto.DTOAssembler;
@@ -35,8 +36,14 @@ public final class TableDTOAssembler implements DTOAssembler<TableDTO, TableDoma
 
 	@Override
 	public List<TableDTO> toDTO(List<TableDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		var tableDtoList = new ArrayList<TableDTO>();
+		
+		for (var tableDomain : domainList) {
+			
+			tableDtoList.add(toDTO(tableDomain));
+		}
+		
+		return tableDtoList;
 	}
 
 }

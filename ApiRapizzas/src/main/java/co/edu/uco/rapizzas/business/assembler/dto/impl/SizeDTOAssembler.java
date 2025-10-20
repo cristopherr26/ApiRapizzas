@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.assembler.dto.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.rapizzas.business.assembler.dto.DTOAssembler;
@@ -34,9 +35,15 @@ public final class SizeDTOAssembler implements DTOAssembler<SizeDTO, SizeDomain>
 	}
 
 	@Override
-	public List<SizeDTO> toDTO(List<SizeDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<SizeDTO> toDTO(final List<SizeDomain> domainList) {
+		var sizeDtoList = new ArrayList<SizeDTO>();
+		
+		for (var sizeDomain : domainList) {
+			
+			sizeDtoList.add(toDTO(sizeDomain));
+		}
+		
+		return sizeDtoList;
 	}
 
 }

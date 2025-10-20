@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.assembler.dto.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.rapizzas.business.assembler.dto.DTOAssembler;
@@ -34,9 +35,15 @@ public final class StatusDTOAssembler implements DTOAssembler<StatusDTO, StatusD
 	}
 
 	@Override
-	public List<StatusDTO> toDTO(List<StatusDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<StatusDTO> toDTO(final List<StatusDomain> domainList) {
+		var statusDtoList = new ArrayList<StatusDTO>();
+		
+		for (var statusDomain : domainList) {
+			
+			statusDtoList.add(toDTO(statusDomain));
+		}
+		
+		return statusDtoList;
 	}
 
 }

@@ -18,14 +18,22 @@ import co.edu.uco.rapizzas.data.dao.entity.ProductOrderDAO;
 import co.edu.uco.rapizzas.data.dao.entity.SizeDAO;
 import co.edu.uco.rapizzas.data.dao.entity.StatusDAO;
 import co.edu.uco.rapizzas.data.dao.entity.TableDAO;
+import co.edu.uco.rapizzas.data.dao.factory.postgresql.PostgreSQLDAOFactory;
 
 public abstract class DAOFactory {
 	
 	protected Connection connection;
-	protected FactoryEnum factoryEnum = FactoryEnum.POSTGRESQL;
+	protected static FactoryEnum factoryEnum = FactoryEnum.POSTGRESQL;
 	
 	public static DAOFactory getFactory() {
-		return null;
+		if(FactoryEnum.POSTGRESQL.equals(factoryEnum)) {
+			
+			return new PostgreSQLDAOFactory();
+		}else {
+			var userMessage = MessagesEnum.USER_ERROR_FACTORY_NOT_INITIALIZED.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_FACTORY_NOT_VALIDATED.getContent();
+			throw RapizzasException.create(userMessage, technicalMessage);
+		}
 	}
 
 	public abstract CategoryDAO getCategoryDAO();
@@ -54,7 +62,7 @@ public abstract class DAOFactory {
 	
 	protected abstract void openConnection();
 	
-	protected final void initTransaction() {
+	public final void initTransaction() {
 		SqlConnectionHelper.ensureTransactionIsNotStarted(connection);
 		try {
 			connection.setAutoCommit(false);
@@ -69,7 +77,7 @@ public abstract class DAOFactory {
 		}
 	}
 	
-	protected final void commitTransaction() {
+	public final void commitTransaction() {
 		SqlConnectionHelper.ensureTransactionIsStarted(connection);
 		try {
 			connection.commit();
@@ -84,7 +92,7 @@ public abstract class DAOFactory {
 		}
 	}
 	
-	protected final void rollbackTransaction() {
+	public final void rollbackTransaction() {
 		SqlConnectionHelper.ensureTransactionIsStarted(connection);
 		try {
 			connection.rollback();
@@ -99,7 +107,7 @@ public abstract class DAOFactory {
 		}
 	}
 	
-	protected final void closeConnection() {
+	public final void closeConnection() {
 		SqlConnectionHelper.ensureConnectionIsOpen(connection);
 		
 		try {

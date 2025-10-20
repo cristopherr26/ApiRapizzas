@@ -19,6 +19,7 @@ public abstract class SqlConnection {
 
 	private void setConnection(final Connection connection) {
 		SqlConnectionHelper.ensureConnectionIsOpen(connection);
+		this.connection = connection;
 	}
 	
 	

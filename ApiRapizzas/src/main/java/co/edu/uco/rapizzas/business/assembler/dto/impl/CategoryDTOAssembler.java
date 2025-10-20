@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.assembler.dto.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -34,9 +35,16 @@ public final class CategoryDTOAssembler implements DTOAssembler<CategoryDTO, Cat
 	}
 
 	@Override
-	public List<CategoryDTO> toDTO(List<CategoryDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CategoryDTO> toDTO(final List<CategoryDomain> domainList) {
+		var categoryDtoList = new ArrayList<CategoryDTO>();
+		
+		for (var categoryDomain : domainList) {
+			
+			categoryDtoList.add(toDTO(categoryDomain));
+			
+		}
+		
+		return categoryDtoList;
 	}
 
 }

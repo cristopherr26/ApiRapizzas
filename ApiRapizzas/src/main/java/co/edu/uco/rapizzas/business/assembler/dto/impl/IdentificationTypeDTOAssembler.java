@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.assembler.dto.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.rapizzas.business.assembler.dto.DTOAssembler;
@@ -34,9 +35,15 @@ public final class IdentificationTypeDTOAssembler implements DTOAssembler<Identi
 	}
 
 	@Override
-	public List<IdentificationTypeDTO> toDTO(List<IdentificationTypeDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<IdentificationTypeDTO> toDTO(final List<IdentificationTypeDomain> domainList) {
+		var identificationTypeDtoList = new ArrayList<IdentificationTypeDTO>();
+		
+		for (var identificationTypeDomain : domainList) {
+			
+			identificationTypeDtoList.add(toDTO(identificationTypeDomain));
+		}
+		
+		return identificationTypeDtoList;
 	}
 
 }

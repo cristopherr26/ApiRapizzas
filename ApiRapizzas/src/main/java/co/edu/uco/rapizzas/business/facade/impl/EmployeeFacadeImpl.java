@@ -1,14 +1,15 @@
-package co.edu.uco.rapizzas.business.business.impl;
+package co.edu.uco.rapizzas.business.facade.impl;
 
 import java.util.UUID;
 
 import co.edu.uco.rapizzas.business.facade.EmployeeFacade;
 import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
-public final class EmployeeBusinessImpl implements EmployeeFacade{
+public final class EmployeeFacadeImpl implements EmployeeFacade{
 
 	@Override
-	public void registerNewEmployeeInformation(final EmployeeDTO employeeDTO) {
+	public void registerNewEmployeeInformation(EmployeeDTO employeeDTO) {
+		// TODO Auto-generated method stub
 		
 	}
 

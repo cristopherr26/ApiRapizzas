@@ -25,7 +25,7 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 	public void create(final IdentificationTypeEntity entity) {
 		
 		final var sql = new StringBuilder();
-		sql.append("INSERT INTO \"TipoIdentificacion\" (\"idTipoIdentificacion\", \"nombreTipoIdentificacion\") ");
+		sql.append("INSERT INTO \"TipoDocumento\" (\"idTipoDocumento\", \"nombreTipoDocumento\") ");
 		sql.append("VALUES (?, ?)");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
@@ -84,9 +84,9 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 		final var sql = new StringBuilder();
 
 		sql.append("SELECT ");
-		sql.append("  TI.\"idTipoIdentificacion\" AS \"idTI\", ");
-		sql.append("  TI.\"nombreTipoIdentificacion\" AS \"nombreTI\" ");
-		sql.append("  FROM \"TipoIdentificacion\" AS TI ");
+		sql.append("  TI.\"idTipoDocumento\" AS \"idTI\", ");
+		sql.append("  TI.\"nombreTipoDocumento\" AS \"nombreTI\" ");
+		sql.append("  FROM \"TipoDocumento\" AS TI ");
 
 		createWhereClauseFindByFilter(sql, parametersList, filterEntity);
 
@@ -100,7 +100,7 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 		final var conditions = new ArrayList<String>();
 
 		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getName()),
-				"TI.\"nombreTipoIdentificacion\" = ", filterEntityValidated.getName());
+				"TI.\"nombreTipoDocumento\" = ", filterEntityValidated.getName());
 
 		if (!conditions.isEmpty()) {
 			sql.append(" WHERE ");
@@ -149,9 +149,9 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 	public void update(final IdentificationTypeEntity entity) {
 		
 		final var sql = new StringBuilder();
-		sql.append("UPDATE \"TipoIdentificacion\" ");
-		sql.append("SET \"nombreTipoIdentificacion\" = ? ");
-		sql.append("WHERE \"idTipoIdentificacion\" = ?");
+		sql.append("UPDATE \"TipoDocumento\" ");
+		sql.append("SET \"nombreTipoDocumento\" = ? ");
+		sql.append("WHERE \"idTipoDocumento\" = ?");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 																					

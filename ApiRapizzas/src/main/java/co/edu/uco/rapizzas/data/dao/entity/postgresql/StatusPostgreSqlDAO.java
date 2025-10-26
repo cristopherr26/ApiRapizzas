@@ -8,6 +8,7 @@ import java.util.List;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.SqlConnectionHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
@@ -122,6 +123,8 @@ public final class StatusPostgreSqlDAO extends SqlConnection implements StatusDA
 	@Override
 	public void update(final StatusEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		sql.append("UPDATE \"Estado\" ");
 		sql.append("SET \"nombreEstado\" = ? ");
@@ -129,7 +132,7 @@ public final class StatusPostgreSqlDAO extends SqlConnection implements StatusDA
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setString(1, TextHelper.getDefaultWithTrim(entity.getStatusName()));
+			preparedStatement.setString(1, entity.getStatusName());
 			preparedStatement.setObject(2, entity.getStatusId());
 
 			preparedStatement.executeUpdate();

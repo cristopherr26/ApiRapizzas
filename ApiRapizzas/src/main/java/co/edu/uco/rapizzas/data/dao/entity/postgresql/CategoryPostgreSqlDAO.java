@@ -8,6 +8,7 @@ import java.util.List;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.SqlConnectionHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.entity.CategoryEntity;
@@ -24,14 +25,16 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 	@Override
 	public void create(final CategoryEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 	    sql.append("INSERT INTO \"Categoria\" (\"idCategoria\", \"nombreCategoria\") ");
 	    sql.append("VALUES (?, ?)");
 
 	    try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-	        preparedStatement.setObject(1, ObjectHelper.getDefault(entity.getIdCategory(), UUIDHelper.getUUIDHelper().generateNewUUID()));
-	        preparedStatement.setString(2, TextHelper.getDefaultWithTrim(entity.getNameCategory()));
+	        preparedStatement.setObject(1, entity.getIdCategory());
+	        preparedStatement.setString(2, entity.getNameCategory());
 
 	        preparedStatement.executeUpdate();
 
@@ -149,6 +152,8 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 	@Override
 	public void update(final CategoryEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 	    sql.append("UPDATE \"Categoria\" ");
 	    sql.append("SET \"nombreCategoria\" = ? ");
@@ -156,7 +161,7 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 
 	    try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-	        preparedStatement.setString(1, TextHelper.getDefaultWithTrim(entity.getNameCategory()));
+	        preparedStatement.setString(1, entity.getNameCategory());
 	        preparedStatement.setObject(2, entity.getIdCategory());
 
 	        preparedStatement.executeUpdate();

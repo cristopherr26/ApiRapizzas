@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
-import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.SqlConnectionHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
@@ -28,15 +28,17 @@ public final class ProductPostgreSqlDAO extends SqlConnection implements Product
 	@Override
 	public void create(final ProductEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		sql.append("INSERT INTO \"Producto\" (\"idProducto\", \"nombreProducto\", \"precioProducto\", \"categoria\", \"tamano\") ");
 		sql.append("VALUES (?, ?, ?, ?, ?)");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setObject(1, ObjectHelper.getDefault(entity.getProductId(), UUIDHelper.getUUIDHelper().generateNewUUID()));
-			preparedStatement.setString(2, TextHelper.getDefaultWithTrim(entity.getProductName()));
-			preparedStatement.setInt(3, IntegerHelper.getDefault(entity.getPrice()));
+			preparedStatement.setObject(1, entity.getProductId());
+			preparedStatement.setString(2, entity.getProductName());
+			preparedStatement.setInt(3, entity.getPrice());
 			preparedStatement.setObject(4, entity.getCategory().getIdCategory());
 			preparedStatement.setObject(5, entity.getSize().getSizeId());
 
@@ -93,7 +95,7 @@ public final class ProductPostgreSqlDAO extends SqlConnection implements Product
 		sql.append("SELECT ");
 		sql.append("  P.\"idProducto\" AS \"idP\", ");
 		sql.append("  P.\"nombreProducto\" AS \"nombreP\", ");
-		sql.append("  P.\"precioProducto\" AS \"precioP\", ");
+		sql.append("  P.\"precio\" AS \"precioP\", ");
 		sql.append("  C.\"idCategoria\" AS \"idC\", ");
 		sql.append("  C.\"nombreCategoria\" AS \"nombreC\", ");
 		sql.append("  T.\"idTamano\" AS \"idT\", ");
@@ -117,7 +119,7 @@ public final class ProductPostgreSqlDAO extends SqlConnection implements Product
 				"P.\"nombreProducto\" = ", filterEntityValidated.getProductName());
 				
 		addCondition(conditions, parametersList, filterEntityValidated.getPrice() > 0,
-				"P.\"precioProducto\" = ", filterEntityValidated.getPrice());
+				"P.\"precio\" = ", filterEntityValidated.getPrice());
 		
 		addCondition(conditions, parametersList, !ObjectHelper.isNull(filterEntityValidated.getCategory()) && 
 				!UUIDHelper.getUUIDHelper().isDefaultUUID(filterEntityValidated.getCategory().getIdCategory()),
@@ -186,16 +188,18 @@ public final class ProductPostgreSqlDAO extends SqlConnection implements Product
 	@Override
 	public void update(final ProductEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		
 		sql.append("UPDATE \"Producto\" ");
-		sql.append("SET \"nombreProducto\" = ?, \"precioProducto\" = ?, \"categoria\" = ?, \"tamano\" = ? ");
+		sql.append("SET \"nombreProducto\" = ?, \"precio\" = ?, \"categoria\" = ?, \"tamano\" = ? ");
 		sql.append("WHERE \"idProducto\" = ?");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setString(1, TextHelper.getDefaultWithTrim(entity.getProductName()));
-			preparedStatement.setInt(2, IntegerHelper.getDefault(entity.getPrice()));
+			preparedStatement.setString(1, entity.getProductName());
+			preparedStatement.setInt(2, entity.getPrice());
 			preparedStatement.setObject(3, entity.getCategory().getIdCategory());
 			preparedStatement.setObject(4, entity.getSize().getSizeId());
 			preparedStatement.setObject(5, entity.getProductId());

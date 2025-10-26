@@ -9,6 +9,7 @@ import java.util.List;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.SqlConnectionHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
 import co.edu.uco.rapizzas.data.dao.entity.SqlConnection;
@@ -24,14 +25,16 @@ public final class TablePostgreSqlDAO extends SqlConnection implements TableDAO 
 	@Override
 	public void create(final TableEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		sql.append("INSERT INTO \"Mesa\" (\"idMesa\", \"numeroMesa\") ");
 		sql.append("VALUES (?, ?)");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setObject(1, ObjectHelper.getDefault(entity.getTableId(), UUIDHelper.getUUIDHelper().generateNewUUID()));
-			preparedStatement.setInt(2, IntegerHelper.getDefault(entity.getTableNumber()));
+			preparedStatement.setObject(1, entity.getTableId());
+			preparedStatement.setInt(2, entity.getTableNumber());
 											
 			preparedStatement.executeUpdate();
 

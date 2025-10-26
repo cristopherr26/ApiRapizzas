@@ -8,6 +8,7 @@ import java.util.List;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
+import co.edu.uco.rapizzas.crosscuting.helper.SqlConnectionHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.TextHelper;
 import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
@@ -24,14 +25,16 @@ public final class SizePostgreSqlDAO extends SqlConnection implements SizeDAO {
 	@Override
 	public void create(final SizeEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		sql.append("INSERT INTO \"Tamano\" (\"idTamano\", \"nombreTamano\") ");
 		sql.append("VALUES (?, ?)");
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setObject(1, ObjectHelper.getDefault(entity.getSizeId(), UUIDHelper.getUUIDHelper().generateNewUUID()));
-			preparedStatement.setString(2, TextHelper.getDefaultWithTrim(entity.getNameSize()));
+			preparedStatement.setObject(1, entity.getSizeId());
+			preparedStatement.setString(2, entity.getNameSize());
 
 			preparedStatement.executeUpdate();
 
@@ -148,6 +151,8 @@ public final class SizePostgreSqlDAO extends SqlConnection implements SizeDAO {
 	@Override
 	public void update(final SizeEntity entity) {
 		
+		SqlConnectionHelper.ensureTransactionIsStarted(getConnection());
+		
 		final var sql = new StringBuilder();
 		sql.append("UPDATE \"Tamano\" ");
 		sql.append("SET \"nombreTamano\" = ? ");
@@ -155,7 +160,7 @@ public final class SizePostgreSqlDAO extends SqlConnection implements SizeDAO {
 
 		try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
-			preparedStatement.setString(1, TextHelper.getDefaultWithTrim(entity.getNameSize()));
+			preparedStatement.setString(1, entity.getNameSize());
 			preparedStatement.setObject(2, entity.getSizeId());
 
 			preparedStatement.executeUpdate();

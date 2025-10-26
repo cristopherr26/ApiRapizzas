@@ -17,5 +17,13 @@ public class DateHelper {
 	public static LocalDate getDefault(final LocalDate date) {
 		return ObjectHelper.getDefault(date, getDefault());
 	}
+	
+	public static boolean isDefaultDate(final LocalDate value) {
+	    if (value == null) {
+	        return true;
+	    }
+	    return getDefault().equals(value);
+	}
+
 
 }

@@ -22,11 +22,11 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 	}
 
 	@Override
-	public void create(CategoryEntity entity) {
+	public void create(final CategoryEntity entity) {
 		
 		final var sql = new StringBuilder();
 	    sql.append("INSERT INTO \"Categoria\" (\"idCategoria\", \"nombreCategoria\") ");
-	    sql.append("VALUES (?, ?);");
+	    sql.append("VALUES (?, ?)");
 
 	    try (var preparedStatement = getConnection().prepareStatement(sql.toString())) {
 
@@ -56,7 +56,7 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 	}
 
 	@Override
-	public List<CategoryEntity> findByFilter(CategoryEntity filterEntity) {
+	public List<CategoryEntity> findByFilter(final CategoryEntity filterEntity) {
 		
 		var parametersList = new ArrayList<Object>();
 		var sql = createSentenceFindByFilter(filterEntity, parametersList);
@@ -84,8 +84,8 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 		final var sql = new StringBuilder();
 		
 		sql.append("SELECT ");
-		sql.append("  C.\"idCategoria\" as \"idC\", ");
-		sql.append("  C.\"nombreCategoria\" as \"nombreC\" ");
+		sql.append("  C.\"idCategoria\" AS \"idC\", ");
+		sql.append("  C.\"nombreCategoria\" AS \"nombreC\" ");
 		sql.append("  FROM \"Categoria\" as C ");
 		
 		createWhereClauseFindByFilter(sql, parametersList, filterEntity);
@@ -147,7 +147,7 @@ public final class CategoryPostgreSqlDAO extends SqlConnection implements Catego
 		}
 
 	@Override
-	public void update(CategoryEntity entity) {
+	public void update(final CategoryEntity entity) {
 		
 		final var sql = new StringBuilder();
 	    sql.append("UPDATE \"Categoria\" ");

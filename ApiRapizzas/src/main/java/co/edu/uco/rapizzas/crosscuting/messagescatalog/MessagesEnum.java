@@ -112,7 +112,66 @@ public enum MessagesEnum {
 	USER_ERROR_SQL_EXCEPTION_UPDATING_CATEGORY_WHILE_EXECUTION("Error durante la actualización de una categoría.","Se ha presentado un problema tratando de ejecutar la actualización de la información de una categoría, por favor intente de nuevo. Si el problema persiste, contacte al administrador del sistema."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la actualización de una categoría.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de una categoría. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_CATEGORY_WHILE_EXECUTION("Error SQL durante la operación de actualización de una categoría.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización de una categoría."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la operación de actualización de una categoría.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de una categoría. No fue una SQLException, sino un error no controlado en el proceso de actualización.");
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la operación de actualización de una categoría.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de una categoría. No fue una SQLException, sino un error no controlado en el proceso de actualización."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_SIZE_WHILE_EXECUTION("Error durante el registro de un tamaño.","Se ha presentado un problema tratando de ejecutar el registro de un tamaño, por favor intente de nuevo. Si el problema persiste, contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_SIZE_WHILE_EXECUTION("Error inesperado durante el registro de un tamaño.","Se ha presentado un problema inesperado durante la ejecución de la operación de registro de un tamaño. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_SIZE_WHILE_EXECUTION("Error SQL durante la operación de registro de un tamaño.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de registro de un tamaño."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_SIZE_WHILE_EXECUTION("Error inesperado durante la operación de registro de un tamaño.","Se ha presentado un problema inesperado durante la ejecución de la operación de registro de un tamaño. No fue una SQLException, sino un error no controlado en el proceso de registro."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_SIZE_WHILE_EXECUTION("Error durante la actualización de un tamaño.","Se ha presentado un problema tratando de ejecutar la actualización de la información de un tamaño, por favor intente de nuevo. Si el problema persiste, contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_SIZE_WHILE_EXECUTION("Error inesperado durante la actualización de un tamaño.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un tamaño. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_SIZE_WHILE_EXECUTION("Error SQL durante la operación de actualización de un tamaño.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización de un tamaño."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_SIZE_WHILE_EXECUTION("Error inesperado durante la operación de actualización de un tamaño.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un tamaño. No fue una SQLException, sino un error no controlado en el proceso de actualización."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_TABLE_WHILE_EXECUTION("Error durante el registro de una mesa.","Se ha presentado un problema tratando de ejecutar el registro de una mesa, por favor intente de nuevo. Si el problema persiste, contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_TABLE_WHILE_EXECUTION("Error inesperado durante el registro de una mesa.","Se ha presentado un problema inesperado durante la ejecución de la operación de registro de una mesa. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_TABLE_WHILE_EXECUTION("Error SQL durante la operación de registro de una mesa.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de registro de una mesa."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_TABLE_WHILE_EXECUTION("Error inesperado durante la operación de registro de una mesa.","Se ha presentado un problema inesperado durante la ejecución de la operación de registro de una mesa. No fue una SQLException, sino un error no controlado en el proceso de registro."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error durante la actualización de un estado.","Se ha presentado un problema tratando de ejecutar la actualización de la información de un estado, por favor intente de nuevo. Si el problema persiste, contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error inesperado durante la actualización de un estado.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un estado. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error SQL durante la operación de actualización de un estado.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización de un estado."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error inesperado durante la operación de actualización de un estado.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un estado. No fue una SQLException, sino un error no controlado en el proceso de actualización."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la creación del tipo de identificación.", 
+			"Se ha presentado un problema tratando de ejecutar la operación de creación del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la creación del tipo de identificación.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de creación del tipo de identificación.", 
+			"Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de creación del tipo de identificación.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la actualización del tipo de identificación.", 
+			"Se ha presentado un problema tratando de ejecutar la operación de actualización del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la actualización del tipo de identificación.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de actualización del tipo de identificación.", 
+			"Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de actualización del tipo de identificación.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error durante la creación del producto.", 
+			"Se ha presentado un problema tratando de ejecutar la operación de creación del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de creación del producto.", 
+			"Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de creación del producto."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la creación del producto.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de creación del producto.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_FINDING_PRODUCT_WHILE_PREPARATION("Error durante la preparación de la consulta de la información del producto.", 
+			"Se ha presentado un problema durante la preparación de la operación de consulta de la información del producto."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error durante la actualización del producto.", 
+			"Se ha presentado un problema tratando de ejecutar la operación de actualización del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de actualización del producto.", 
+			"Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización del producto."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la actualización del producto.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de actualización del producto.", 
+			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error durante la creación del cliente.","Se ha presentado un problema tratando de ejecutar la operación de creación del cliente, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error SQL durante la operación de creación del cliente.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de creación del cliente."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la creación del cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de creación del cliente. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la operación de creación del cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de creación del cliente. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_CUSTOMER_WHILE_EXECUTION("Error durante la actualización del cliente.","Se ha presentado un problema tratando de ejecutar la operación de actualización del cliente, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_CUSTOMER_WHILE_EXECUTION("Error SQL durante la operación de actualización del cliente.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización del cliente."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la actualización del cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del cliente. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la operación de actualización del cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del cliente. No fue una SQLException, sino un error no controlado en el proceso de ejecución.");
+
 	
 	
 	private String title;
@@ -143,9 +202,5 @@ public enum MessagesEnum {
 	private void setContent(final String content) {
 		this.content = TextHelper.getDefaultWithTrim(content);
 	}
-	
-	
-	
-	
 
 }

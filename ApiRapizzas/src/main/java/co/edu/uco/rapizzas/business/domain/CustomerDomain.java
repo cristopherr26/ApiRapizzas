@@ -47,7 +47,7 @@ public final class CustomerDomain extends Domain {
 		setIdentificationNumber(identificationNumber);
 	}
 	
-	static CustomerDomain getDefaultValue() {
+	protected static CustomerDomain getDefaultValue() {
 		return new CustomerDomain();
 	}
 	

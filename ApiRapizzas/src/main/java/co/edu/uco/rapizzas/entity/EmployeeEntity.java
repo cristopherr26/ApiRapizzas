@@ -28,7 +28,7 @@ public final class EmployeeEntity{
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(false);
 		setAdministratorDefaultValue(true);
@@ -44,7 +44,7 @@ public final class EmployeeEntity{
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeEntity.getDefaultValue());;
+		setIdentificationType(IdentificationTypeEntity.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(false);
 		setAdministratorDefaultValue(true);

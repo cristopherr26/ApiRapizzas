@@ -34,7 +34,7 @@ public final class ProductOrderDomain extends Domain {
 		setOrder(order);
 	}
 	
-	static ProductOrderDomain getDefaultValue() {
+	protected static ProductOrderDomain getDefaultValue() {
 		return new ProductOrderDomain();
 	}
 	

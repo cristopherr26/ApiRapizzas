@@ -105,7 +105,7 @@ public final class EmployeePostgreSqlDAO extends SqlConnection implements Employ
 		sql.append("  TI.\"nombreTipoDocumento\" AS \"nombreTI\", ");
 		sql.append("  E.\"numeroDocumento\" AS \"numeroIdentificacionE\" ");
 		sql.append("FROM \"Empleado\" AS E ");
-		sql.append("INNER JOIN \"TipoDocumento\" AS TI ON E.\"idtipoDocumento\" = TI.\"idTipoDocumento\" ");
+		sql.append("INNER JOIN \"TipoDocumento\" AS TI ON E.\"idTipoDocumento\" = TI.\"idTipoDocumento\" ");
 
 		createWhereClauseFindByFilter(sql, parametersList, filterEntity);
 
@@ -116,6 +116,11 @@ public final class EmployeePostgreSqlDAO extends SqlConnection implements Employ
 
 		var filterEntityValidated = ObjectHelper.getDefault(filterEntity, new EmployeeEntity());
 		final var conditions = new ArrayList<String>();
+		
+		addCondition(conditions, parametersList,
+		!UUIDHelper.getUUIDHelper().isDefaultUUID(filterEntityValidated.getEmployeeId()),
+				"E.\"idEmpleado\" = ", filterEntityValidated.getEmployeeId());
+
 
 		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getName()),
 				"E.\"nombre\" = ", filterEntityValidated.getName());

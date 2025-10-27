@@ -40,12 +40,12 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 			preparedStatement.executeUpdate();
 
 		} catch (final SQLException exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_SQL_EXCEPTION_CREATING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		} catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
@@ -71,12 +71,12 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 			return executeSentenceFindByFilter(preparedStatement);
 
 		} catch (final SQLException exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_SQL_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_PRODUCTORDER_WHILE_PREPARATION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		} catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_PRODUCTORDER_WHILE_PREPARATION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
@@ -158,13 +158,15 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 				productOrders.add(productOrder);
 			}
 
-		} catch (final SQLException exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+		}  catch (final SQLException exception) {
+			var userMessage = MessagesEnum.USER_ERROR_SQL_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent()
+					+ exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		} catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_PRODUCTORDER_WHILE_EXECUTION.getContent()
+					+ exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 
@@ -189,12 +191,12 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 			preparedStatement.executeUpdate();
 
 		} catch (final SQLException exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_SQL_EXCEPTION_UPDATING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		} catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
@@ -212,12 +214,12 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 			preparedStatement.executeUpdate();
 
 		} catch (final SQLException exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		} catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION.getContent() + exception.getMessage();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		

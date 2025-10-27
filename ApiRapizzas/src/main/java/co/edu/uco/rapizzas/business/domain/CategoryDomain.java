@@ -25,7 +25,7 @@ public final class CategoryDomain extends Domain {
 		setCategoryName(nameCategory);
 	}
 	
-	static CategoryDomain getDefaultValue() {
+	protected static CategoryDomain getDefaultValue() {
 		return new CategoryDomain();
 	}
 	

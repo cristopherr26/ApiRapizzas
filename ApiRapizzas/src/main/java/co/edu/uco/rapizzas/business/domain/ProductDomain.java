@@ -39,7 +39,7 @@ public final class ProductDomain extends Domain {
 	    setSize(size);
 	}
 	
-	static ProductDomain getDefaultValue() {
+	protected static ProductDomain getDefaultValue() {
 		return new ProductDomain();
 	}
 	

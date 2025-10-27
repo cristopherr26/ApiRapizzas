@@ -35,7 +35,7 @@ public final class CustomerTableDomain extends Domain {
 		setCustomer(customer);
 	}
 	
-	static CustomerTableDomain getDefaultValue() {
+	protected static CustomerTableDomain getDefaultValue() {
 		return new CustomerTableDomain();
 	}
 	

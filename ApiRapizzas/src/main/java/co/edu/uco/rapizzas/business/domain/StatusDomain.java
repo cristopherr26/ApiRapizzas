@@ -25,7 +25,7 @@ public final class StatusDomain extends Domain{
 		setStatusName(statusName);
 	}
 	
-	static StatusDomain getDefaultValue() {
+	protected static StatusDomain getDefaultValue() {
 		return new StatusDomain();
 	}
 	

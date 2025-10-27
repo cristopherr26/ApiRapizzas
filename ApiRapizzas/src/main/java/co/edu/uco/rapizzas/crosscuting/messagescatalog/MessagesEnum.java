@@ -214,7 +214,27 @@ public enum MessagesEnum {
 	USER_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema tratando de ejecutar la operación de eliminación de un producto asignado a un pedido, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error SQL durante la operación de eliminación de un producto asignado a un pedido.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de eliminación de un producto asignado a un pedido."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución.");
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_EMPLOYEE("La información del empleado es obligatoria","No es posible registrar al empleado, ya que no se envió la información"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_EMPLOYEE("EmployeeDomain fue enviado como nulo","No es posible registrar al empleado, ya que este fue enviado como null"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_IDENTIFICATION_TYPE("La información del tipo de documento del empleado es obligatoria","No es posible registrar al empleado, ya que no se envió la información de su tipo de documento"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_IDENTIFICATION_TYPE("identificationType fue enviado como nulo","No es posible registrar al empleado, ya que su tipo de documento fue enviado como null"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_IDENTIFICATION_NUMBER("El número de documento del empleado no es válido","Debe tener entre 8 y 12 caracteres y solo contener letras y números"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_IDENTIFICATION_NUMBER("El número de documento no cumple con las reglas","Fue enviado vacío, con caracteres especiales o fuera del rango de 8 a 12 caracteres"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_FIRST_NAME("El nombre del empleado no es válido","Debe tener entre 3 y 25 caracteres y solo contener letras"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_FIRST_NAME("El nombre no cumple con las reglas","Fue enviado vacío, contiene números o caracteres especiales o excede los 25 caracteres"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_LAST_NAME("El apellido del empleado no es válido","Debe tener entre 2 y 25 caracteres y solo contener letras"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_LAST_NAME("El apellido no cumple con las reglas","Fue enviado vacío, contiene números o caracteres especiales o excede los 25 caracteres"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_PASSWORD("La contraseña del empleado no es válida","Debe tener entre 8 y 15 caracteres, incluir al menos una mayúscula, un número y un carácter especial (! @ # $ % & * ? - _)"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_PASSWORD("La contraseña no cumple con las reglas de formato","Fue enviada vacía, demasiado corta/larga o no contiene los requisitos mínimos (mayúscula, número y carácter especial)"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_CELL_PHONE_NUMBER("El número de teléfono del empleado no es válido","Debe tener entre 10 y 15 caracteres numéricos"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_CELL_PHONE_NUMBER("El teléfono del empleado no cumple con las reglas","Fue enviado vacío, contiene letras, es menor a 10 caracteres o supera los 15 caracteres"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_CELL_PHONE_NUMBER("El número de teléfono ya se encuentra registrado","No es posible registrar al empleado, ya que el teléfono ingresado ya está en uso"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_CELL_PHONE_NUMBER("El teléfono ya está registrado en la base de datos","No es posible registrar al empleado, ya que el número ingresado ya existe en la fuente de datos"),
+	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_IDENTIFICATION("El tipo y número de documento del empleado ya se encuentra registrado","No es posible registrar al empleado, ya que el tipo y número de documento ingresado ya están en uso"),
+	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_IDENTIFICATION("El tipo y número de documento ya están registrados","No es posible registrar al empleado, ya que los datos de identificación ya existen en la fuente de datos");
+
 	
 	private String title;
 	private String content;

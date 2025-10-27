@@ -35,7 +35,7 @@ public final class PaymentDomain extends Domain {
 		setOrder(order);
 	}
 	
-	static PaymentDomain getDefaultValue() {
+	protected static PaymentDomain getDefaultValue() {
 		return new PaymentDomain();
 	}
 	

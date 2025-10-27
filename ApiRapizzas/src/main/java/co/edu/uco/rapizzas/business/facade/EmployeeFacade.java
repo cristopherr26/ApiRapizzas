@@ -1,21 +1,24 @@
 package co.edu.uco.rapizzas.business.facade;
 
+import java.util.List;
 import java.util.UUID;
 
 import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
 public interface EmployeeFacade {
 	
-	void registerNewEmployeeInformation(EmployeeDTO employeeDTO);
+	void registerNewUserInformation(EmployeeDTO employeeDto);
 	
-	void generateAndSendPhoneVerificationCode(UUID id);
+	void updateUserInformation(UUID id, EmployeeDTO employeeDto);
 	
-	void confirmPhoneNumber(UUID id);
+	List<EmployeeDTO> findAllUsers();
 	
-	void logInAsEmployee();
+	List<EmployeeDTO> findUserByFilter(EmployeeDTO employeeFilters);
 	
-	void consultEmployeeInformation(UUID id);
+	void confirmMobileNumber(UUID id, int confirmationCode);
 	
-	void updateUserInformation(UUID id, EmployeeDTO employeeDTO);
+	void sendMobileNumberConfirmation(UUID id);
+	
+	void loginAsEmployee();
 
 }

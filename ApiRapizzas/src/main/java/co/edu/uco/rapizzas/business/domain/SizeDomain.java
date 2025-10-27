@@ -25,7 +25,7 @@ public final class SizeDomain extends Domain{
 		setSizeName(nameSize);
 	}
 	
-	static SizeDomain getDefaultValue() {
+	protected static SizeDomain getDefaultValue() {
 		return new SizeDomain();
 	}
 	

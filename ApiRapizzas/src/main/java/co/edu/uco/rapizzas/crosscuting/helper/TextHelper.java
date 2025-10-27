@@ -28,14 +28,29 @@ public final class TextHelper {
 		return EMPTY.equals(getDefaultWithTrim(value));
 	}
 	
-	public static boolean isValidPhoneNumber(final String value) {
-        final var phone = getDefaultWithTrim(value);
-        return !isEmpty(phone) && phone.matches("^\\+?[0-9]{7,20}$");
+	public static boolean isValidPhoneNumber(final String cellPhone) {
+        return  cellPhone.matches("^\\+?[0-9]{10,15}$");
     }
 	
-	 public static boolean isValidEmail(final String value) {
-	    final var email = getDefaultWithTrim(value);
-	    return !isEmpty(email) && email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+	public static boolean isValidIdentificationNumber(final String identificationNumber) {
+	    String pattern = "^[A-Za-z0-9]{8,12}$";
+
+	    return identificationNumber.matches(pattern);
 	}
+	
+	public static boolean isValidName(final String name) {
+        String pattern = "^[A-Za-zÁÉÍÓÚáéíóúÑñ]{3,25}$";
+        return name.matches(pattern);
+    }
+
+    public static boolean isValidLastName(final String lastName) {
+        String pattern = "^[A-Za-zÁÉÍÓÚáéíóúÑñ]{2,25}$";
+        return lastName.matches(pattern);
+    }
+    
+    public static boolean isValidPassword(final String password) {
+        String pattern = "^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%&*?\\-_])[A-Za-z\\d!@#$%&*?\\-_]{8,15}$";
+        return password.matches(pattern);
+    }
 
 }

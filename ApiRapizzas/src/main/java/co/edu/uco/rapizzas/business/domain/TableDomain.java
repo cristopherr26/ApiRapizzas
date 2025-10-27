@@ -25,7 +25,7 @@ public final class TableDomain extends Domain{
 		setTableNumber(tableNumber);
 	}
 	
-	static TableDomain getDefaultValue() {
+	protected static TableDomain getDefaultValue() {
 		return new TableDomain();
 	}
 	

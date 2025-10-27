@@ -44,7 +44,7 @@ public final class OrderDomain extends Domain {
 		setCustomerTable(customerTable);
 	}
 	
-	static OrderDomain getDefaultValue() {
+	protected static OrderDomain getDefaultValue() {
 		return new OrderDomain();
 	}
 	

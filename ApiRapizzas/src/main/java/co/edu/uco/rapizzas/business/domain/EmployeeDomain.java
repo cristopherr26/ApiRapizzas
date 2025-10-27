@@ -43,7 +43,7 @@ public final class EmployeeDomain extends Domain {
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeDomain.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(false);
 		setAdministratorDefaultValue(true);
@@ -71,7 +71,7 @@ public final class EmployeeDomain extends Domain {
 		setEmployeePassword(employeePassword);
 	}
 
-	static EmployeeDomain getDefaultValue() {
+	protected static EmployeeDomain getDefaultValue() {
 		return new EmployeeDomain();
 	}
 	

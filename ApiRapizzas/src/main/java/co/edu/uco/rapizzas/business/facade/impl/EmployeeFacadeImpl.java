@@ -7,6 +7,7 @@ import static co.edu.uco.rapizzas.business.assembler.dto.impl.EmployeeDTOAssembl
 import co.edu.uco.rapizzas.business.business.impl.EmployeeBusinessImpl;
 import co.edu.uco.rapizzas.business.facade.EmployeeFacade;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
+import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
 import co.edu.uco.rapizzas.data.dao.factory.DAOFactory;
 import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
@@ -32,13 +33,13 @@ public final class EmployeeFacadeImpl implements EmployeeFacade{
 			daoFactory.rollbackTransaction();
 			throw exception;
 			
-		}catch (final Exception exception){
+		} catch (final Exception exception){
 			daoFactory.rollbackTransaction();
-			var userMessage = "";
-			var technicalMessage="";
+			var userMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION.getContent();
+			var technicalMessage = MessagesEnum.USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION.getContent();
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 			
-		}finally {
+		} finally {
 			daoFactory.closeConnection();
 		}
 		
@@ -79,7 +80,5 @@ public final class EmployeeFacadeImpl implements EmployeeFacade{
 		// TODO Auto-generated method stub
 		
 	}
-
-
-
+	
 }

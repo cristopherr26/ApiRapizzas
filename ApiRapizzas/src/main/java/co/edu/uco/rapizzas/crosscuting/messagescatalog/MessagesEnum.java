@@ -215,8 +215,6 @@ public enum MessagesEnum {
 	TECHNICAL_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error SQL durante la operación de eliminación de un producto asignado a un pedido.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de eliminación de un producto asignado a un pedido."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución.");
-
-	
 	
 	private String title;
 	private String content;

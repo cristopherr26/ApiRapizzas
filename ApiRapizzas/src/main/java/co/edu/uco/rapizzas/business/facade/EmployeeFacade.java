@@ -7,13 +7,13 @@ import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
 public interface EmployeeFacade {
 	
-	void registerNewUserInformation(EmployeeDTO employeeDto);
+	void registerNewEmployeeInformation(EmployeeDTO employeeDto);
 	
-	void updateUserInformation(UUID id, EmployeeDTO employeeDto);
+	void updateEmployeeInformation(UUID id, EmployeeDTO employeeDto);
 	
-	List<EmployeeDTO> findAllUsers();
+	List<EmployeeDTO> findAllEmployees();
 	
-	List<EmployeeDTO> findUserByFilter(EmployeeDTO employeeFilters);
+	List<EmployeeDTO> findEmployeeByFilter(EmployeeDTO employeeFilters);
 	
 	void confirmMobileNumber(UUID id, int confirmationCode);
 	

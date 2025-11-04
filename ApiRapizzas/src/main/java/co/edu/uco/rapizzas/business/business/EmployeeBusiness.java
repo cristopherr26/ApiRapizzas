@@ -7,13 +7,13 @@ import co.edu.uco.rapizzas.business.domain.EmployeeDomain;
 
 public interface EmployeeBusiness {
 	
-	void registerNewUserInformation(EmployeeDomain employeeDomain);
+	void registerNewEmployeeInformation(EmployeeDomain employeeDomain);
 	
-	void updateUserInformation(UUID id, EmployeeDomain employeeDomain);
+	void updateEmployeeInformation(UUID id, EmployeeDomain employeeDomain);
 	
-	List<EmployeeDomain> findAllUsers();
+	List<EmployeeDomain> findAllEmployees();
 	
-	List<EmployeeDomain> findUserByFilter(EmployeeDomain employeeFilters);
+	List<EmployeeDomain> findEmployeeByFilter(EmployeeDomain employeeFilters);
 	
 	void confirmMobileNumber(UUID id, int confirmationCode);
 	

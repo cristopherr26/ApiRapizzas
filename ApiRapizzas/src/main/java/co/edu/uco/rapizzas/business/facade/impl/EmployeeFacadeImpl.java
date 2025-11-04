@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static co.edu.uco.rapizzas.business.assembler.dto.impl.EmployeeDTOAssembler.getEmployeeDTOAssembler;
+
 import co.edu.uco.rapizzas.business.business.impl.EmployeeBusinessImpl;
 import co.edu.uco.rapizzas.business.facade.EmployeeFacade;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
@@ -12,10 +13,9 @@ import co.edu.uco.rapizzas.data.dao.factory.DAOFactory;
 import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
 public final class EmployeeFacadeImpl implements EmployeeFacade{
-	
+
 	@Override
-	public void registerNewUserInformation(final EmployeeDTO employeeDto) {
-		
+	public void registerNewEmployeeInformation(EmployeeDTO employeeDto) {
 		var daoFactory = DAOFactory.getFactory();
 		var business = new EmployeeBusinessImpl(daoFactory);
 		
@@ -25,7 +25,7 @@ public final class EmployeeFacadeImpl implements EmployeeFacade{
 			
 			var domain = getEmployeeDTOAssembler().toDomain(employeeDto);
 			
-			business.registerNewUserInformation(domain);
+			business.registerNewEmployeeInformation(domain);
 			
 			daoFactory.commitTransaction();
 			
@@ -46,19 +46,19 @@ public final class EmployeeFacadeImpl implements EmployeeFacade{
 	}
 
 	@Override
-	public void updateUserInformation(UUID id, EmployeeDTO employeeDto) {
+	public void updateEmployeeInformation(UUID id, EmployeeDTO employeeDto) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<EmployeeDTO> findAllUsers() {
+	public List<EmployeeDTO> findAllEmployees() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<EmployeeDTO> findUserByFilter(EmployeeDTO employeeFilters) {
+	public List<EmployeeDTO> findEmployeeByFilter(EmployeeDTO employeeFilters) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -27,7 +27,7 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 	}
 
 	@Override
-	public void registerNewUserInformation(final EmployeeDomain employeeDomain) {
+	public void registerNewEmployeeInformation(final EmployeeDomain employeeDomain) {
 		
 		//1. Validar que la informacion sea consistente a nivel de tipo de dato, longitud, oblatoriedad
 		//2. Validar que no exista otro empleado con el mismo tipo y número de documento
@@ -100,7 +100,7 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		
 	}
 	
-	private void validateDuplicatedEmployee(EmployeeDomain employeeDomain) {
+	private void validateDuplicatedEmployee(final EmployeeDomain employeeDomain) {
 
 	    var employeeEntityFilter = getEmployeeEntityAssembler().toEntity(employeeDomain);
 
@@ -130,7 +130,7 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 	    }
 	}
 	
-	private UUID generateUniqueEmployeeId(EmployeeDAO employeeDAO) {
+	private UUID generateUniqueEmployeeId(final EmployeeDAO employeeDAO) {
 	    var id = UUIDHelper.getUUIDHelper().generateNewUUID();
 
 	    var filterById = new EmployeeEntity();
@@ -150,31 +150,31 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 
 
 	@Override
-	public void updateUserInformation(UUID id, EmployeeDomain employeeDomain) {
+	public void updateEmployeeInformation(final UUID id, final EmployeeDomain employeeDomain) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<EmployeeDomain> findAllUsers() {
+	public List<EmployeeDomain> findAllEmployees() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<EmployeeDomain> findUserByFilter(EmployeeDomain employeeFilters) {
+	public List<EmployeeDomain> findEmployeeByFilter(final EmployeeDomain employeeFilters) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void confirmMobileNumber(UUID id, int confirmationCode) {
+	public void confirmMobileNumber(final UUID id, final int confirmationCode) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void sendMobileNumberConfirmation(UUID id) {
+	public void sendMobileNumberConfirmation(final UUID id) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -184,7 +184,5 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		// TODO Auto-generated method stub
 		
 	}
-
 	
-
 }

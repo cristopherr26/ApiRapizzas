@@ -236,7 +236,45 @@ public enum MessagesEnum {
 	USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante el registro del empleado.",
 		    "Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.",
-		    "Ocurrió una excepción no controlada al ejecutar la operación de registro del empleado en la capa de negocio o de acceso a datos.");
+		    "Ocurrió una excepción no controlada al ejecutar la operación de registro del empleado en la capa de negocio o de acceso a datos."),
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "No se recibieron los parámetros requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
+	
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador fue enviado como nulo"),
+	
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("No se pudo ejecutar la acción deseada.", "El identificador no puede tener el valor por defecto."),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador tiene el valor por defecto (00000000-0000-0000-0000-000000000000)."),
+	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("Error técnico ejecutando la regla StringValueIsPresentRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringValueIsPresentRule"),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringValueIsPresentRule"),
+	
+	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla StringValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringLengthValueIsPresentRule"),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "Se requerían cinco parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringLengthValueIsValidRule"),
+	
+	USER_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("No se pudo ejecutar la acción deseada.", "El siguiente dato debe tener una longitud entre (min, max): "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_LENGTH("La regla StringLengthValueIsPresentRule falló.","Esto se debe a que el siguiente dato no tiene una longitus esperada entre (min, max): "),
+	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE("Error técnico ejecutando la regla UUIDValueIsPresentRule.", "No se recibieron los parámetros requeridos para ejecutar la regla UUIDValueIsPresentRule"),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla UUIDValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla UUIDValueIsPresentRule"),
+	
+	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla UUIDValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:");
+	
 	
 	private String title;
 	private String content;

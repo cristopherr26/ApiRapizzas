@@ -52,5 +52,15 @@ public final class TextHelper {
         String pattern = "^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%&*?\\-_])[A-Za-z\\d!@#$%&*?\\-_]{8,15}$";
         return password.matches(pattern);
     }
+    
+    public static boolean lengthIsValid(final String value, final int min, final int max, final boolean mustApplyTrim) {
+		var valueToValidate = mustApplyTrim ? getDefaultWithTrim(value) : getDefault(value);
+		var length = valueToValidate.length();
+		return length>= min && length <= max;
+	}
+	
+	public static boolean lengthIsValidWithTrim(final String value, final int min, final int max) {
+		return lengthIsValid(getDefaultWithTrim(value), min, max, true);
+	}
 
 }

@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class StatusDomain extends Domain{
 	
-	private String statusName;
+	private String name;
 	
 	StatusDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -34,11 +34,11 @@ public final class StatusDomain extends Domain{
 	}
 
 	public String getStatusName() {
-		return statusName;
+		return name;
 	}
 
 	public void setStatusName(final String statusName) {
-		this.statusName = TextHelper.getDefaultWithTrim(statusName);
+		this.name = TextHelper.getDefaultWithTrim(statusName);
 	}
 
 }

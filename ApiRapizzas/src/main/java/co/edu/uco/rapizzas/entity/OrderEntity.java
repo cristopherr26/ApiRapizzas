@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class OrderEntity {
 	
-	private UUID orderId;
+	private UUID id;
 	private int total;
 	private String comment;
 	private EmployeeEntity employee;
@@ -70,11 +70,11 @@ public final class OrderEntity {
 	}
 
 	public UUID getOrderId() {
-		return orderId;
+		return id;
 	}
 
 	public void setOrderId(final UUID orderId) {
-		this.orderId = UUIDHelper.getUUIDHelper().getDefault(orderId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(orderId);
 	}
 
 	public EmployeeEntity getEmployee() {

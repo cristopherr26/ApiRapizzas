@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class CustomerTableEntity {
 	
-	private UUID customerTableId;
+	private UUID id;
 	private LocalDate orderDate;
 	private TableEntity table;
 	private CustomerEntity customer;
@@ -52,11 +52,11 @@ public final class CustomerTableEntity {
 	}
 
 	public UUID getCustomerTableId() {
-		return customerTableId;
+		return id;
 	}
 
 	public void setCustomerTableId(final UUID customerTableId) {
-		this.customerTableId = UUIDHelper.getUUIDHelper().getDefault(customerTableId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(customerTableId);
 	}
 
 	public TableEntity getTable() {

@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class SizeEntity{
 	
-	private UUID sizeId;
-	private String sizeName;
+	private UUID id;
+	private String name;
 	
 	public SizeEntity() {
 		setSizeId(UUIDHelper.getUUIDHelper().getDefault());
@@ -35,19 +35,19 @@ public final class SizeEntity{
 	}
 
 	public String getNameSize() {
-		return sizeName;
+		return name;
 	}
 
 	public void setNameSize(final String nameSize) {
-		this.sizeName = TextHelper.getDefaultWithTrim(nameSize);
+		this.name = TextHelper.getDefaultWithTrim(nameSize);
 	}
 
 	public UUID getSizeId() {
-		return sizeId;
+		return id;
 	}
 
 	public void setSizeId(final UUID sizeId) {
-		this.sizeId = UUIDHelper.getUUIDHelper().getDefault(sizeId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(sizeId);
 	}
 	
 }

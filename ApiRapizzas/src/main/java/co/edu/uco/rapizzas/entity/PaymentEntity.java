@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class PaymentEntity {
 	
-	private UUID paymentId;
+	private UUID id;
 	private LocalDate collectionDate;
 	private EmployeeEntity employee;
 	private OrderEntity order;
@@ -53,11 +53,11 @@ public final class PaymentEntity {
 	}
 
 	public UUID getPaymentId() {
-		return paymentId;
+		return id;
 	}
 
 	public void setPaymentId(final UUID paymentId) {
-		this.paymentId = UUIDHelper.getUUIDHelper().getDefault(paymentId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(paymentId);
 	}
 
 	public EmployeeEntity getEmployee() {

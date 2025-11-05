@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class SizeDTO {
 	
-	private UUID sizeId;
-	private String sizeName;
+	private UUID id;
+	private String name;
 	
 	public SizeDTO() {
 		setSizeId(UUIDHelper.getUUIDHelper().getDefault());
@@ -35,19 +35,19 @@ public final class SizeDTO {
 	}
 	
 	public UUID getSizeId() {
-		return sizeId;
+		return id;
 	}
 	
 	public void setSizeId(final UUID sizeId) {
-		this.sizeId = UUIDHelper.getUUIDHelper().getDefault(sizeId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(sizeId);
 	}
 	
 	public String getSizeName() {
-		return sizeName;
+		return name;
 	}
 	
 	public void setSizeName(final String sizeName) {
-		this.sizeName = TextHelper.getDefaultWithTrim(sizeName);
+		this.name = TextHelper.getDefaultWithTrim(sizeName);
 	}
 	
 }

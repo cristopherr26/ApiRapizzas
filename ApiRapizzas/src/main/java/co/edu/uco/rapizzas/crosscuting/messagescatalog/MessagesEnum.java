@@ -41,8 +41,8 @@ public enum MessagesEnum {
 			"Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de un cliente. No fue una SQLException, sino un error no controlado en el proceso de registro."),
 	USER_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_EXECUTION("Error durante la consulta de la información de una mesa.","Se ha presentado un problema tratando de ejecutar la consulta de la información de una mesa, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_EXECUTION("Error inesperado durante la consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de una mesa. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de una mesa.","Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de una mesa."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de una mesa. No fue una SQLException, sino un error no controlado en el proceso de consulta."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_PREPARATION("Error SQL durante la  operación de consulta de la información de una mesa.","Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de una mesa."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_PREPARATION("Error  inesperado durante la operación de consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de una mesa. No fue una SQLException, sino un error no controlado en el proceso de consulta."),
 	USER_ERROR_SQL_EXCEPTION_FINDING_EMPLOYEE_WHILE_EXECUTION("Error durante la consulta de la información de un empleado.","Se ha presentado un problema tratando de ejecutar la consulta de la información de un empleado, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante la consulta de la información de un empleado.","Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de un empleado. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_EMPLOYEE_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de un empleado.","Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de un empleado."),
@@ -220,16 +220,16 @@ public enum MessagesEnum {
 		    "Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.",
 		    "Ocurrió una excepción no controlada al ejecutar la operación de registro del empleado en la capa de negocio o de acceso a datos."),
-	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("El valor  del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar  a cabo la operación deseada..."),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "No se recibieron los parámetros requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
 	
-	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("No  se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la  operación: "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador fue enviado como nulo"),
 	
-	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("No se pudo ejecutar la acción deseada.", "El identificador no puede tener el valor por defecto."),
+	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("No se pudo ejecutar la acción  deseada", "El identificador no puede tener el valor por defecto."),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador tiene el valor por defecto (00000000-0000-0000-0000-000000000000)."),
 	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
@@ -244,7 +244,7 @@ public enum MessagesEnum {
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringValueIsPresentRule"),
 	
-	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla StringValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringLengthValueIsPresentRule"),
@@ -268,13 +268,13 @@ public enum MessagesEnum {
 	
 	UNEXPECTED_ERROR_WHILE_REGISTERING_EMPLOYEE("Error inesperado durante el registro del empleado", "Se presentó un error inesperado llevando a cabo el registro del empleado, si el error persiste, por favor contacte con el administrador"),
 	
-	TECHNICAL_ERROR_VALUE_EMPLOYEEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
-	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("No fueron ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
+	TECHNICAL_ERROR_VALUE_EMPLOYEEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("Error tratando de llevar  a cabo la  operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("No fueron  ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
 	USER_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado con el mismo  número de teléfono"),
 	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese  número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo  número de teléfono"),
 	
-	TECHNICAL_ERROR_VALUE_IS_NOT_PRESENT_EMPLOYEE("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeExistsByIdRule"),
-	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE("No fueron ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeExistsByIdRule"),
+	TECHNICAL_ERROR_VALUE_IS_NOT_PRESENT_EMPLOYEE("Error tratando de llevar a cabo la  operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeExistsByIdRule"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE("No fueron  ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeExistsByIdRule"),
 	USER_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado ingresada no existe"),
 	TECHNICAL_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado con el siguiente id no existe: "),
 	

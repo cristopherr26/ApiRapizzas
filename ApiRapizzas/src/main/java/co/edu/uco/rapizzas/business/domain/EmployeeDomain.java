@@ -19,7 +19,7 @@ public final class EmployeeDomain extends Domain {
 	private boolean cellPhoneNumberConfirmedDefaultValue;
 	private boolean isAdministrator;
 	private boolean isAdministratorDefaultValue;
-	private String employeePassword;
+	private String password;
 	
 	EmployeeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -27,7 +27,7 @@ public final class EmployeeDomain extends Domain {
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeDomain.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 		setAdministrator(false);
 		setAdministratorDefaultValue(true);
@@ -157,11 +157,11 @@ public final class EmployeeDomain extends Domain {
 	}
 
 	public String getEmployeePassword() {
-		return employeePassword;
+		return password;
 	}
 
 	public void setEmployeePassword(final String employeePassword) {
-		this.employeePassword = TextHelper.getDefault(employeePassword);
+		this.password = TextHelper.getDefault(employeePassword);
 	}
 
 	public boolean isActiveDefaultValue() {

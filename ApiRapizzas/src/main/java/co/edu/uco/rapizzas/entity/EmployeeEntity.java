@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class EmployeeEntity{
 	
-	private UUID employeeId;
+	private UUID id;
 	private String name;
 	private String lastName;
 	private boolean isActive;
@@ -20,7 +20,7 @@ public final class EmployeeEntity{
 	private boolean cellPhoneNumberConfirmedDefaultValue;
 	private boolean isAdministrator;
 	private boolean isAdministratorDefaultValue;
-	private String employeePassword;
+	private String password;
 	
 	public EmployeeEntity() {
 		setEmployeeId(UUIDHelper.getUUIDHelper().getDefault());
@@ -140,19 +140,19 @@ public final class EmployeeEntity{
 	}
 
 	public String getEmployeePassword() {
-		return employeePassword;
+		return password;
 	}
 
 	public void setEmployeePassword(final String employeePassword) {
-		this.employeePassword = TextHelper.getDefault(employeePassword);
+		this.password = TextHelper.getDefault(employeePassword);
 	}
 
 	public UUID getEmployeeId() {
-		return employeeId;
+		return id;
 	}
 
 	public void setEmployeeId(final UUID employeeId) {
-		this.employeeId = UUIDHelper.getUUIDHelper().getDefault(employeeId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(employeeId);
 	}
 
 	public IdentificationTypeEntity getIdentificationType() {

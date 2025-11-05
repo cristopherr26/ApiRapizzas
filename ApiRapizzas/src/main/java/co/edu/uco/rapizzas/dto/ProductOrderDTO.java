@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
 
 public final class ProductOrderDTO {
 	
-	private UUID productOrderId;
+	private UUID id;
 	private int amount;
 	private ProductDTO product;
 	private OrderDTO order;
@@ -44,11 +44,11 @@ public final class ProductOrderDTO {
 	}
 	
 	public UUID getProductOrderId() {
-		return productOrderId;
+		return id;
 	}
 	
 	public void setProductOrderId(final UUID productOrderId) {
-		this.productOrderId = UUIDHelper.getUUIDHelper().getDefault(productOrderId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(productOrderId);
 	}
 	
 	public int getAmount() {

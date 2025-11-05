@@ -50,11 +50,11 @@ public final class ValidateDataEmployeeConsistencyForRegisterNewInformation impl
 	private void validateEmptyData(final EmployeeDomain data) {
 		 
 		UUIDValueIsPresentRule.executeRule(data.getIdentificationType().getId(), "Tipo de identificación");
-		StringValueIsPresentRule.executeRule(data.getIdentificationNumber(), "Número de identificación", true);
+		StringValueIsPresentRule.executeRule(data.getIdentificationNumber(), "Número de identificación ", true);
 		StringValueIsPresentRule.executeRule(data.getName(), "Nombre", true);
 		StringValueIsPresentRule.executeRule(data.getLastName(), "Apellido", true);
-		StringValueIsPresentRule.executeRule(data.getCellPhoneNumber(), "Número de celular", true);
-		StringValueIsPresentRule.executeRule(data.getEmployeePassword(), "Contraseña", false);
+		StringValueIsPresentRule.executeRule(data.getCellPhoneNumber(), " Número de celular", true);
+		StringValueIsPresentRule.executeRule(data.getEmployeePassword(), " Contraseña", false);
 	
 	}
 	

@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class IdentificationTypeDomain extends Domain {
 	
-	private String identificationTypeName;
+	private String name;
 	
 	IdentificationTypeDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -36,11 +36,11 @@ public final class IdentificationTypeDomain extends Domain {
 	}
 
 	public String getIdentificationTypeName() {
-		return identificationTypeName;
+		return name;
 	}
 
 	public void setIdentificationTypeName(final String name) {
-		this.identificationTypeName = TextHelper.getDefaultWithTrim(name);
+		this.name = TextHelper.getDefaultWithTrim(name);
 	}
 	
 }

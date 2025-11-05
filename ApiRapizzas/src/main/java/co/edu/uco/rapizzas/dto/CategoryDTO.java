@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class CategoryDTO {
 	
-	private UUID categoryId;
-	private String categoryName;
+	private UUID id;
+	private String name;
 	
 	public CategoryDTO() {
 		setCategoryId(UUIDHelper.getUUIDHelper().getDefault());
@@ -35,19 +35,19 @@ public final class CategoryDTO {
 	}
 
 	public UUID getCategoryId() {
-		return categoryId;
+		return id;
 	}
 
 	public void setCategoryId(final UUID categoryId) {
-		this.categoryId = ObjectHelper.getDefault(categoryId, UUIDHelper.getUUIDHelper().getDefault());
+		this.id = ObjectHelper.getDefault(categoryId, UUIDHelper.getUUIDHelper().getDefault());
 	}
 
 	public String getCategoryName() {
-		return categoryName;
+		return name;
 	}
 
 	public void setCategoryName(final String categoryName) {
-		this.categoryName = TextHelper.getDefaultWithTrim(categoryName);
+		this.name = TextHelper.getDefaultWithTrim(categoryName);
 	}
 	
 }

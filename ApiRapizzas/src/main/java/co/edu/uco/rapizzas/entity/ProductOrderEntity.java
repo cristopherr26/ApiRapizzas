@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class ProductOrderEntity{
 	
-	private  UUID productOrderId;
+	private  UUID id;
 	private int amount;
 	private ProductEntity product;
 	private OrderEntity order;
@@ -52,11 +52,11 @@ public final class ProductOrderEntity{
 	}
 
 	public UUID getProductOrderId() {
-		return productOrderId;
+		return id;
 	}
 
 	public void setProductOrderId(final UUID productOrderId) {
-		this.productOrderId = UUIDHelper.getUUIDHelper().getDefault(productOrderId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(productOrderId);
 	}
 
 	public ProductEntity getProduct() {

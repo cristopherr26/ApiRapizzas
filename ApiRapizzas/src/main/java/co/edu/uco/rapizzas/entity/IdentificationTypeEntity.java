@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class IdentificationTypeEntity{
 	
-	private UUID identificationTypeId;
-	private String identificationTypeName;
+	private UUID id;
+	private String name;
 	
 	public IdentificationTypeEntity() {
 		setIdentificationTypeId(UUIDHelper.getUUIDHelper().getDefault());
@@ -37,19 +37,19 @@ public final class IdentificationTypeEntity{
 	}
 
 	public String getName() {
-		return identificationTypeName;
+		return name;
 	}
 
 	public void setIdentificationTypeName(final String name) {
-		this.identificationTypeName = TextHelper.getDefaultWithTrim(name);
+		this.name = TextHelper.getDefaultWithTrim(name);
 	}
 
 	public UUID getIdentificationTypeId() {
-		return identificationTypeId;
+		return id;
 	}
 
 	public void setIdentificationTypeId(final UUID identificationTypeId) {
-		this.identificationTypeId = UUIDHelper.getUUIDHelper().getDefault(identificationTypeId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(identificationTypeId);
 	}
 
 }

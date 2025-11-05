@@ -9,7 +9,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class ProductDomain extends Domain {
 	
-	private String productName;
+	private String name;
 	private int price;
 	private CategoryDomain category;
 	private SizeDomain size;
@@ -48,11 +48,11 @@ public final class ProductDomain extends Domain {
 	}
 
 	public String getProductName() {
-		return productName;
+		return name;
 	}
 
 	public void setProductName(final String productName) {
-		this.productName = TextHelper.getDefaultWithTrim(productName);
+		this.name = TextHelper.getDefaultWithTrim(productName);
 	}
 
 	public int getPrice() {

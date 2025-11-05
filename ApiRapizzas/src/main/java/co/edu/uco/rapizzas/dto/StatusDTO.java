@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class StatusDTO {
 	
-	private UUID statusId;
-	private String statusName;
+	private UUID id;
+	private String name;
 	
 	public StatusDTO() {
 		setStatusId(UUIDHelper.getUUIDHelper().getDefault());
@@ -35,19 +35,19 @@ public final class StatusDTO {
 	}
 	
 	public UUID getStatusId() {
-		return statusId;
+		return id;
 	}
 	
 	public void setStatusId(final UUID statusId) {
-		this.statusId = UUIDHelper.getUUIDHelper().getDefault(statusId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(statusId);
 	}
 	
 	public String getStatusName() {
-		return statusName;
+		return name;
 	}
 	
 	public void setStatusName(final String statusName) {
-		this.statusName = TextHelper.getDefaultWithTrim(statusName);
+		this.name = TextHelper.getDefaultWithTrim(statusName);
 	}
 	
 }

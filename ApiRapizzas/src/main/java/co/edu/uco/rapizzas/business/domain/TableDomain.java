@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class TableDomain extends Domain{
 	
-	private int tableNumber;
+	private int number;
 	
 	TableDomain() {
 		super(UUIDHelper.getUUIDHelper().getDefault());
@@ -34,11 +34,11 @@ public final class TableDomain extends Domain{
 	}
 
 	public int getTableNumber() {
-		return tableNumber;
+		return number;
 	}
 
 	public void setTableNumber(final int tableNumber) {
-		this.tableNumber = IntegerHelper.getDefault(tableNumber);
+		this.number = IntegerHelper.getDefault(tableNumber);
 	}
 
 }

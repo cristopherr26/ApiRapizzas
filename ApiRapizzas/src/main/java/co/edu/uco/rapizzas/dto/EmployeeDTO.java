@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class EmployeeDTO {
 	
-	private UUID employeeId;
+	private UUID id;
 	private String name;
 	private String lastName;
 	private boolean isActive;
@@ -20,7 +20,7 @@ public final class EmployeeDTO {
 	private boolean cellPhoneNumberConfirmedDefaultValue;
 	private boolean isAdministrator;
 	private boolean isAdministratorDefaultValue;
-	private String employeePassword;
+	private String password;
 	
 	public EmployeeDTO() {
 		setEmployeeId(UUIDHelper.getUUIDHelper().getDefault());
@@ -80,11 +80,11 @@ public final class EmployeeDTO {
 	}
 	
 	public UUID getEmployeeId() {
-		return employeeId;
+		return id;
 	}
 	
 	public void setEmployeeId(final UUID employeeId) {
-		this.employeeId = ObjectHelper.getDefault(employeeId, UUIDHelper.getUUIDHelper().getDefault());
+		this.id = ObjectHelper.getDefault(employeeId, UUIDHelper.getUUIDHelper().getDefault());
 	}
 	
 	public String getName() {
@@ -155,11 +155,11 @@ public final class EmployeeDTO {
 	}
 	
 	public String getEmployeePassword() {
-		return employeePassword;
+		return password;
 	}
 	
 	public void setEmployeePassword(final String employeePassword) {
-		this.employeePassword = TextHelper.getDefault(employeePassword);
+		this.password = TextHelper.getDefault(employeePassword);
 	}
 
 	public boolean isActiveDefaultValue() {

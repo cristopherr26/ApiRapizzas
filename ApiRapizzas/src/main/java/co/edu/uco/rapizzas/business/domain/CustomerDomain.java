@@ -21,7 +21,7 @@ public final class CustomerDomain extends Domain {
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeDomain.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
@@ -31,7 +31,7 @@ public final class CustomerDomain extends Domain {
 		setLastName(TextHelper.getDefault());
 		setActive(false);
 		setActiveDefaultValue(true);
-		setIdentificationType(IdentificationTypeDomain.getDefaultValue());;
+		setIdentificationType(IdentificationTypeDomain.getDefaultValue());
 		setIdentificationNumber(TextHelper.getDefault());
 	}
 	
@@ -43,7 +43,7 @@ public final class CustomerDomain extends Domain {
 		setName(name);
 		setLastName(lastName);
 		setActive(isActive);
-		setIdentificationType(identificationType);;
+		setIdentificationType(identificationType);
 		setIdentificationNumber(identificationNumber);
 	}
 	

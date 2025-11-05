@@ -8,8 +8,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class TableEntity{
 	
-	private UUID tableId;
-	private int tableNumber;
+	private UUID id;
+	private int number;
 	
 	public TableEntity() {
 		setTableId(UUIDHelper.getUUIDHelper().getDefault());
@@ -35,19 +35,19 @@ public final class TableEntity{
 	}
 
 	public int getTableNumber() {
-		return tableNumber;
+		return number;
 	}
 
 	public void setTableNumber(final int tableNumber) {
-		this.tableNumber = IntegerHelper.getDefault(tableNumber);
+		this.number = IntegerHelper.getDefault(tableNumber);
 	}
 
 	public UUID getTableId() {
-		return tableId;
+		return id;
 	}
 
 	public void setTableId(final UUID tableId) {
-		this.tableId = UUIDHelper.getUUIDHelper().getDefault(tableId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(tableId);
 	}
 	
 }

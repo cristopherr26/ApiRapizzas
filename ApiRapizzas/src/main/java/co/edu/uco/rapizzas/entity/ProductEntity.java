@@ -9,8 +9,8 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class ProductEntity{
 	
-	private UUID productId;
-	private String productName;
+	private UUID id;
+	private String name;
 	private int price;
 	private CategoryEntity category;
 	private SizeEntity size;
@@ -49,11 +49,11 @@ public final class ProductEntity{
 	}
 
 	public String getProductName() {
-		return productName;
+		return name;
 	}
 
 	public void setProductName(final String productName) {
-		this.productName = TextHelper.getDefaultWithTrim(productName);
+		this.name = TextHelper.getDefaultWithTrim(productName);
 	}
 
 	public int getPrice() {
@@ -65,11 +65,11 @@ public final class ProductEntity{
 	}
 
 	public UUID getProductId() {
-		return productId;
+		return id;
 	}
 
 	public void setProductId(final UUID productId) {
-		this.productId = UUIDHelper.getUUIDHelper().getDefault(productId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(productId);
 	}
 
 	public CategoryEntity getCategory() {

@@ -8,7 +8,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class CustomerDTO {
 	
-	private UUID customerId;
+	private UUID id;
 	private String name;
 	private String lastName;
 	private boolean isActive;
@@ -56,11 +56,11 @@ public final class CustomerDTO {
 	}
 	
 	public UUID getCustomerId() {
-		return customerId;
+		return id;
 	}
 	
 	public void setCustomerId(final UUID customerId) {
-		this.customerId = UUIDHelper.getUUIDHelper().getDefault(customerId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(customerId);
 	}
 	
 	public String getName() {

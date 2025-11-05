@@ -10,7 +10,7 @@ import co.edu.uco.rapizzas.crosscuting.helper.UUIDHelper;
 
 public final class CustomerTableDTO {
 	
-	private UUID customerTableId;
+	private UUID id;
 	private LocalDate orderDate;
 	private TableDTO table;
 	private CustomerDTO customer;
@@ -46,11 +46,11 @@ public final class CustomerTableDTO {
 	}
 	
 	public UUID getCustomerTableId() {
-		return customerTableId;
+		return id;
 	}
 	
 	public void setCustomerTableId(final UUID customerTableId) {
-		this.customerTableId = UUIDHelper.getUUIDHelper().getDefault(customerTableId);
+		this.id = UUIDHelper.getUUIDHelper().getDefault(customerTableId);
 	}
 	
 	public LocalDate getOrderDate() {

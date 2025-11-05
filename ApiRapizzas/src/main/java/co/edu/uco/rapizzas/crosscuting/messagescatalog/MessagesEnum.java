@@ -215,24 +215,7 @@ public enum MessagesEnum {
 	TECHNICAL_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error SQL durante la operación de eliminación de un producto asignado a un pedido.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de eliminación de un producto asignado a un pedido."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_EMPLOYEE("Información del empleado no proporcionada","No es posible registrar al empleado porque no se recibió la información requerida para su registro."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_EMPLOYEE("El objeto EmployeeDomain llegó nulo","No es posible continuar con el registro del empleado, ya que la instancia de EmployeeDomain fue recibida como null."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_IDENTIFICATION_TYPE("Tipo de documento del empleado no proporcionado","No es posible registrar al empleado porque no se envió la información correspondiente a su tipo de documento."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_NULL_IDENTIFICATION_TYPE("El atributo identificationType llegó nulo","No es posible continuar con el registro del empleado, ya que su tipo de documento fue recibido como null."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_IDENTIFICATION_NUMBER("Número de documento del empleado inválido","Debe tener entre 8 y 12 caracteres alfanuméricos y no contener símbolos o espacios."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_IDENTIFICATION_NUMBER("El número de documento no cumple con las validaciones de formato","Fue enviado vacío, con caracteres no permitidos o fuera del rango de 8 a 12 caracteres."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_FIRST_NAME("Nombre del empleado inválido","Debe tener entre 3 y 25 caracteres alfabéticos y no incluir números ni símbolos."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_FIRST_NAME("El nombre no cumple con las reglas de validación","Fue enviado vacío, contiene caracteres no válidos o excede la longitud máxima permitida."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_LAST_NAME("Apellido del empleado inválido","Debe tener entre 2 y 25 caracteres alfabéticos y no incluir números ni símbolos."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_LAST_NAME("El apellido no cumple con las reglas de validación","Fue enviado vacío, contiene caracteres no válidos o supera el límite de longitud permitido."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_PASSWORD("Contraseña del empleado inválida","Debe tener entre 8 y 15 caracteres, incluir al menos una mayúscula, un número y un carácter especial (! @ # $ % & * ? - _)."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_PASSWORD("La contraseña no cumple con las políticas de seguridad establecidas","Fue enviada vacía, con longitud incorrecta o sin cumplir los requisitos mínimos de formato."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_CELL_PHONE_NUMBER("Número de teléfono del empleado inválido","Debe contener entre 10 y 15 dígitos numéricos sin letras ni espacios."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_INVALID_CELL_PHONE_NUMBER("El número de teléfono no cumple con las reglas de validación","Fue enviado vacío, con caracteres no numéricos o con una longitud fuera del rango permitido."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_CELL_PHONE_NUMBER("Número de teléfono ya registrado","No es posible registrar al empleado porque el número de teléfono ingresado ya está asociado a otro registro."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_CELL_PHONE_NUMBER("Número de teléfono duplicado en la base de datos","El registro no puede completarse porque el número de teléfono ingresado ya existe en la fuente de datos."),
-	USER_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_IDENTIFICATION("Documento de identificación ya registrado","No es posible registrar al empleado porque el tipo y número de documento ingresados ya están asociados a otro registro."),
-	TECHNICAL_ERROR_WHILE_REGISTERING_EMPLOYEE_DUPLICATED_IDENTIFICATION("Identificación duplicada en la fuente de datos","No es posible completar el registro porque el tipo y número de documento ya existen en la base de datos."),
+	
 	USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante el registro del empleado.",
 		    "Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.",
@@ -250,6 +233,12 @@ public enum MessagesEnum {
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador tiene el valor por defecto (00000000-0000-0000-0000-000000000000)."),
 	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID("La regla IdentificationTypeExistsByIdRule falló.", "La regla IdentificationTypeExistsByIdRule falló porque el tipo de identificación se envió como vacío."),
+	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID_WITH_PARAMETERS("Error técnico ejecutando la regla IdentificationTypeExistsByIdRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdentificationTypeExistsByIdRule"),
+	
+	USER_ERROR_IDENTIFICATION_TYPE_DOES_NOT_EXITS("El tipo de documento no existe", "El tipo de documento ingresado no existe"),
+	TECHNICAL_ERROR_IDENTIFICATION_TYPE_DOES_NOT_EXITS("El tipo de documento no existe", "El tipo de documento con el siguiente id no existe: "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("Error técnico ejecutando la regla StringValueIsPresentRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringValueIsPresentRule"),
 	
@@ -273,7 +262,29 @@ public enum MessagesEnum {
 	
 	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
 	
-	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla UUIDValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:");
+	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla UUIDValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
+	
+	SUCCESFULLY_EMPLOYEE_REGISTERED("Empleado registrado con éxito", "El registro del empleado se llevó a cabo con éxito"),
+	
+	UNEXPECTED_ERROR_WHILE_REGISTERING_EMPLOYEE("Error inesperado durante el registro del empleado", "Se presentó un error inesperado llevando a cabo el registro del empleado, si el error persiste, por favor contacte con el administrador"),
+	
+	TECHNICAL_ERROR_VALUE_EMPLOYEEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("No fueron ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
+	USER_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado con el mismo  número de teléfono"),
+	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese  número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo  número de teléfono"),
+	
+	TECHNICAL_ERROR_VALUE_IS_NOT_PRESENT_EMPLOYEE("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeExistsByIdRule"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE("No fueron ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeExistsByIdRule"),
+	USER_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado ingresada no existe"),
+	TECHNICAL_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado con el siguiente id no existe: "),
+	
+	TECHNICAL_ERROR_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_IDENTIFICATION("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSameIdtypeAndNumberRule"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_IDENTIFICATION("No fueron ingresados todos los parametros", "Se requerían tres parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSameIdtypeAndNumberRule"),
+	USER_ERROR_EMPLOYEE_DOES_EXISTS_BY_IDENTIFICATION("Ya hay un empleado registrado con ese tipo y número de identificación", "No es posible llevar a cabo la operación, ya que ya existe un empleado con el mismo tipo y número de identificación"),
+	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_IDENTIFICATION("Ya hay un empleado registrado con ese tipo y número de identificación", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo tipo y número de identificación "),
+	
+	TECHNICAL_ERROR_VALUE_EMPLOYEE_IS_NOT_PRESENT("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation"),
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_IS_NOT_PRESENT("No fueron ingresados todos los parametros", "Se requería un solo parametro y llegó una cantidad menor a esta requerida para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation");
 	
 	
 	private String title;

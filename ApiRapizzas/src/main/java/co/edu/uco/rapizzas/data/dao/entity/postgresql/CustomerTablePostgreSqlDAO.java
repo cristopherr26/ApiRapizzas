@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
@@ -217,6 +218,11 @@ public final class CustomerTablePostgreSqlDAO extends SqlConnection implements C
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
+	}
+
+	@Override
+	public CustomerTableEntity findById(final UUID id) {
+		return findByFilter(new CustomerTableEntity(id)).stream().findFirst().orElse(new CustomerTableEntity());
 	}
 
 }

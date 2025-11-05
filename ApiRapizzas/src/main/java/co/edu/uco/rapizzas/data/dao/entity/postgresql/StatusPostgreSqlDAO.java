@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -147,6 +148,11 @@ public final class StatusPostgreSqlDAO extends SqlConnection implements StatusDA
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
+	}
+
+	@Override
+	public StatusEntity findById(final UUID id) {
+		return findByFilter(new StatusEntity(id)).stream().findFirst().orElse(new StatusEntity());
 	}
 
 }

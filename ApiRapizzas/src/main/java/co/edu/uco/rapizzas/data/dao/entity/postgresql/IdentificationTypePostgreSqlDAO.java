@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -86,7 +87,7 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 		sql.append("SELECT ");
 		sql.append("  TI.\"idTipoDocumento\" AS \"idTI\", ");
 		sql.append("  TI.\"nombreTipoDocumento\" AS \"nombreTI\" ");
-		sql.append("  FROM \"TipoDocumento\" AS TI ");
+		sql.append("FROM \"TipoDocumento\" AS TI ");
 
 		createWhereClauseFindByFilter(sql, parametersList, filterEntity);
 
@@ -98,6 +99,9 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 
 		var filterEntityValidated = ObjectHelper.getDefault(filterEntity, new IdentificationTypeEntity());
 		final var conditions = new ArrayList<String>();
+		
+		addCondition(conditions, parametersList, !UUIDHelper.getUUIDHelper().isDefaultUUID(filterEntityValidated.getIdentificationTypeId()),
+				"TI.\"idTipoDocumento\" = ", filterEntityValidated.getIdentificationTypeId());
 
 		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getName()),
 				"TI.\"nombreTipoDocumento\" = ", filterEntityValidated.getName());
@@ -170,6 +174,11 @@ public final class IdentificationTypePostgreSqlDAO extends SqlConnection impleme
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		
 		}
+	}
+
+	@Override
+	public IdentificationTypeEntity findById(final UUID id) {
+		return findByFilter(new IdentificationTypeEntity(id)).stream().findFirst().orElse(new IdentificationTypeEntity());
 	}
 }
 

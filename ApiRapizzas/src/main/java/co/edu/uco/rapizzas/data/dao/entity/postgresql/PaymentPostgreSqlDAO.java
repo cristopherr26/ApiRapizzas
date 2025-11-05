@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.DateHelper;
@@ -272,6 +273,11 @@ public final class PaymentPostgreSqlDAO extends SqlConnection implements Payment
 		}
 
 		return payments;
+	}
+
+	@Override
+	public PaymentEntity findById(final UUID id) {
+		return findByFilter(new PaymentEntity(id)).stream().findFirst().orElse(new PaymentEntity());
 	}
 
 }

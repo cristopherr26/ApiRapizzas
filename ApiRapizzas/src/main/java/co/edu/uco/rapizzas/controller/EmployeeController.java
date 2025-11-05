@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import co.edu.uco.rapizzas.controller.dto.Response;
 import co.edu.uco.rapizzas.business.facade.impl.EmployeeFacadeImpl;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
+import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
 import co.edu.uco.rapizzas.dto.EmployeeDTO;
 
 @RestController
@@ -26,14 +27,14 @@ public class EmployeeController {
 		try {
 			var facade = new EmployeeFacadeImpl();
 			facade.registerNewEmployeeInformation(employee);
-			responseObjectData.addMessage("Employee registered succesfully!!");
+			responseObjectData.addMessage(MessagesEnum.SUCCESFULLY_EMPLOYEE_REGISTERED.getContent());
 		} catch (final RapizzasException exception) {
 			responseObjectData = Response.createFailedResponse();
 			responseObjectData.addMessage(exception.getUserMessage());
 			responseStatusCode = HttpStatus.BAD_REQUEST;
 			exception.printStackTrace();
 		} catch(Exception exception) {
-			var userMessage = "Unexpected error";
+			var userMessage = MessagesEnum.UNEXPECTED_ERROR_WHILE_REGISTERING_EMPLOYEE.getContent();
 			responseObjectData = Response.createFailedResponse();
 			responseObjectData.addMessage(userMessage);
 			responseStatusCode = HttpStatus.INTERNAL_SERVER_ERROR;

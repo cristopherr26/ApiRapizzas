@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -176,5 +177,10 @@ public final class SizePostgreSqlDAO extends SqlConnection implements SizeDAO {
 			}
 
 		}
+
+	@Override
+	public SizeEntity findById(final UUID id) {
+		return findByFilter(new SizeEntity(id)).stream().findFirst().orElse(new SizeEntity());
+	}
 	
 	}

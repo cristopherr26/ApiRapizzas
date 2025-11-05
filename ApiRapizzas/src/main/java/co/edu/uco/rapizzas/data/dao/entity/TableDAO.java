@@ -1,9 +1,11 @@
 package co.edu.uco.rapizzas.data.dao.entity;
 
+import java.util.UUID;
+
 import co.edu.uco.rapizzas.data.dao.CreateDAO;
 import co.edu.uco.rapizzas.data.dao.RetrieveDAO;
 import co.edu.uco.rapizzas.entity.TableEntity;
 
-public interface TableDAO extends CreateDAO<TableEntity>, RetrieveDAO<TableEntity> {
+public interface TableDAO extends CreateDAO<TableEntity>, RetrieveDAO<TableEntity, UUID> {
 
 }

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -127,6 +128,9 @@ public final class EmployeePostgreSqlDAO extends SqlConnection implements Employ
 
 		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getLastName()),
 				"E.\"apellido\" = ", filterEntityValidated.getLastName());
+		
+		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getIdentificationNumber()),
+				"E.\"numeroDocumento\" = ", filterEntityValidated.getIdentificationNumber());
 
 		addCondition(conditions, parametersList,
 				!UUIDHelper.getUUIDHelper().isDefaultUUID(filterEntityValidated.getIdentificationType().getIdentificationTypeId()),
@@ -230,6 +234,11 @@ public final class EmployeePostgreSqlDAO extends SqlConnection implements Employ
 			throw RapizzasException.create(exception, userMessage, technicalMessage);
 		}
 		
+	}
+
+	@Override
+	public EmployeeEntity findById(final UUID id) {
+		return findByFilter(new EmployeeEntity(id)).stream().findFirst().orElse(new EmployeeEntity());
 	}
 
 }

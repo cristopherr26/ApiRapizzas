@@ -225,4 +225,9 @@ public final class ProductOrderPostgreSqlDAO extends SqlConnection implements Pr
 		
 	}
 
+	@Override
+	public ProductOrderEntity findById(final UUID id) {
+		return findByFilter(new ProductOrderEntity(id)).stream().findFirst().orElse(new ProductOrderEntity());
+	}
+
 }

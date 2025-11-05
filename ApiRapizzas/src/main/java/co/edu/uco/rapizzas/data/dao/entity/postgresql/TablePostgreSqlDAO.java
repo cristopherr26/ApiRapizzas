@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.IntegerHelper;
@@ -146,6 +147,11 @@ public final class TablePostgreSqlDAO extends SqlConnection implements TableDAO 
 		}
 
 		return tables;
+	}
+
+	@Override
+	public TableEntity findById(final UUID id) {
+		return findByFilter(new TableEntity(id)).stream().findFirst().orElse(new TableEntity());
 	}
 
 }

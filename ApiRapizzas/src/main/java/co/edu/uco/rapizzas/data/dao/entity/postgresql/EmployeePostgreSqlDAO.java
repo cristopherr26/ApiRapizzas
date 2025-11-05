@@ -131,6 +131,9 @@ public final class EmployeePostgreSqlDAO extends SqlConnection implements Employ
 		
 		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getIdentificationNumber()),
 				"E.\"numeroDocumento\" = ", filterEntityValidated.getIdentificationNumber());
+		
+		addCondition(conditions, parametersList, !TextHelper.isEmptyWithTrim(filterEntityValidated.getCellPhoneNumber()),
+				"E.\"numeroTelefonoMovil\" = ", filterEntityValidated.getCellPhoneNumber());
 
 		addCondition(conditions, parametersList,
 				!UUIDHelper.getUUIDHelper().isDefaultUUID(filterEntityValidated.getIdentificationType().getIdentificationTypeId()),

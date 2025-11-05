@@ -31,7 +31,7 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 
 		ValidateIdTypeExistsById.executeValidation(employeeDomain.getIdentificationType().getId(), daoFactory);
 		
-		ValidateEmployeeDoesNotExistsWithSameIdTypeAndNumber.executeValidation(employeeDomain.getIdentificationType().getId(), employeeDomain.getIdentificationNumber(), daoFactory);
+		ValidateEmployeeDoesNotExistsWithSameIdTypeAndNumber.executeValidation(employeeDomain.getIdentificationType(), employeeDomain.getIdentificationNumber(), daoFactory);
 		
 		ValidateEmployeeDoesNotExistsWithSamePhoneNumber.executeValidation(employeeDomain.getCellPhoneNumber(), daoFactory);
 		

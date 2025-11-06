@@ -17,13 +17,13 @@ public class TestEmployeeRegistration {
 			
 			employee.setName("Cristopher");
 			employee.setLastName("Jose");
-			employee.setIdentificationNumber("10362540589");
+			employee.setIdentificationNumber("103625405894");
 			employee.setEmployeePassword("11Ospina*");
 			employee.setAdministrator(false);
 			employee.setActive(false);
 			employee.setIdentificationType(new IdentificationTypeDTO(UUID.fromString("2928425a-9571-4eb3-a079-01addb001798")));
 			employee.setCellPhoneNumberConfirmed(false);
-			employee.setCellPhoneNumber("12345678902");
+			employee.setCellPhoneNumber("123456789024");
 			
 			var facade = new EmployeeFacadeImpl();
 			facade.registerNewEmployeeInformation(employee);

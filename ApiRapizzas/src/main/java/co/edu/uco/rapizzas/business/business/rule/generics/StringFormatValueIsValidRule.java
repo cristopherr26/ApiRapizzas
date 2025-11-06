@@ -1,6 +1,6 @@
 package co.edu.uco.rapizzas.business.business.rule.generics;
 
-import co.edu.uco.nose.crosscuting.messagescatalog.MessagesEnum;
+import co.edu.uco.rapizzas.crosscuting.messagescatalog.MessagesEnum;
 import co.edu.uco.rapizzas.business.business.rule.Rule;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;

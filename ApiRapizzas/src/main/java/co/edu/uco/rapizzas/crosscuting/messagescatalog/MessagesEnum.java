@@ -216,6 +216,12 @@ public enum MessagesEnum {
 	USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
 	
+	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_IDENTIFICATION_TYPE("Error inesperado durante la consulta de la información de un tipo de documento", "Se ha presentado un problema inesperado durante la operación de consulta de la información de un tipo de documento. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_IDENTIFICATION_TYPE("Error inesperado durante la operación de consulta de la información de un tipo de documento", "Se ha presentado un problema inesperado durante la de la operación de consulta de la información de un tipo de documento. No fue una SQLException, sino un error no controlado en el proceso de consulta."),	
+	
+	USER_ERROR_TRYING_TO_MAKE_AN_OPERATION("Error tratando de llevar a cabo la operación", "Se ha presentado un error tratando de llevar a cabo la operación esperada"),
+	IDENTIFICATION_TYPE_SUCESSFULLY_FOUND("El Tipo de documento O los tipos de documentos fueron consultados con éxito", "La consulta del tipo de documento o los tipos de documento se llevo a cabo con éxito"),
+
 	USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante el registro del empleado.",
 		    "Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.",
@@ -298,7 +304,6 @@ public enum MessagesEnum {
 	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("No se pudo ejecutar la acción deseada.", "El formato del siguiente dato no es válido: "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("La regla StringFormatValueIsValidRule falló.", "La regla StringFormatValueIsValidRule falló porque el siguiente dato no cumple con el patrón esperado: ");
-
 	
 	private String title;
 	private String content;

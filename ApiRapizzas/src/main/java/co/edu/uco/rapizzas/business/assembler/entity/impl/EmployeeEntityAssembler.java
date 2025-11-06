@@ -2,6 +2,9 @@ package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.IdentificationTypeEntityAssembler.getIdentificationTypeEntityAssembler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.EmployeeDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -39,6 +42,15 @@ private static final EntityAssembler<EmployeeEntity, EmployeeDomain> instance = 
 				entityTmp.getIdentificationNumber(), entityTmp.getCellPhoneNumber(), 
 				entityTmp.isCellPhoneNumberConfirmed(), entityTmp.isAdministrator(), 
 				entityTmp.getEmployeePassword());
+	}
+
+	@Override
+	public List<EmployeeDomain> toDomain(List<EmployeeEntity> entityList){
+		var employeeDomainList = new ArrayList<EmployeeDomain>();
+		for (var employeeEntity : entityList) {
+			employeeDomainList.add(toDomain(employeeEntity));
+		}
+		return employeeDomainList;
 	}
 	
 }

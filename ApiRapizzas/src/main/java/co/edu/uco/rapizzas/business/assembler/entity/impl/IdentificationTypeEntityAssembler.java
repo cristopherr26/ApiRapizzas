@@ -1,5 +1,8 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.IdentificationTypeDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -28,6 +31,15 @@ private static final EntityAssembler<IdentificationTypeEntity, IdentificationTyp
 	public IdentificationTypeDomain toDomain(final IdentificationTypeEntity entity) {
 		var entityTmp = ObjectHelper.getDefault(entity, new IdentificationTypeEntity());
 		return new IdentificationTypeDomain(entityTmp.getIdentificationTypeId(), entityTmp.getName());
+	}
+
+	@Override
+	public List<IdentificationTypeDomain> toDomain(List<IdentificationTypeEntity> entityList) {
+		var identificationTypeDomainList = new ArrayList<IdentificationTypeDomain>();
+		for (var identificationTypeEntity : entityList) {
+			identificationTypeDomainList.add(toDomain(identificationTypeEntity));
+		}
+		return identificationTypeDomainList;
 	}
 
 }

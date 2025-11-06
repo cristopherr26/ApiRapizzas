@@ -1,6 +1,10 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.TableEntityAssembler.getTableEntityAssembler;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.CustomerEntityAssembler.getCustomerEntityAssembler;
 
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
@@ -35,6 +39,15 @@ private static final EntityAssembler<CustomerTableEntity, CustomerTableDomain> i
 		var tableDomainTmp = getTableEntityAssembler().toDomain(entityTmp.getTable());
 		var customerDomainTmp = getCustomerEntityAssembler().toDomain(entityTmp.getCustomer());
 		return new CustomerTableDomain(entityTmp.getCustomerTableId(), entityTmp.getOrderDate(), tableDomainTmp, customerDomainTmp);
+	}
+
+	@Override
+	public List<CustomerTableDomain> toDomain(List<CustomerTableEntity> entityList) {
+		var customerTableDomainList = new ArrayList<CustomerTableDomain>();
+		for (var customerTableEntity : entityList) {
+			customerTableDomainList.add(toDomain(customerTableEntity));
+		}
+		return customerTableDomainList;
 	}
 	
 }

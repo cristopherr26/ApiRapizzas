@@ -1,6 +1,10 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.SizeEntityAssembler.getSizeEntityAssembler;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.CategoryEntityAssembler.getCategoryEntityAssembler;
 
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
@@ -37,6 +41,15 @@ public final class ProductEntityAssembler implements EntityAssembler<ProductEnti
 		var categoryDomainTmp = getCategoryEntityAssembler().toDomain(entityTmp.getCategory());
 		return new ProductDomain(entityTmp.getProductId(), entityTmp.getProductName(), 
 				entityTmp.getPrice(), categoryDomainTmp, sizeDomainTmp);
+	}
+
+	@Override
+	public List<ProductDomain> toDomain(List<ProductEntity> entityList) {
+		var productDomainList = new ArrayList<ProductDomain>();
+		for (ProductEntity entity : entityList) {
+			productDomainList.add(toDomain(entity));
+		}
+		return productDomainList;
 	}
 
 }

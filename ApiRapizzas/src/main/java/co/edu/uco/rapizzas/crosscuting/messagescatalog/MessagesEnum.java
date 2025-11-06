@@ -232,7 +232,7 @@ public enum MessagesEnum {
 	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("No se pudo ejecutar la acción  deseada", "El identificador no puede tener el valor por defecto."),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador tiene el valor por defecto (00000000-0000-0000-0000-000000000000)."),
-	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
+	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor  del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a  cabo la operación deseada..."),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID("La regla IdentificationTypeExistsByIdRule falló.", "La regla IdentificationTypeExistsByIdRule falló porque el tipo de identificación se envió como vacío."),
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID_WITH_PARAMETERS("Error técnico ejecutando la regla IdentificationTypeExistsByIdRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdentificationTypeExistsByIdRule"),
@@ -244,14 +244,14 @@ public enum MessagesEnum {
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringValueIsPresentRule"),
 	
-	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para  llevar a cabo la operación: "),
 	
-	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla StringValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla StringValueIsPresentRule falló.", "Esto se debe a que el siguiente  dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringLengthValueIsPresentRule"),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "Se requerían cinco parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringLengthValueIsValidRule"),
 	
-	USER_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("No se pudo ejecutar la acción deseada.", "El siguiente dato debe tener una longitud entre (min, max): "),
+	USER_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("No se  pudo ejecutar la acción deseada.", "El siguiente dato debe tener una longitud entre (min, max): "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_LENGTH("La regla StringLengthValueIsPresentRule falló.","Esto se debe a que el siguiente dato no tiene una longitus esperada entre (min, max): "),
 	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
@@ -260,7 +260,7 @@ public enum MessagesEnum {
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla UUIDValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla UUIDValueIsPresentRule"),
 	
-	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
 	
 	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla UUIDValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
 	
@@ -284,8 +284,21 @@ public enum MessagesEnum {
 	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_IDENTIFICATION("Ya hay un empleado registrado con ese tipo y número de identificación", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo tipo y número de identificación "),
 	
 	TECHNICAL_ERROR_VALUE_EMPLOYEE_IS_NOT_PRESENT("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation"),
-	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_IS_NOT_PRESENT("No fueron ingresados todos los parametros", "Se requería un solo parametro y llegó una cantidad menor a esta requerida para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation");
+	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_IS_NOT_PRESENT("No fueron ingresados todos los parametros", "Se requería un solo parametro y llegó una cantidad menor a esta requerida para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation"),
+	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
 	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringFormatValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringFormatValueIsValidRule"),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringFormatValueIsValidRule.", "Se requerían cuatro parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringFormatValueIsValidRule"),
+	
+	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_EMPTY_DATA("La regla StringFormatValueIsValidRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
+	
+	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("No se pudo ejecutar la acción deseada.", "El formato del siguiente dato no es válido: "),
+	
+	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("La regla StringFormatValueIsValidRule falló.", "La regla StringFormatValueIsValidRule falló porque el siguiente dato no cumple con el patrón esperado: ");
+
 	
 	private String title;
 	private String content;

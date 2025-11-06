@@ -1,5 +1,8 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.TableDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -28,6 +31,15 @@ public final class TableEntityAssembler implements EntityAssembler<TableEntity, 
 	public TableDomain toDomain(final TableEntity entity) {
 		var entityTmp = ObjectHelper.getDefault(entity, new TableEntity());
 		return new TableDomain(entityTmp.getTableId(), entityTmp.getTableNumber());
+	}
+
+	@Override
+	public List<TableDomain> toDomain(List<TableEntity> entityList) {
+		var tableDomainList = new ArrayList<TableDomain>();
+		for (TableEntity entity : entityList) {
+			tableDomainList.add(toDomain(entity));
+		}
+		return tableDomainList;
 	}
 
 }

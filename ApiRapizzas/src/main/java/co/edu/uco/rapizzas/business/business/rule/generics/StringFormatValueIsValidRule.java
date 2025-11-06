@@ -1,5 +1,6 @@
 package co.edu.uco.rapizzas.business.business.rule.generics;
 
+import co.edu.uco.nose.crosscuting.messagescatalog.MessagesEnum;
 import co.edu.uco.rapizzas.business.business.rule.Rule;
 import co.edu.uco.rapizzas.crosscuting.exception.RapizzasException;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -21,14 +22,14 @@ public final class StringFormatValueIsValidRule implements Rule {
 	public void execute( final Object... data) {
 		
 		if(ObjectHelper.isNull(data)) {
-			var userMessage = "";
-			var technicalMessage ="";
+			var userMessage = MessagesEnum.USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_EMPTY_DATA.getContent();
+			var technicalMessage =MessagesEnum.TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE.getContent();
 			throw RapizzasException.create(userMessage, technicalMessage);
 		}
 		
 		if(data.length < 4) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = MessagesEnum.USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE.getContent();
+			var technicalMessage = MessagesEnum.TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_WITH_PARAMETERS.getContent();
 			throw RapizzasException.create(userMessage, technicalMessage);
 		}
 		
@@ -39,8 +40,8 @@ public final class StringFormatValueIsValidRule implements Rule {
 		boolean mustApplyTrim = (Boolean) data[3];
 		
 		if(!TextHelper.formatIsValid(stringData, pattern, mustApplyTrim)) {
-			var userMessage= "No cumple con los requisitos" + dataName;
-			var technicalMessage= "No cumple con los siguientes requeisitos:" + dataName + " " + pattern;
+			var userMessage= MessagesEnum.USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT.getContent() + dataName;
+			var technicalMessage= MessagesEnum.TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT.getContent() + dataName + " " + pattern;
 
 			throw RapizzasException.create(userMessage, technicalMessage);
 		}

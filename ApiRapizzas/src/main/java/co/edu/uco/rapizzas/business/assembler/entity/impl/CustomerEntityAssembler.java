@@ -2,6 +2,9 @@ package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.IdentificationTypeEntityAssembler.getIdentificationTypeEntityAssembler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.CustomerDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -32,6 +35,15 @@ public final class CustomerEntityAssembler implements EntityAssembler<CustomerEn
 		var entityTmp = ObjectHelper.getDefault(entity, new CustomerEntity());
 		var identificationTypeDomainTmp = getIdentificationTypeEntityAssembler().toDomain(entityTmp.getIdentificationType());
 		return new CustomerDomain(entityTmp.getCustomerId(), entityTmp.getName(), entityTmp.getLastName(), entityTmp.isActive(), identificationTypeDomainTmp, entityTmp.getIdentificationNumber());
+	}
+
+	@Override
+	public List<CustomerDomain> toDomain(List<CustomerEntity> entityList) {
+		var customerDomainList = new ArrayList<CustomerDomain>();
+		for (var customerEntity : entityList) {
+			customerDomainList.add(toDomain(customerEntity));
+		}
+		return customerDomainList;
 	}
 
 }

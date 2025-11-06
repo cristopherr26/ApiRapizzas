@@ -1,6 +1,10 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.OrderEntityAssembler.getOrderEntityAssembler;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.EmployeeEntityAssembler.getEmployeeEntityAssembler;
 
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
@@ -37,6 +41,15 @@ public final class PaymentEntityAssembler implements EntityAssembler<PaymentEnti
 		var orderDomainTmp = getOrderEntityAssembler().toDomain(entityTmp.getOrder());
 		return new PaymentDomain(entityTmp.getPaymentId(), entityTmp.getCollectionDate(), 
 				employeeDomainTmp, orderDomainTmp);
+	}
+
+	@Override
+	public List<PaymentDomain> toDomain(List<PaymentEntity> entityList) {
+		var paymentDomainList = new ArrayList<PaymentDomain>();
+		for (PaymentEntity entity : entityList) {
+			paymentDomainList.add(toDomain(entity));
+		}
+		return paymentDomainList;
 	}
 	
 }

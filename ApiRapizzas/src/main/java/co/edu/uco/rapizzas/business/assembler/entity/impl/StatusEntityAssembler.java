@@ -1,5 +1,8 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.StatusDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -28,6 +31,15 @@ public final class StatusEntityAssembler implements EntityAssembler<StatusEntity
 	public StatusDomain toDomain(final StatusEntity entity) {
 		var entityTmp = ObjectHelper.getDefault(entity, new StatusEntity());
 		return new StatusDomain(entityTmp.getStatusId(), entityTmp.getStatusName());
+	}
+
+	@Override
+	public List<StatusDomain> toDomain(List<StatusEntity> entityList) {
+		var statusDomainList = new ArrayList<StatusDomain>();
+		for (StatusEntity entity : entityList) {
+			statusDomainList.add(toDomain(entity));
+		}
+		return statusDomainList;
 	}
 	
 }

@@ -1,5 +1,8 @@
 package co.edu.uco.rapizzas.business.assembler.entity.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.SizeDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -28,6 +31,15 @@ public final class SizeEntityAssembler implements EntityAssembler<SizeEntity, Si
 	public SizeDomain toDomain(final SizeEntity entity) {
 		var entityTmp = ObjectHelper.getDefault(entity, new SizeEntity());
 		return new SizeDomain(entityTmp.getSizeId(), entityTmp.getNameSize());
+	}
+
+	@Override
+	public List<SizeDomain> toDomain(List<SizeEntity> entityList) {
+		var sizeDomainList = new ArrayList<SizeDomain>();
+		for (SizeEntity entity : entityList) {
+			sizeDomainList.add(toDomain(entity));
+		}
+		return sizeDomainList;
 	}
 	
 }

@@ -3,6 +3,9 @@ package co.edu.uco.rapizzas.business.assembler.entity.impl;
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.OrderEntityAssembler.getOrderEntityAssembler;
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.ProductEntityAssembler.getProductEntityAssembler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.ProductOrderDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -37,6 +40,15 @@ public final class ProductOrderEntityAssembler implements EntityAssembler<Produc
 		var productDomainTmp = getProductEntityAssembler().toDomain(entityTmp.getProduct());
 		return new ProductOrderDomain(entityTmp.getProductOrderId(), entityTmp.getAmount(), 
 				productDomainTmp, orderDomainTmp);
+	}
+
+	@Override
+	public List<ProductOrderDomain> toDomain(List<ProductOrderEntity> entityList) {
+		var productOrderDomainList = new ArrayList<ProductOrderDomain>();
+		for (ProductOrderEntity entity : entityList) {
+			productOrderDomainList.add(toDomain(entity));
+		}
+		return productOrderDomainList;
 	}
 
 }

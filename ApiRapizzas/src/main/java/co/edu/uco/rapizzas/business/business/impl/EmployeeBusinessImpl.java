@@ -43,8 +43,6 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		
 	}
 	
-	
-	
 	private UUID generateId() {
 		var id = UUIDHelper.getUUIDHelper().generateNewUUID();
 		var userEntity = daoFactory.getEmployeeDAO().findById(id);
@@ -56,8 +54,6 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		return id;
 	}
 	
-
-
 	@Override
 	public void updateEmployeeInformation(final UUID id, final EmployeeDomain employeeDomain) {
 		// TODO Auto-generated method stub

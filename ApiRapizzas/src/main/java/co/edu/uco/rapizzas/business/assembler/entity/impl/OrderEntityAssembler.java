@@ -4,6 +4,9 @@ import static co.edu.uco.rapizzas.business.assembler.entity.impl.EmployeeEntityA
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.CustomerTableEntityAssembler.getCustomerTableEntityAssembler;
 import static co.edu.uco.rapizzas.business.assembler.entity.impl.StatusEntityAssembler.getStatusEntityAssembler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.rapizzas.business.assembler.entity.EntityAssembler;
 import co.edu.uco.rapizzas.business.domain.OrderDomain;
 import co.edu.uco.rapizzas.crosscuting.helper.ObjectHelper;
@@ -40,6 +43,15 @@ private static final EntityAssembler<OrderEntity, OrderDomain> instance = new Or
 		var employeeDomainTmp = getEmployeeEntityAssembler().toDomain(entityTmp.getEmployee());
 		return new OrderDomain(entityTmp.getOrderId(), entityTmp.getTotal(), entityTmp.getComment(), 
 				employeeDomainTmp, statusDomainTmp, customerTableDomainTmp);
+	}
+
+	@Override
+	public List<OrderDomain> toDomain(List<OrderEntity> entityList) {
+		var orderDomainList = new ArrayList<OrderDomain>();
+		for(var entity : entityList) {
+			orderDomainList.add(toDomain(entity));
+		}
+		return orderDomainList;
 	}
 	
 }

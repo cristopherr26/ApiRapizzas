@@ -39,6 +39,8 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		
 		employeeEntity.setEmployeeId(generateId());
 		
+		employeeEntity.setActive(true);
+		
 		daoFactory.getEmployeeDAO().create(employeeEntity);
 		
 	}

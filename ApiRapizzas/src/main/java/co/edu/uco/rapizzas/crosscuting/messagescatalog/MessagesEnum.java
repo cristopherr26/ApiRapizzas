@@ -23,22 +23,14 @@ public enum MessagesEnum {
 	USER_ERROR_SQL_CONNECTION_UNEXPECTED_ERROR_VALIDATING_TRANSACTION_IS_NOT_STARTED("Error inesperado tratando de validar el estado de la operacion deseada frente a la fuente de informacion se encontraba activado", "Ocurrió un problema inesperado al validar si la operación solicitada contra la fuente de información deseada estaba iniciada. Por favor intente de nuevo y si el problema persiste, contacte al administrador de la aplicación."),
 	USER_ERROR_FACTORY_NOT_INITIALIZED("Factoria no iniciada", "La fuente de información sobre la cual se va a realizar la transacción seleccionada no esta disponible dentro del sistema. Por favor intente de nuevo y si el problema persiste, contacte al administrador de la aplicación."),
 	TECHNICAL_ERROR_FACTORY_NOT_VALIDATED("Factotoria no validada", "La factoria de acceso a datos no existe y por tanto no se puede determinar a que fuente de datos debe conectarse."),
-	USER_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error durante la consulta de la información de una categoría.", 
-			"Se ha presentado un problema tratando de ejecutar la consulta de la información de una categoría, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la consulta de la información de una categoría.", 
-			"Se ha presentado un problema inesperado durante la ejecución operación de consulta de la información de una categoría. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de una categoría", 
-			"Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia sql para llevar a cabo la operación de consulta de la información de una categoría."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de una categoría.", 
-			"Se ha presentado un problema inesperado durante la preparación de la sentencia sql de la operación de consulta de la información de una categoría. No fue una SQLException, sino un error no controlado en el proceso de registro."),
-	USER_ERROR_SQL_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error durante la consulta de la información de un cliente.",
-			"Se ha presentado un problema tratando de ejecutar la consulta de la información de un cliente, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la consulta de la información de un cliente.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de un cliente. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMER_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de un cliente.", 
-			"Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de un cliente."),	
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMER_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de un cliente.", 
-			"Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de un cliente. No fue una SQLException, sino un error no controlado en el proceso de registro."),
+	USER_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error durante la consulta de la información de una categoría.", "Se ha presentado un problema tratando de ejecutar la consulta de la información de una categoría, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la consulta de la información de una categoría.", "Se ha presentado un problema inesperado durante la ejecución operación de consulta de la información de una categoría. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de una categoría", "Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia sql para llevar a cabo la operación de consulta de la información de una categoría."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de una categoría.", "Se ha presentado un problema inesperado durante la preparación de la sentencia sql de la operación de consulta de la información de una categoría. No fue una SQLException, sino un error no controlado en el proceso de registro."),
+	USER_ERROR_SQL_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error durante la consulta de la información de un cliente.","Se ha presentado un problema tratando de ejecutar la consulta de la información de un cliente, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la consulta de la información de un cliente.", "Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de un cliente. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMER_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de un cliente.", "Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de un cliente."),	
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMER_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de un cliente.", "Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de un cliente. No fue una SQLException, sino un error no controlado en el proceso de registro."),
 	USER_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_EXECUTION("Error durante la consulta de la información de una mesa.","Se ha presentado un problema tratando de ejecutar la consulta de la información de una mesa, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_EXECUTION("Error inesperado durante la consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de una mesa. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_PREPARATION("Error SQL durante la  operación de consulta de la información de una mesa.","Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de una mesa."),
@@ -79,10 +71,8 @@ public enum MessagesEnum {
 	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_TABLE_WHILE_EXECUTION("Error inesperado durante la consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de una mesa. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_TABLE_WHILE_PREPARATION("Error SQL durante la operación de consulta de la información de una mesa.","Se ha presentado un problema de tipo SQLException durante la preparación de la sentencia SQL para llevar a cabo la operación de consulta de la información de una mesa."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_TABLE_WHILE_PREPARATION("Error inesperado durante la operación de consulta de la información de una mesa.","Se ha presentado un problema inesperado durante la preparación de la sentencia SQL de la operación de consulta de la información de una mesa. No fue una SQLException, sino un error no controlado en el proceso de registro."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error SQL durante la operación de consulta de la información de una categoría.", 
-			"Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de consulta de la información de una categoría."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la operación de consulta de la información de una categoría.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de una categoría. No fue una SQLException, sino un error no controlado en el proceso de registro."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error SQL durante la operación de consulta de la información de una categoría.", "Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de consulta de la información de una categoría."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CATEGORY_WHILE_EXECUTION("Error inesperado durante la operación de consulta de la información de una categoría.", "Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de una categoría. No fue una SQLException, sino un error no controlado en el proceso de registro."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error SQL durante la operación de consulta de la información de un cliente.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de consulta de la información de un cliente."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la operación de consulta de la información de un cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de consulta de la información de un cliente. No fue una SQLException, sino un error no controlado en el proceso de registro."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_FINDING_CUSTOMERTABLE_WHILE_EXECUTION("Error SQL durante la operación de consulta de la información de un cliente mesa.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de consulta de la información de un cliente mesa."),
@@ -129,40 +119,23 @@ public enum MessagesEnum {
 	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error inesperado durante la actualización de un estado.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un estado. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error SQL durante la operación de actualización de un estado.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización de un estado."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_STATUS_WHILE_EXECUTION("Error inesperado durante la operación de actualización de un estado.","Se ha presentado un problema inesperado durante la ejecución de la operación de actualización de un estado. No fue una SQLException, sino un error no controlado en el proceso de actualización."),
-	USER_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la creación del tipo de identificación.", 
-			"Se ha presentado un problema tratando de ejecutar la operación de creación del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la creación del tipo de identificación.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de creación del tipo de identificación.", 
-			"Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de creación del tipo de identificación.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
-	USER_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la actualización del tipo de identificación.", 
-			"Se ha presentado un problema tratando de ejecutar la operación de actualización del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la actualización del tipo de identificación.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de actualización del tipo de identificación.", 
-			"Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de actualización del tipo de identificación.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
-	USER_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error durante la creación del producto.", 
-			"Se ha presentado un problema tratando de ejecutar la operación de creación del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de creación del producto.", 
-			"Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de creación del producto."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la creación del producto.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de creación del producto.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
-	USER_ERROR_SQL_EXCEPTION_FINDING_PRODUCT_WHILE_PREPARATION("Error durante la preparación de la consulta de la información del producto.", 
-			"Se ha presentado un problema durante la preparación de la operación de consulta de la información del producto."),
-	USER_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error durante la actualización del producto.", 
-			"Se ha presentado un problema tratando de ejecutar la operación de actualización del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
-	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de actualización del producto.", 
-			"Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización del producto."),
-	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la actualización del producto.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de actualización del producto.", 
-			"Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la creación del tipo de identificación.", "Se ha presentado un problema tratando de ejecutar la operación de creación del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la creación del tipo de identificación.", "Se ha presentado un problema inesperado durante la ejecución de la operación de creación del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de creación del tipo de identificación.", "Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de creación del tipo de identificación.", "Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de creación del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error durante la actualización del tipo de identificación.", "Se ha presentado un problema tratando de ejecutar la operación de actualización del tipo de identificación, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la actualización del tipo de identificación.", "Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del tipo de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error SQL durante la operación de actualización del tipo de identificación.", "Se ha presentado un problema de tipo SQLException durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_IDENTIFICATIONTYPE_WHILE_EXECUTION("Error inesperado durante la operación de actualización del tipo de identificación.", "Se ha presentado un problema inesperado durante la ejecución de la sentencia SQL para llevar a cabo la operación de actualización del tipo de identificación. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error durante la creación del producto.", "Se ha presentado un problema tratando de ejecutar la operación de creación del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de creación del producto.", "Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de creación del producto."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la creación del producto.", "Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_CREATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de creación del producto.", "Se ha presentado un problema inesperado durante la ejecución de la operación de creación del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
+	USER_ERROR_SQL_EXCEPTION_FINDING_PRODUCT_WHILE_PREPARATION("Error durante la preparación de la consulta de la información del producto.", "Se ha presentado un problema durante la preparación de la operación de consulta de la información del producto."),
+	USER_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error durante la actualización del producto.", "Se ha presentado un problema tratando de ejecutar la operación de actualización del producto, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
+	TECHNICAL_ERROR_SQL_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error SQL durante la operación de actualización del producto.", "Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de actualización del producto."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la actualización del producto.", "Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_UPDATING_PRODUCT_WHILE_EXECUTION("Error inesperado durante la operación de actualización del producto.", "Se ha presentado un problema inesperado durante la ejecución de la operación de actualización del producto. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
 	USER_ERROR_SQL_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error durante la creación del cliente.","Se ha presentado un problema tratando de ejecutar la operación de creación del cliente, por favor intente de nuevo. Si el problema persiste por favor contacte al administrador del sistema."),
 	TECHNICAL_ERROR_SQL_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error SQL durante la operación de creación del cliente.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de creación del cliente."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_CREATING_CUSTOMER_WHILE_EXECUTION("Error inesperado durante la creación del cliente.","Se ha presentado un problema inesperado durante la ejecución de la operación de creación del cliente. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
@@ -215,94 +188,59 @@ public enum MessagesEnum {
 	TECHNICAL_ERROR_SQL_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error SQL durante la operación de eliminación de un producto asignado a un pedido.","Se ha presentado un problema de tipo SQLException durante la ejecución de la operación de eliminación de un producto asignado a un pedido."),
 	USER_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la eliminación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_DELETING_PRODUCTORDER_WHILE_EXECUTION("Error inesperado durante la operación de elimiación de un producto asignado a un pedido.","Se ha presentado un problema inesperado durante la ejecución de la operación de eliminación de un producto asignado a un pedido. No fue una SQLException, sino un error no controlado en el proceso de ejecución."),
-	
 	USER_ERROR_UNEXPECTED_EXCEPTION_FINDING_IDENTIFICATION_TYPE("Error inesperado durante la consulta de la información de un tipo de documento", "Se ha presentado un problema inesperado durante la operación de consulta de la información de un tipo de documento. Por favor intente de nuevo y si el problema persiste contacte al administrador del sistema."),
 	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_FINDING_IDENTIFICATION_TYPE("Error inesperado durante la operación de consulta de la información de un tipo de documento", "Se ha presentado un problema inesperado durante la de la operación de consulta de la información de un tipo de documento. No fue una SQLException, sino un error no controlado en el proceso de consulta."),	
-	
-	USER_ERROR_TRYING_TO_MAKE_AN_OPERATION("Error tratando de llevar a cabo la operación", "Se ha presentado un error tratando de llevar a cabo la operación esperada"),
+	USER_ERROR_TRYING_TO_MAKE_AN_OPERATION("Error tratando  de llevar a cabo la operación", "Se ha presentado un error tratando de llevar a cabo la operación esperada"),
 	IDENTIFICATION_TYPE_SUCESSFULLY_FOUND("El Tipo de documento O los tipos de documentos fueron consultados con éxito", "La consulta del tipo de documento o los tipos de documento se llevo a cabo con éxito"),
-
-	USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante el registro del empleado.",
-		    "Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
-	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.",
-		    "Ocurrió una excepción no controlada al ejecutar la operación de registro del empleado en la capa de negocio o de acceso a datos."),
+	USER_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Error inesperado durante el registro del empleado.","Se presentó un problema inesperado al intentar registrar la información del empleado. Por favor, intente nuevamente y si el problema persiste, contacte al administrador del sistema."),
+	TECHNICAL_ERROR_UNEXPECTED_EXCEPTION_REGISTERING_EMPLOYEE_WHILE_EXECUTION("Excepción inesperada durante la operación de registro del empleado.", "Ocurrió una excepción no controlada al ejecutar la operación de registro del empleado en la capa de negocio o de acceso a datos."),
 	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("El valor  del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar  a cabo la operación deseada..."),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "No se recibieron los parámetros requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla IdValueIsNotDefaultValueRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdValueIsNotDefaultValueRule"),
-	
 	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("No  se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la  operación: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_EMPTY_DATA("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador fue enviado como nulo"),
-	
 	USER_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("No se pudo ejecutar la acción  deseada", "El identificador no puede tener el valor por defecto."),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_VALUE_IS_NOT_DEFAULT_VALUE_RULE_DEFAULT_VALUE("La regla IdValueIsNotDefaultValueRule falló.", "La regla IdValueIsNotDefaultValueRule falló porque el identificador tiene el valor por defecto (00000000-0000-0000-0000-000000000000)."),
 	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("El valor  del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a  cabo la operación deseada..."),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID("La regla IdentificationTypeExistsByIdRule falló.", "La regla IdentificationTypeExistsByIdRule falló porque el tipo de identificación se envió como vacío."),
 	TECHNICAL_ERROR_WHILE_EXECUTING_ID_TYPE_EXISTS_BY_ID_WITH_PARAMETERS("Error técnico ejecutando la regla IdentificationTypeExistsByIdRule.", "Se requerían dos parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla IdentificationTypeExistsByIdRule"),
-	
 	USER_ERROR_IDENTIFICATION_TYPE_DOES_NOT_EXITS("El tipo de documento no existe", "El tipo de documento ingresado no existe"),
 	TECHNICAL_ERROR_IDENTIFICATION_TYPE_DOES_NOT_EXITS("El tipo de documento no existe", "El tipo de documento con el siguiente id no existe: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE("Error técnico ejecutando la regla StringValueIsPresentRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringValueIsPresentRule"),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringValueIsPresentRule"),
-	
 	USER_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para  llevar a cabo la operación: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla StringValueIsPresentRule falló.", "Esto se debe a que el siguiente  dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringLengthValueIsPresentRule"),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringLengthValueIsValidRule.", "Se requerían cinco parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringLengthValueIsValidRule"),
-	
 	USER_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE("No se  pudo ejecutar la acción deseada.", "El siguiente dato debe tener una longitud entre (min, max): "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_LENGTH_VALUE_IS_VALID_RULE_WITH_LENGTH("La regla StringLengthValueIsPresentRule falló.","Esto se debe a que el siguiente dato no tiene una longitus esperada entre (min, max): "),
 	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE("Error técnico ejecutando la regla UUIDValueIsPresentRule.", "No se recibieron los parámetros requeridos para ejecutar la regla UUIDValueIsPresentRule"),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla UUIDValueIsPresentRule.", "Se requerían tres parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla UUIDValueIsPresentRule"),
-	
 	USER_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("No se pudo  ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_UUID_VALUE_IS_PRESENT_RULE_EMPTY_DATA("La regla UUIDValueIsPresentRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
-	
 	SUCCESFULLY_EMPLOYEE_REGISTERED("Empleado registrado con éxito", "El registro del empleado se llevó a cabo con éxito"),
-	
 	UNEXPECTED_ERROR_WHILE_REGISTERING_EMPLOYEE("Error inesperado durante el registro del empleado", "Se presentó un error inesperado llevando a cabo el registro del empleado, si el error persiste, por favor contacte con el administrador"),
-	
 	TECHNICAL_ERROR_VALUE_EMPLOYEEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("Error tratando de llevar  a cabo la  operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
 	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_MOBILE_NUMBER("No fueron  ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSamePhoneNumberRule"),
 	USER_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado con el mismo  número de teléfono"),
 	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_MOBILE_NUMBER("Ya hay un empleado registrado con ese  número de teléfono", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo  número de teléfono"),
-	
 	TECHNICAL_ERROR_VALUE_IS_NOT_PRESENT_EMPLOYEE("Error tratando de llevar a cabo la  operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeExistsByIdRule"),
 	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE("No fueron  ingresados todos los parametros", "Se requerían dos parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeExistsByIdRule"),
 	USER_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado ingresada no existe"),
 	TECHNICAL_ERROR_EMPLOYEE_DOES_NOT_EXITS("El empleado no existe", "El empleado con el siguiente id no existe: "),
-	
 	TECHNICAL_ERROR_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_IDENTIFICATION("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar la regla EmployeeDoesNotExistsWithSameIdtypeAndNumberRule"),
 	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_EMPLOYEE_DOES_NOT_EXISTS_BY_IDENTIFICATION("No fueron ingresados todos los parametros", "Se requerían tres parametros y llegó una cantidad menor a esta requeridos para ejecutar la regla EmployeeDoesNotExistsWithSameIdtypeAndNumberRule"),
 	USER_ERROR_EMPLOYEE_DOES_EXISTS_BY_IDENTIFICATION("Ya hay un empleado registrado con ese tipo y número de identificación", "No es posible llevar a cabo la operación, ya que ya existe un empleado con el mismo tipo y número de identificación"),
 	TECHNICAL_ERROR_EMPLOYEE_DOES_EXISTS_BY_IDENTIFICATION("Ya hay un empleado registrado con ese tipo y número de identificación", "No es posible llevar a cabo la operación, ya que ya existe un empleado dentro de la fuente de datos con el mismo tipo y número de identificación "),
-	
 	TECHNICAL_ERROR_VALUE_EMPLOYEE_IS_NOT_PRESENT("Error tratando de llevar a cabo la operación", "No se recibieron los parametros requeridos para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation"),
 	TECHNICAL_ERROR_WRONG_EMPLOYEE_LENGTH_VALUE_IS_NOT_PRESENT("No fueron ingresados todos los parametros", "Se requería un solo parametro y llegó una cantidad menor a esta requerida para ejecutar el validator ValidateDataEmployeeConsistencyForRegisterNewInformation"),
 	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE("El valor del campo es obligatorio.", "Se ha presentado un problema inesperado tratando de llevar a cabo la operación deseada..."),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE("Error técnico ejecutando la regla StringFormatValueIsValidRule.", "No se recibieron los parámetros requeridos para ejecutar la regla StringFormatValueIsValidRule"),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_WITH_PARAMETERS("Error técnico ejecutando la regla StringFormatValueIsValidRule.", "Se requerían cuatro parámetros y llegó una cantidad menor a esta requeridos para ejecutar la regla StringFormatValueIsValidRule"),
-	
 	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_EMPTY_DATA("No se pudo ejecutar la acción deseada.", "El siguiente dato es requerido para llevar a cabo la operación: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_EMPTY_DATA("La regla StringFormatValueIsValidRule falló.", "Esto se debe a que el siguiente dato es requerido para poder llevar a cabo la correcta ejecución de la operación:"),
-	
 	USER_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("No se pudo ejecutar la acción deseada.", "El formato del siguiente dato no es válido: "),
-	
 	TECHNICAL_ERROR_WHILE_EXECUTING_STRING_FORMAT_VALUE_IS_VALID_RULE_INVALID_FORMAT("La regla StringFormatValueIsValidRule falló.", "La regla StringFormatValueIsValidRule falló porque el siguiente dato no cumple con el patrón esperado: ");
 	
 	private String title;

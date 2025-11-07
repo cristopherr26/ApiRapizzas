@@ -15,6 +15,8 @@ public interface EmployeeBusiness {
 	
 	List<EmployeeDomain> findEmployeeByFilter(EmployeeDomain employeeFilters);
 	
+	EmployeeDomain findSpecificEmployee(UUID id);
+	
 	void confirmMobileNumber(UUID id, int confirmationCode);
 	
 	void sendMobileNumberConfirmation(UUID id);

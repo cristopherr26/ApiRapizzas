@@ -80,5 +80,11 @@ public final class EmployeeFacadeImpl implements EmployeeFacade{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public EmployeeDTO findSpecificEmployee(UUID id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

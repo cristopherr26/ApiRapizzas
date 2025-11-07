@@ -15,6 +15,8 @@ public interface EmployeeFacade {
 	
 	List<EmployeeDTO> findEmployeeByFilter(EmployeeDTO employeeFilters);
 	
+	EmployeeDTO findSpecificEmployee(UUID id);
+	
 	void confirmMobileNumber(UUID id, int confirmationCode);
 	
 	void sendMobileNumberConfirmation(UUID id);

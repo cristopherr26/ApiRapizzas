@@ -91,5 +91,11 @@ public final class EmployeeBusinessImpl implements EmployeeBusiness{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public EmployeeDomain findSpecificEmployee(UUID id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
